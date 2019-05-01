@@ -1,0 +1,196 @@
+//
+// Drum/Tumbler Skin for <select> Elements
+//
+//================================================
+
+div.drum-wrapper {
+	position: relative;
+  user-select:none;
+  height: 240px;
+  width: 30px;
+  -webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  		 -moz-user-select: none;
+  			-ms-user-select: none;
+  
+  > .inner {
+  	height: 100%;
+		overflow: hidden;
+  	position: relative;
+		
+		> .container {
+			border-top: 1px solid @gray-dark;
+			border-bottom: 1px solid @gray;
+			height: 25px;
+			left: 0px;
+			line-height: 25px;
+			position: absolute;
+			top: 106px;
+			width: 100%;
+			-webkit-perspective: 1000px;
+				 -moz-perspective: 1000px;
+					 -o-perspective: 1000px;
+							perspective: 1000px;
+			
+			// And here's the actual drum...
+			> .drum {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				-webkit-transform-style: preserve-3d;
+					 -moz-transform-style: preserve-3d;
+						 -o-transform-style: preserve-3d;
+								transform-style: preserve-3d;
+				
+				> figure {
+					color: black;
+					display: block;
+					height: 25px;
+					left: 0px;
+					line-height: 25px;
+					margin: 0px;
+					overflow: hidden;
+					padding: 0px 3px;
+					position: absolute;
+					text-align: center;
+					text-overflow: ellipsis;
+					top: 0px;
+					white-space: nowrap;
+					width: 100%;
+					-webkit-box-sizing: border-box;
+						 -moz-box-sizing: border-box;
+									box-sizing: border-box;  
+					-webkit-backface-visibility: hidden;
+						 -moz-backface-visibility: hidden;
+							 -o-backface-visibility: hidden;
+									backface-visibility: hidden;
+				}
+			}
+		}
+  }
+  
+  // Dial styles for mouse controls
+	> .dial {
+		cursor: pointer;
+		height: 86px;
+		left: 0px;
+		position: absolute;
+		width: 100%;
+		
+		&.up {
+			// background: -webkit-linear-gradient(bottom, rgba(255,255,255,0), rgba(155,155,155,.2) 85%, rgba(130,130,130,.4));
+			// background: -moz-linear-gradient(top, rgba(255,255,255,0), rgba(155,155,155,.2) 85%, rgba(130,130,130,.4));
+			// background: -o-linear-gradient(top, rgba(255,255,255,0), rgba(155,155,155,.2) 85%, rgba(130,130,130,.4));
+			// background: linear-gradient(to top, rgba(255,255,255,0), rgba(155,155,155,.2) 85%, rgba(130,130,130,.4));
+	    border-left: 1px solid @gray;
+	    border-top: 1px solid @gray-light;
+	    border-right: 1px solid @gray-darker;
+			top: 20px;
+			
+			> div {
+				top: -28px;
+				
+				> svg {
+				  -webkit-transform: translate(-50%, -60%);
+				      -ms-transform: translate(-50%, -60%);
+				       -o-transform: translate(-50%, -60%);
+				          transform: translate(-50%, -60%);
+				}
+			}
+		}
+		
+		&.down {
+			// background: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(155,155,155,.2) 85%, rgba(130,130,130,.4));
+			// background: -moz-linear-gradient(bottom, rgba(255,255,255,0), rgba(155,155,155,.2) 85%, rgba(130,130,130,.4));
+			// background: -o-linear-gradient(bottom, rgba(255,255,255,0), rgba(155,155,155,.2) 85%, rgba(130,130,130,.4));
+			// background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(155,155,155,.2) 85%, rgba(130,130,130,.4));
+			border-right: 1px solid @gray-darker;
+	    border-bottom: 1px solid @gray-darkest;
+	    border-left: 1px solid @gray;
+			bottom: 20px;
+			height: 89px;
+			
+			> div {
+				bottom: -24px;
+				
+				> svg {
+				  -webkit-transform: translate(-50%, -35%);
+				      -ms-transform: translate(-50%, -35%);
+				       -o-transform: translate(-50%, -35%);
+				          transform: translate(-50%, -35%);
+				}
+			}
+		}
+		
+		> div {
+			.btn-default;
+			cursor: pointer;
+			left: 0px;
+			height: 18px;
+			position: absolute;
+			width: 100%;
+		  // -webkit-transform: translateX(-50%);
+		  //     -ms-transform: translateX(-50%);
+		  //     -o-transform: translateX(-50%);
+		  //         transform: translateX(-50%);
+			
+			> svg {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+			  
+			  > g {
+			  	> path {
+						stroke: @text-color;
+			  	}
+			  }
+			}
+		}
+	}
+}
+
+.outside {
+	> .drum-wrapper {
+		height: 140px;
+		
+		> .inner {
+			top: 12px;
+		
+			> .container {
+				top: 46px;
+			}	
+		}
+		
+		> .dial {
+			height: 58px;
+		}
+	}
+}
+
+// Center the drum's form within its parent container
+form.appt-wrapper {
+	.clearfix;
+	margin: 0 auto;
+	width: 230px;
+}
+
+// Implementation-specific styles
+#drum_apptDate {
+	float: left;
+	width: 130px;
+	
+	.container {
+		border-left: 1px solid @gray-darker;
+	}
+}
+
+#drum_apptTime {
+	float: left;
+	width: 100px;
+	
+	.container {
+		border-right: 1px solid @gray;
+	}
+}

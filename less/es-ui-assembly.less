@@ -1,0 +1,3927 @@
+// ---------------------------------
+//  Colors
+// ---------------------------------
+@blue:             #00a0d2;
+@green:            #00c389;
+@magenta:          #c110a0;
+@violet:           #702082;
+
+// - Tints & Shades -----------
+
+// Tint/Shade Values
+@lightest: 55%;
+@lighter:  50%;
+@light:    30%;
+@dark:     15%;
+@darker:   25%;
+
+// Tint/Shade Definitions
+@blue-lightest:    lighten(@blue, @lightest);
+@blue-lighter:     lighten(@blue, @lighter);
+@blue-light:       lighten(@blue, @light);
+@blue-dark:        darken(@blue, @dark);
+@blue-darker:      darken(@blue, @darker);
+@green-lightest:   lighten(@green, @lightest);
+@green-lighter:    lighten(@green, @lighter);
+@green-light:      lighten(@green, @light);
+@green-dark:       darken(@green, @dark);
+@green-darker:     darken(@green, @darker);
+@magenta-lightest: lighten(@magenta, @lightest);
+@magenta-lighter:  lighten(@magenta, @lighter);
+@magenta-light:    lighten(@magenta, @light);
+@magenta-dark:     darken(@magenta, @dark);
+@magenta-darker:   darken(@magenta, @darker);
+@violet-lightest:  lighten(@violet, @lightest);
+@violet-lighter:   lighten(@violet, @lighter);
+@violet-light:     lighten(@violet, @light);
+@violet-dark:      darken(@violet, @dark);
+@violet-darker:    darken(@violet, @darker);
+
+// - Semantic colors ----------
+@software-info:    #006699;
+@software-success: #298544;
+@software-error:   #c00;
+@software-warning: #b35f00;
+
+// - Other UI-Related colors --
+@software-blue:    #007fa7;
+@software-focus:   #83bffc;
+@light-gray:       #d8dbd8;
+@light-violet:     #d8d7df;
+@light-pink:       #ddd0cf;
+@light-blue:       #c8d7df;
+@light-green:      #d9e7dc;
+@sand:             #efeede;
+
+// -------------------------
+//  Grays
+// -------------------------
+@white:           #fff;
+@software-gray-1: #f4f4f4;
+@software-gray-2: #ecedee;
+@software-gray-3: #e4e4e4;
+@software-gray-4: #d8d8d8;
+@software-gray-5: #c5c5c5;
+@software-gray-6: #979797;
+@software-gray-7: #707070;
+@software-gray-8: #585858;
+@software-gray-9: #444;
+@black:           #000;
+
+@gray-base:     @black;
+@gray-darkest:  @software-gray-9;
+@gray-darker:   @software-gray-8;
+@gray-dark:     @software-gray-6;
+@gray:          @software-gray-5;
+@gray-light:    @software-gray-3;
+@gray-lighter:  @software-gray-2;
+@gray-lightest: @software-gray-1;
+
+@brand-primary:        @software-blue;
+@brand-primary-accent: @blue;
+@brand-success:        @software-success;
+@brand-info:           @software-info;
+@brand-warning:        @software-warning;
+@brand-danger:         @software-error;
+@brand-agent:          @software-warning;
+
+@brand-info-90: #327290;
+@brand-info-80: #49819d;
+@brand-info-70: #5f91a9;
+@brand-info-60: #76a1b5;
+@brand-info-50: #8db1c2;
+@brand-info-40: #a4c0ce;
+@brand-info-30: #bbd0da;
+@brand-info-20: #d1e0e6;
+@brand-info-10: #e8eff3;
+
+//Brand Primary
+@wtwViolet: @brand-primary-accent;
+@wtwBlack:  #000;    
+@wtwWhite:  #fff;
+
+//Brand Secondary
+@wtwLightGray:   #d8dbd8;
+@wtwLightViolet: #d8d7df;
+@wtwLightPink:   #ddd0cf;
+@wtwLightBlue:   #c8d7df;
+@wtwLightGreen:  #d9e6dc;
+@wtwSand:        #efeede;
+
+// Brand Tertiary
+@wtwGray:    #63666a;
+@wtwMagenta: #c110a0;
+@wtwBlue:    #00a0d2;
+@wtwGreen:   #00c389;
+@wtwGold:    #ffb81c;
+
+// Brand Tertiary Halftones
+@wtwGrayHalf:    #b1b3b5;
+@wtwVioletHalf:  #b78fc1;
+@wtwMagentaHalf: #d389bb;
+@wtwBlueHalf:    #81cfe8;
+@wtwGreenHalf:   #8cd0bc;
+@wtwGoldHalf:    #f0dc8d;
+
+// Brand Metal Tiers
+@wtwMetalBronze:   #e16e00;
+@wtwMetalSilver:   @gray-light;
+@wtwMetalGold:     #ebaf00;
+@wtwMetalPlatinum: @gray-lightest;
+
+// Alert colors (just the variables needed for the prototype)
+@alert-info-bg: lighten(desaturate(@brand-info, 45%), 60%);
+
+
+// ---------------------------------
+//  Icons (for reference)
+// ---------------------------------
+
+.chevron-down         { &::before { content: "\e61d" } }
+.chevron-up           { &::before { content: "\e620" } }
+.double-chevron-right { &::before { content: "\e62e" } }
+.ok                   { &::before { content: "\e67b" } }
+
+
+// ---------------------------------
+//  Typeface / Emphasis
+// ---------------------------------
+.font-weight--bold() {
+  font-family: 'SourceSansPro-Bold', 'Segoe UI', Segoe, Calibri, Tahoma, sans-serif;
+}
+
+
+// ---------------------------------
+//  Shared styles/Scaffolding/Etc.
+// ---------------------------------
+
+html {
+  background: #fff bottom center fixed no-repeat;
+  background-size: 2700px 350px;
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  
+  &.variant-1 {
+    background-color: @light-violet;
+    background-image: url("../../assets/img/bckgrnd-1.jpg");
+  }
+  
+  &.variant-2 {
+    background-color: @light-blue;
+    background-image: url("../../assets/img/bckgrnd-2.jpg");
+  }
+  
+  &.variant-3 {
+    background-color: @light-green;
+    background-image: url("../../assets/img/bckgrnd-3.jpg");
+  }
+  
+  &.variant-4 {
+    background-color: @light-violet;
+    background-image: url("../../assets/img/bckgrnd-4.jpg");
+  }
+}
+
+body {
+  // background: #fff bottom center no-repeat;
+  background: transparent;
+  // background-size: 2700px 350px;
+  min-height: 100%;
+  padding: 130px 0 380px;
+  position: relative;
+  
+  &.variant-1 {
+    background-color: @light-violet;
+    background-image: url("../../assets/img/bckgrnd-1.jpg");
+  }
+  
+  &.variant-2 {
+    background-color: @light-blue;
+    background-image: url("../../assets/img/bckgrnd-2.jpg");
+  }
+  
+  &.variant-3 {
+    background-color: @light-green;
+    background-image: url("../../assets/img/bckgrnd-3.jpg");
+  }
+  
+  &.variant-4 {
+    background-color: @light-violet;
+    background-image: url("../../assets/img/bckgrnd-4.jpg");
+  }
+}
+
+#qc-content { min-height: 500px; }
+
+.canvas,
+.palette {
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.canvas {
+  margin: 0 15px 30px 15px;
+}
+
+.palette {
+  margin: 0 15px 20px 0;
+  padding: 0 10px 15px;
+  
+  & + .palette {
+    margin: 0 0 20px;
+  }
+}
+
+.label-style {
+  display: block;
+  max-width: 100%;
+  margin: 15px 0 5px;
+  .font-weight--bold();
+}
+
+p {
+  > a {
+    text-decoration: underline;
+    
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// ---------------------------------
+//  "Global" Page Styles
+// ---------------------------------
+.es-header {
+  background: @white;
+  border-bottom: 3px solid @blue;
+  padding: 10px 0 15px;
+
+  .container {
+    position: relative;
+    
+    .logo-mask {
+      display: block;
+      float: left;
+      height: 45px;
+      margin: 5px 0 0;
+      overflow: hidden;
+      position: relative;
+      width: 30%;
+      
+      img.placeholder { 
+        height: auto;
+        left: 0;
+        max-width: 100%;
+        top: 50%;
+        transform: translateY(-28%);
+        width: 100%;
+      }
+      
+      &.client {
+        img.placeholder {
+          max-width: 55%;
+          transform: translateY(-25%);
+        }
+      }
+      
+      & + .logo-mask {
+        margin-left: 35px;
+      }
+    }
+    
+    #global-nav {
+      float: right;
+      margin-top: 5px;
+      position: relative;
+      
+      > .dot {
+        background-color: @magenta;
+        border-radius: 50%;
+        color: @white;
+        font-size: 75%;
+        padding: 2px 8px;
+        outline: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(50%, -50%);
+        -webkit-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.3);
+           -moz-box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.3);
+                box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.3);
+      }
+      
+      &:active {
+        margin-top: 14px;
+      }
+    }
+    
+    #nav-menu {
+      background: @software-gray-9;
+      color: @white;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 0px;
+      overflow-x: hidden;
+      transition: width .5s ease-out;
+      white-space: nowrap;
+      
+      h2 {
+        border-bottom: 2px solid @white;
+        line-height: 24px;
+        margin: 0 0 5px;
+        min-width: 100%;
+        padding: 5px 10px 15px;
+        position: relative;
+        width: 100%;
+        
+        span {
+          cursor: pointer;
+          font-size: 32px;
+          position: relative;
+          right: -45px;
+          top: 5px;
+        }
+      }
+      
+      ul {
+        list-style: none;
+        margin: 0 10px 10px;
+        padding: 0;
+        
+        li {
+          overflow: hidden;
+          
+          a {
+            border-left: 5px solid;
+            border-left-color: @software-gray-9;
+            color: @white;
+            display: block;
+            padding: 10px 10px 10px 5px;
+            position: relative;
+            text-decoration: none;
+            
+            > .badge {
+              background-color: @magenta;
+              position: relative;
+              right: -50%;
+              top: 50%;
+            }
+            
+            &:hover {
+              border-left-color: @blue;
+            }
+          }
+          
+          + li {
+            border-top: 1px solid @software-gray-6;
+          }
+          
+          > ul {
+            border-top: 1px solid @software-gray-6;
+            margin: 0;
+            padding: 0;
+            
+            a {
+              background: @software-gray-7;
+              border-left-color: @software-gray-7;
+              padding-left: 33px;
+            }
+          }
+        }
+      }
+      
+      &.open {
+        //right: 0px;
+        width: 300px;
+      }
+    }
+  }
+  
+  @media (min-width: 768px) {
+    padding: 25px 0;
+    
+    .container .logo-mask {
+      width: 240px;
+    }
+    
+    #global-nav {
+      margin-top: 10px;
+    }
+  }
+}
+
+
+// ---------------------------------
+//  Log In Styles
+// ---------------------------------
+#login-prototype {
+  background-image: none;
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    padding: 0;
+    position: relative;
+      
+    .es-header {
+      border: none;
+      flex: 0;
+      
+      .no-mobile {
+        display: none;
+      }
+    }
+    
+    #main {
+      background: #fff center fixed no-repeat;
+      background-size: 2500px 1000px;
+      flex: 3;
+      
+      .container {
+        position: relative;
+      }
+      
+      .welcome {
+        .font-weight--bold();
+        background-color: rgba(112, 32, 130, 0.6);
+        color: @white;
+        padding: 10px;
+      }
+      
+      .login-panel {
+        background: @software-gray-1;
+        margin-bottom: 20px;
+        padding: 10px 10px 20px;
+        
+        h2 {
+          margin-top: 0;
+        }
+        
+        .btn-primary {
+          display: block;
+        }
+        
+        .alert {
+          margin-bottom: 0;
+        }
+      }
+    }
+    
+    #footer {
+      flex: 2;
+      
+      .footer,
+      .footer-example {
+        border: none;
+        margin-top: ;
+        padding-top: ;
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .es-header {
+        flex: 1;
+        
+        .no-mobile {
+          display: inline;
+        }
+      }
+      
+      #main {
+        
+        .container {
+          min-height: 100%;
+          position: relative;
+        }
+        
+        .welcome {
+          float: left;
+          max-width: 420px;
+          min-width: 270px;
+          height: auto;
+          padding: .75em 1em;
+          width: 45%;
+        }
+        
+        .login-panel {
+          bottom: -50px;
+          padding: 50px 40px;
+          position: absolute;
+          right: 0;
+          top: -50px;
+          
+          h2 {
+            margin-top: 0;
+          }
+          
+          .btn-primary {
+            display: inline;
+            float: right;
+          }
+        }
+      }
+      
+      #footer {
+        flex: 2;
+        
+        .footer,
+        .footer-example {
+          margin-top: 0;
+          padding-top: 70px;
+        }
+      }
+    }
+  }
+  
+  &.variant-1 {
+    #main {
+      background-image: url("../../assets/img/login/login-bg-1.jpg");
+    }
+  }
+  
+  &.variant-2 {
+    #main {
+      background-image: url("../../assets/img/login/login-bg-2.jpg");
+    }
+  }
+  
+  &.variant-3 {
+    #main {
+      background-image: url("../../assets/img/login/login-bg-3.jpg");
+    }
+  }
+  
+  &.variant-4 {
+    #main {
+      background-image: url("../../assets/img/login/login-bg-4.jpg");
+    }
+  }
+}
+
+
+// ---------------------------------
+//  Household Page Styles
+// ---------------------------------
+
+.assem-bucket {
+  background-color: #fff;
+  margin-bottom: 30px;
+  padding: 20px;
+  -webkit-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+  
+  [class^='section-header'] {
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: 850px 257px;
+    height: 257px;
+    margin: -20px -20px 15px;
+    position: relative;
+    
+    h3 {
+      bottom: 20px;
+      color: #fff;
+      left: 20px;
+      margin: 0;
+      position: absolute;
+    }
+    
+    button {
+      bottom: 20px;
+      position: absolute;
+      right: 20px;
+    }
+  }
+  
+  .section-header-family {
+    background-image: url('../../assets/img/illust/wtw-illus1.gif');
+  }
+  
+  .section-header-apps-policies {
+    background-image: url('../../assets/img/illust/wtw-illus2.gif');
+  }
+  
+  .section-header-funds-reimbursements {
+    background-image: url('../../assets/img/illust/wtw-illus3.gif');
+  }
+  
+  .section-header-acct-settings {
+    background-image: url('../../assets/img/illust/wtw-illus4.gif');
+  }
+  
+  > .person {
+    > h4 {
+      margin-bottom: 2px;
+    }
+    
+    > .icon {
+      border-radius: 50%;
+      // color: #fff;
+      display: block;
+      float: left;
+      font-size: 28px;
+      margin-right: 10px;
+      padding: 10px;
+    }
+    
+    > .panel-group {
+      margin-top: 5px;
+    }
+  }
+  
+  > .policy {
+    margin-left: -10px;
+    margin-right: -10px;
+    
+    & + .policy {
+      border-top: 4px solid #444;
+      margin-top: 10px;
+      padding-top: 10px;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .carrier-logo {
+      margin-top: 15px;
+      max-width: 154px;
+    }
+  }
+  
+  .alert {
+    margin-bottom: 0;
+  }
+}
+
+
+// ---------------------------------
+//  Dashboard Styles
+// ---------------------------------
+#dashboard-prototype {
+  .dashboard {
+    .flex-row {
+      display: flex;
+      justify-content: space-between;
+      
+      > .palette {
+        position: relative;
+        
+        &:first-of-type {
+          flex-basis: calc(75% - 15px);
+        }
+        
+        align-self: flex-start;
+        flex-basis: 25%;
+        
+        > .h3,
+        > .h4 {
+          background: @blue-dark;
+          color: @white;
+          margin: 0 -10px 15px;
+          padding: 10px;
+        }
+        
+        .account {
+          background: @software-gray-1;
+          padding: 0 10px 15px;
+        
+          h4 {
+            background: @software-gray-7;
+            color: @white;
+            padding: 5px 10px;
+            margin: 0 -10px 15px;
+          }
+          
+          .basic-info {
+            float: left;
+            margin-right: 15px;
+            width: calc(35% - 15px);
+            
+            > strong {
+              display: block;
+              margin-bottom: 5px;
+            }
+            
+            > span {
+              display: block;
+              
+              & + span {
+                margin-top: 5px;
+              }
+            }
+          }
+          
+          .stats {
+            float: left;
+            position: relative;
+            width: 65%;
+            
+            > a {
+              display: block;
+              position: absolute;
+              top: 0;
+              right: 0;
+              
+              .icon {
+                display: inline-block;
+                margin-left: 6px;
+              }
+            }
+            
+            .balance {
+              border-radius: 50%;
+              display: block;
+              float: left;
+              height: 150px;
+              position: relative;
+              width: 150px;
+              
+              > .donut {
+                background: @software-gray-3;
+                border-radius: 50%;
+                display: block;
+                margin: 0;
+                transition: background 250ms linear;
+                transform: rotate(90deg) scaleX(-1);
+                
+                > .bar {
+                  fill: none;
+                  stroke: @software-gray-6;
+                  stroke-width: 32;
+                  transition: stroke 250ms linear;
+                }
+                
+                > .hole {
+                  fill: @software-gray-1;
+                }
+                
+                &.hra {
+                  background: @magenta-lighter;
+                  
+                  > .bar {
+                    stroke: @magenta;
+                  }
+                }
+                
+                &.hsa {
+                  background: @green-lighter;
+                  
+                  > .bar {
+                    stroke: @green;
+                  }
+                }
+              }
+              
+              .spinner {
+                position: absolute;
+                height: 50px;
+                left: 33.33333%;
+                margin: 0;
+                top: 33.33333%;
+                transform: translate(-50%,-50%);
+                width: 50px;
+              }
+              
+              .bal-fig {
+                display: none;
+                position: absolute;
+                left: 50%;
+                margin: 0;
+                top: 50%;
+                transform: translate(-50%,-50%);
+              }
+            }
+            
+            .legend {
+              position: absolute;
+              border: 1px solid @software-gray-4;
+              bottom: 0;
+              left: 165px;
+              padding: 10px;
+              
+              > span {
+                display: block;
+                padding-left: 27px;
+                position: relative;
+                
+                & + span {
+                  margin-top: 5px;
+                }
+                
+                i {
+                  border: 1px solid @software-gray-4;
+                  display: block;
+                  float: left;
+                  height: 18px;
+                  width: 22px;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  transition: background 250ms linear;
+                }
+                
+                &.total {
+                  i {
+                    background: @software-gray-3;
+                  }
+                }
+                
+                &.bal {
+                  i {
+                    background: @software-gray-6;
+                  }
+                }
+              }
+              
+              &.hra {
+                > span {
+                  &.total {
+                    i {
+                      background: @magenta-lighter;
+                    }
+                  }
+                  
+                  &.bal {
+                    i {
+                      background: @magenta;
+                    }
+                  }
+                }
+              }
+              
+              &.hsa {
+                > span {
+                  &.total {
+                    i {
+                      background: @green-lighter;
+                    }
+                  }
+                  
+                  &.bal {
+                    i {
+                      background: @green;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          
+          & + .account {
+            margin-top: 25px;
+          }
+          
+          &:last-of-type {
+            margin-bottom: 10px;
+          }
+        }
+        
+        .plan {
+          background: @software-gray-1;
+          border: 1px solid @software-gray-1;
+          cursor: pointer;
+          margin: 0 0 15px;
+          padding: 10px;
+          transition: background 250ms linear,
+                      border-color 250ms linear;
+          
+          img {
+            display: block;
+            float: left;
+            height: auto;
+            margin-right: 15px;
+            width: 150px;
+          }
+          
+          p {
+            float: left;
+            margin: 0;
+            width: calc(75% - 165px);
+            
+            strong {
+              display: block;
+            }
+            
+            .icon {
+              color: @software-gray-7;
+              
+              &.covered {
+                color: @black;
+              }
+            }
+          }
+          
+          .status {
+            background: @software-gray-7;
+            border-radius: 2px;
+            color: @white;
+            float: right;
+            margin-top: 5px;
+            padding: 5px 10px;
+            
+            &.active {
+              background: @software-success;
+            }
+            
+            &.issue {
+              background: @software-warning;
+            }
+          }
+          
+          &:hover {
+            background: @white;
+            border-color: @software-gray-5;
+            
+            strong {
+              text-decoration: underline;
+            }
+          }
+          
+          &:last-of-type {
+            margin-bottom: 10px;
+          }
+        }
+        
+        .cards {
+          display: flex;
+          justify-content: space-between;
+          
+          .account {
+            width: 50%;
+            margin: 0 15px 0 0;
+            
+            h4 {
+              min-height: 62px;
+            }
+            
+            .basic-info {
+              float: none;
+              width: auto;
+            }
+            
+            .stats {
+              border-top: 1px solid @software-gray-4;
+              float: none;
+              margin-top: 15px;
+              padding-top: 10px;
+              width: auto;
+              
+              > a {
+                top: 10px;
+                right: 5px;
+              }
+            }
+            
+            & + .account {
+              margin: 0;
+            }
+          }
+          
+          .plan {
+            width: 32%;
+            margin: 0 15px 0 0;
+            
+            img {
+              display: block;
+              float: none;
+              margin-bottom: 15px;
+              width: 100%;
+            }
+            
+            p {
+              float: none;
+              margin-bottom: 15px;
+              width: auto;
+              
+              strong {
+                min-height: 50px;
+              }
+            }
+            
+            .status {
+              display: block;
+              float: none;
+              text-align: center;
+            }
+            
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+        
+        #acct-tools,
+        #plan-tools {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          
+          .switch-view {
+            li {
+              a {
+                background: transparent;
+                border-color: @white;
+                color: @white;
+                
+                &.selected {
+                  -webkit-box-shadow: inset 0 0 5px 2px rgba(255, 255, 255, 0.6);
+                     -moz-box-shadow: inset 0 0 5px 2px rgba(255, 255, 255, 0.6);
+                          box-shadow: inset 0 0 5px 2px rgba(255, 255, 255, 0.6);
+                }
+              }
+              
+              & + li {
+                a {
+                  border-left: none;
+                }
+              }
+            }
+          }
+        }
+        
+        #msg-tools {
+          margin-bottom: 15px;
+        }
+        
+        .message {
+          border-top: 1px solid @software-gray-7;
+          cursor: pointer;
+          padding: 10px;
+          position: relative;
+          transition: background 250ms linear;
+          
+          > .icon {
+            position: absolute;
+            font-size: 22px;
+            top: 10px;
+            left: 10px;
+          }
+          
+          p {
+            margin: 0 0 0 32px;
+            
+            strong {
+              display: block;
+            }
+            
+            > span {
+              display: block;
+              height: 0;
+              overflow: hidden;
+              transition: height 250ms ease-in-out;
+            }
+            
+            a {
+              .icon {
+                display: inline-block;
+                margin-left: 6px;
+              }
+            }
+          }
+          
+          &:last-of-type {
+            margin-bottom: 10px;
+          }
+          
+          &.read {
+            background: @software-gray-3;
+            display: none;
+          }
+          
+          &.unread {
+            background: @white;
+            display: block;
+          }
+          
+          &:hover {
+            background: @software-gray-1;
+          }
+        }
+        
+        &.all {
+          .message {
+            &.read {
+              display: block;
+            }
+          }
+        }
+        
+        &.full {
+          .message {
+            p > span {
+              height: 50px;
+            }
+          }
+        }
+        
+        ul.link-list {
+          list-style-type: none;
+          padding: 0;
+          
+          li {
+            display: block;
+            
+            & + li {
+              margin-top: 7px;
+            }
+            
+            a {
+              display: block;
+              
+              > span {
+                display: none;
+              }
+              
+              &:hover {
+                > span {
+                  display: inline-block;
+                  margin-left: 7px;
+                }
+              }
+            }
+          }
+        }
+        
+        ul.switch-view {
+          display: inline-block;
+          float: right;
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          vertical-align: middle;
+          
+          li {
+            display: block;
+            float: left;
+            position: relative;
+            
+            a {
+              background: #f4f4f4;
+              border: 1px solid #c5c5c5;
+              color: #000;
+              display: block;
+              padding: 7px;
+              position: relative;
+              text-decoration: none;
+              z-index: 10;
+              
+              &.selected {
+                background: #fff;
+                z-index: 20;
+                -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+                   -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+                        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+              }
+              
+              > span {
+                display: block;
+                margin: 0;
+              }
+            }
+            
+            & + li {
+              a {
+                border-left: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  [id$="-popover"] {
+    display: none;
+  }
+}
+
+
+// ---------------------------------
+//  Quote Configuration Styles
+// ---------------------------------
+
+#quote-config-prototype {
+  .popover {
+    max-width: 400px;
+    min-width: 270px;
+    
+    > .popover-content {
+      > ol,
+      > ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      > ol {
+        
+        > li {
+          display: block;
+          
+          > span {
+            float: right;
+            
+            &.ok {
+              color: @brand-success;
+              margin-left: 10px;
+            }
+            
+            &.remove {
+              color: @brand-danger;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      
+      > small {
+        color: @gray-darker;
+        display: block;
+        font-style: italic;
+        line-height: 14px;
+        margin-top: 10px;
+      }
+      
+      > .data-viz {
+        max-width: 200px;
+      }
+    }
+  }
+  
+  &.version-recap {
+    background-color: #eee;
+    background-image: none;
+    padding: 0 0 100px;
+    
+    #recap-wrapper {
+      align-content: center;
+      align-items: center;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      margin: 100px auto 0;
+      width: 85%;
+      
+      > div {
+        font-size: 36px;
+        margin: auto;
+        text-align: center;
+        .font-weight--bold();
+        
+        > img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.quote-config {
+  h1 {
+    // background: url('../../assets/img/quote-config/qc-bg-0-banner.png') left top no-repeat;
+    background: @blue-dark;
+    color: @wtwWhite;
+    margin: 0 -15px 20px;
+    // min-height: 105px;
+    // padding: 50px 15px 10px;
+    padding: 20px 15px;
+  }
+  
+  .step {
+    margin-bottom: 15px;
+    min-height: 130px;
+    
+    .h4 {
+      font-weight: normal;
+      margin-top: 0;
+      
+      > .popover-link {
+        border-bottom-style: dotted;
+        border-bottom-width: 2px;
+        
+        &:hover {
+          border-bottom-style: solid;
+        }
+      }
+      
+      > strong {
+        .font-weight--bold();
+      }
+    }
+    
+    > div {
+      padding: 0;
+    }
+    
+    .option-selector {
+      
+      .disabled {
+        position: relative;
+        
+        & > button {
+          background: transparent;
+          border: 0px none;
+          cursor: not-allowed;
+          padding: 0;
+          
+          &.popover-link {
+            color: inherit;
+            padding: 7px 15px 3px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            
+            &:hover {
+              color: inherit;
+              cursor: url(../../assets/img/cursors/pointer-help.png) 10 0, pointer;
+            }
+          }
+        }
+      }
+      
+      &.horizontal {
+        
+        > button {
+          margin-right: 15px;
+          
+          &.selected {
+            background: @software-blue;
+            box-shadow: none;
+            color: @wtwWhite;
+            margin: 4px 15px 0 0;
+            
+            > span.icon {
+              .ok;
+            }
+          }
+          
+          &.popover-link {
+            border-bottom: 0px none;
+            color: @wtwBlack;
+            margin: 0 20px 0 -10px;
+            
+            &:hover {
+              color: @magenta;
+            }
+          }
+        }
+      }
+      
+      &.vertical {
+        padding: 0;
+        
+        > .selection-row {
+          display: block;
+          
+          > .btn-icon {
+            display: block;
+            float: left;
+            min-width: 200px;
+            text-align: left;
+            
+            & + .chckbx {
+              display: none;
+            }
+            
+            & ~ .dual-eligible-help {
+              display: inline-block;
+              margin: 7px 0 0 15px;
+              font-style: italic;
+            }
+            
+            &.selected,
+            &[disabled] {
+              & + .chckbx {
+                display: inline-block;
+                margin: 0 0 0 15px;
+                
+                > label {
+                  margin: 2px 0 0;
+                  padding-bottom: 0;
+                }
+              }
+              
+              & ~ .dual-eligible-help {
+                margin: 0 0 0 15px;
+              }
+            }
+            
+            &.selected {
+              background: @software-blue;
+              box-shadow: none;
+              color: @wtwWhite;
+              margin: 4px 0 0;
+              
+              > span.icon {
+                .ok;
+              }
+            }
+          }
+          
+          & + .selection-row {
+            margin-top: 15px;
+          }
+          
+          > .alert {
+            clear: left;
+            margin: 13px 0 10px 0;
+          }
+        }
+      }
+    }
+    
+    &.who {
+      background: url('../../assets/img/quote-config/spot-1.png') left top no-repeat;
+      background-size: 120px;
+      padding-left: 135px;
+      
+      > div.medicare,
+      > div.ifp {
+        background: @software-gray-1;
+        border: 1px solid transparent;
+        margin-bottom: 15px;
+        overflow: hidden;
+        padding: 15px;
+        position: relative;
+        transition: all .25s;
+        
+        > .h5 {
+          margin: 0 170px 15px 0;
+        }
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+        
+        > .incompatibility-alert {
+          display: none;
+          margin-bottom: 0;
+          opacity: 0;
+          transition: all .25s;
+          visibility: hidden;
+        }
+        
+        > .violator {
+          height: 200px;
+          position: absolute;
+          right: -30px;
+          opacity: 0;
+          top: -50px;
+          visibility: hidden;
+          width: 200px;
+          transition: opacity 150ms linear;
+          
+          > a,
+          > a:visited {
+            background: @brand-info;
+            border-radius: 50%;
+            color: @white;
+            display: block;
+            height: 185px;
+            padding: 60px 30px 10px;
+            text-align: center;
+            width: 185px;
+            text-decoration: none;
+            transition: all 150ms linear;
+            .font-weight--bold();
+          }
+          
+          > a:hover {
+            background: @blue-lighter;
+            color: @blue-dark;
+            text-decoration: none;
+          }
+          
+          > a:active {
+            transform: scale(.9);
+            text-decoration: none;
+          }
+        }
+        
+        &.activated {
+          background: @wtwWhite;
+        }
+        
+        &.incompatible {
+          // background: desaturate(darken(@wtwSand, 15%), 25%);
+          background: transparent;
+          border: 1px dotted desaturate(darken(@wtwSand, 15%), 25%);
+          
+          > .incompatibility-alert {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+          }
+          
+          > .violator {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    
+    &.when-where {
+      background: url('../../assets/img/quote-config/spot-4.png') left top no-repeat;
+      background-size: 120px;
+      padding-left: 135px;
+    }
+  }
+  
+  .cta {
+    margin: 30px 0;
+  }
+}
+
+
+// ---------------------------------
+//  Quote Results Styles
+// ---------------------------------
+
+#quote-results-prototype {
+  position: relative;
+  
+  > #curtain {
+    left: 0px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 20;
+  }
+  
+  #metal-tiers-explained {
+    height: 0px;
+    visibility: hidden;
+  }
+  
+  #network-types-modal {
+    table {
+      thead {
+        th {
+          text-align: center;
+        }
+      }
+      
+      tbody {
+        td {
+          text-align: center;
+        }
+      }
+    }
+  }
+  
+  .popover {
+    max-width: 400px;
+    min-width: 270px;
+    
+    > .popover-content {
+      
+      > ul {
+        padding: 0 0 0 20px;
+      }
+      
+      > ol {
+        list-style-type: none;
+        padding: 0;
+        
+        > li {
+          display: block;
+          
+          > span {
+            float: right;
+            
+            &.ok {
+              color: @brand-success;
+              margin-left: 10px;
+            }
+            
+            &.remove {
+              color: @brand-danger;
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+      
+      > small {
+        color: @gray-darker;
+        display: block;
+        font-style: italic;
+        line-height: 14px;
+        margin-top: 10px;
+      }
+      
+      > .star-rating {
+        display: block;
+        height: 27px;
+        margin-bottom: 15px;
+        width: 156px;
+        
+        .bg rect {
+          fill: @gray-dark;
+          height: 100%;
+          width: 100%;
+        }
+        
+        .mask .bar {
+          fill: @wtwGold;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+#quote-results {
+  .context-bar {
+    padding: 15px 0;
+    
+    .h4 {
+      color: @software-gray-7;
+      font-weight: normal;
+      margin: 0;
+      line-height: 150%;
+      
+      > strong {
+        color: @wtwBlack;
+        white-space: nowrap;
+        .font-weight--bold();
+      }
+    }
+    
+    a {
+      transform: translateY(100%);
+    }
+  }
+  
+  #plan-tabs {
+    margin: 0 15px;
+    
+    > #plan-tabs-controls.tabs {
+      margin-bottom: 0;
+      
+      > li {
+        & + li {
+          margin-left: 15px;
+        }
+        
+        > a {
+          background: @wtwWhite;
+          border: 1px solid @gray-light;
+          color: @wtwBlack;
+          
+          > .icon {
+            float: left;
+          }
+          
+          > h3 {
+            display: block;
+            margin: 2px 0 3px 25px;
+            .font-weight--bold();
+          }
+          
+          > small {
+            display: block;
+            color: @gray-darker;
+            margin-left: 25px;
+            .font-weight--bold();
+          }
+        }
+        
+        &.active > a {
+          border-bottom-color: transparent;
+        }
+      }
+    }
+  }
+  
+  .filters {
+    background: @gray-lighter;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+    height: 150px;
+    margin: 15px 0 25px;
+    position: relative;
+    overflow: visible;
+    z-index: 60;
+    
+    > ul {
+      height: 100%;
+      margin: 0;
+      overflow: visible;
+      padding: 0;
+      position: relative;
+      z-index: 50;
+      
+      > li {
+        display: block;
+        float: left;
+        height: 100%;
+        
+        & + li {
+          border-left: 1px solid @gray;
+        }
+        
+        > a {
+          color: @wtwBlack;
+          display: block;
+          height: 100%;
+          padding-top: 30px;
+          padding: 10px;
+          position: relative;
+          
+          &:hover,
+          &:active {
+            background: @gray;
+            text-decoration: none;
+          }
+          
+          &:focus{
+            text-decoration: none;
+          }
+          
+          > .icon {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            .double-chevron-right;
+            transform: rotate(90deg);
+            transition: transform .5s;
+          }
+          
+          > .selection {
+            font-size: 80%;
+          }
+          
+          &.open {
+            background: @gray-light;
+            
+            > .icon {
+              transform: rotate(-90deg);
+            }
+          }
+          
+          &.carrier,
+          &.metal-tier,
+          &.plan-type,
+          &.hsa,
+          &.doctor-visit,
+          &.drug-coverage {
+            padding-top: 45px;
+            text-align: center;
+            width: 127px;
+          }
+        }
+        
+        .h5 {
+          margin: 0;
+        }
+        
+        &.aptc {
+          padding: 10px;
+        }
+      }
+    }
+    
+    > .filter-drawer {
+      background: @gray-light;
+      box-shadow: 0 4px 5px 0px rgba(0, 0, 0, 0.3);
+      margin: 0;
+      padding: 15px 10px;
+      position: absolute;
+      width: 100%;
+      z-index: 60;
+      
+      > h5 {
+        float: left;
+        margin: 0;
+        width: 150px;
+      }
+      
+      > ol {
+        list-style-type: none;
+        padding-left: 170px;
+        
+        > li {
+          display: block;
+          float: left;
+          width: 25%;
+          
+          &:nth-child(5n) {
+            clear: left;
+          }
+          
+          > .checkbox {
+            margin: 0;
+            
+            > label {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+    
+    .popover-link {
+      border: none;
+      color: #000;
+      
+      &:hover {
+        border: none;
+        color: @brand-primary-accent;
+      }
+    }
+  }
+  
+  .results-tools {
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 55;
+    
+    > .plan-count {
+      border: 1px solid @brand-primary-accent;
+      border-radius: 4px;
+      color: @brand-primary-accent;
+      display: inline-block;
+      margin: 7px 0 0;
+      padding: 7px 10px;
+    }
+    
+    > .sort-view {
+      float: right;
+      
+      > span {
+        display: inline-block;
+        margin: 0 10px 0 20px;
+      }
+      
+      > .btn-group {
+        > .btn {
+          &.active {
+            // background: @brand-info;
+            background: @gray-dark;
+            -webkit-box-shadow: 0px 4px 0px 0px darken(@gray-dark, 10%);
+               -moz-box-shadow: 0px 4px 0px 0px darken(@gray-dark, 10%);
+                    box-shadow: 0px 4px 0px 0px darken(@gray-dark, 10%);
+            color: @wtwWhite;
+          }
+        }
+      }
+      
+      > ul {
+        display: inline-block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        
+        > li {
+          display: block;
+          float: left;
+          position: relative;
+          
+          > a {
+            background: @gray-lightest;
+            border: 1px solid @gray;
+            color: @wtwBlack;
+            display: block;
+            font-size: 28px;
+            line-height: 23px;
+            padding: 10px;
+            position: relative;
+            text-decoration: none;
+            z-index: 10;
+            
+            &.selected {
+              background: @wtwWhite;
+              z-index: 20;
+              -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+                 -moz-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+                      box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
+            }
+          }
+          
+          & + li {
+            > a {
+              border-left: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  #plan-tiles {
+    
+    > ol {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      
+      > li {
+        border: 1px solid @gray-dark;
+        display: block;
+        margin: 0 0 15px;
+        -webkit-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+           -moz-box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+        
+        > h5 {
+          background: @gray-lighter;
+          border-bottom: 1px solid @gray;
+          margin: 0 0 15px;
+          
+          > a {
+            color: @wtwBlack;
+            display: block;
+            padding: 15px;
+            text-decoration: underline;
+            
+            &:hover {
+              color: @brand-primary-accent;
+              text-decoration: none;
+            }
+          }
+        }
+        
+        > .carrier-logo {
+          display: block;
+          float: left;
+          margin: 0 0 15px 15px;
+          width: 160px;
+          
+          > img {
+            width: 100%;
+          }
+        }
+        
+        .premium {
+          > .h1 {
+            .font-weight--bold();
+            
+            > sup {
+              top: -0.25em;
+              
+              &.cents {
+                font-weight: normal;
+              }
+            }
+          }
+          
+          > sup {
+            font-size: 18px;
+          }
+        }
+        
+        .label {
+          border-width: 2px;
+          border-style: solid;
+          color: @gray-darker;
+          display: inline-block;
+          padding: 0;
+          font-size: 80%;
+          margin-right: 7px;
+          text-transform: none;
+          transition: all ease-in-out .3s;
+          
+          &.bronze {
+            border-color: @wtwMetalBronze;
+            
+            &:hover {
+              background: @wtwMetalBronze;
+              // color: @wtwWhite;
+            }
+          }
+          
+          &.silver {
+            border-color: @gray;
+            
+            &:hover {
+              background: @wtwMetalSilver;
+              border-color: @wtwMetalSilver;
+            }
+          }
+          
+          &.gold {
+            border-color: @wtwMetalGold;
+            
+            &:hover {
+              background: @wtwMetalGold;
+            }
+          }
+          
+          &.platinum {
+            border-color: @gray-lighter;
+            
+            &:hover {
+              background: @wtwMetalPlatinum;
+            }
+          }
+          
+          > .popover-link {
+            border: none;
+            color: inherit;
+            display: inherit;
+            padding: 5px 8px;
+          }
+        }
+        
+        .network-type {
+          display: inline-block;
+          margin: 0;
+          vertical-align: middle;
+          transition: all ease-in-out .3s;
+          
+          > .popover-link {
+            border: none;
+            border-radius: 0px;
+            color: inherit;
+            padding: 0px 3px;
+          }
+          
+          &:hover {
+            background: @gray-lighter;
+            color: @gray-darker;
+          }
+        }
+        
+        .star-rating {
+          display: block;
+          height: 27px;
+          width: 156px;
+          
+          > button {
+            height: 100%;
+            width: 100%;
+          }
+          
+          .bg rect {
+            fill: @gray-dark;
+            height: 100%;
+            width: 100%;
+          }
+          
+          .mask .bar {
+            fill: @wtwGold;
+            height: 100%;
+          }
+          
+          &:hover {
+            .mask .bar {
+              fill: darken(@wtwGold, 10%);
+            }
+          }
+        }
+        
+        > .plan-footer {
+          background: @gray-lighter;
+          border-top: 1px solid @gray;
+          display: block;
+          padding: 10px;
+          
+          > .chckbx {
+            margin: 0;
+            
+            > label {
+              margin: 0;
+            }
+          }
+          
+          > button {
+            transition: all ease-in-out 0.3s;
+          }
+        }
+        
+        [class$="popover-content"] {
+          display: none;
+        }
+        
+        > table {
+          font-size: 80%;
+          margin: 0 15px 15px 5px;
+          
+          > thead {
+            th {
+              padding: 0 10px 2px 10px;
+              
+              & + th {
+                border-left: 1px solid @gray;
+              }
+              
+              > .popover-link {
+                border-color: @gray-dark;
+                color: @gray-dark;
+                text-transform: uppercase;
+                
+                &:hover {
+                  border-coolor: @gray-darker;
+                  color: @gray-darker;
+                }
+              }
+            }
+          }
+          
+          > tbody {
+            td {
+              padding: 2px 10px 0 10px;
+              
+              & + td {
+                border-left: 1px solid @gray;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    &.full,
+    &.short {
+      > ol {
+        > li {
+          > .premium {
+            float: right;
+            margin: 0 15px 0 0;
+            
+            > a {
+              color: @wtwBlack;
+              display: block;
+              text-align: right;
+              text-decoration: underline;
+              
+              &:hover {
+                color: @brand-primary-accent;
+                text-decoration: none;
+              }
+            }
+          }
+          
+          > .details-card {
+            display: none;
+          }
+          
+          > .details-large {
+            clear: left;
+            display: block;
+            margin: 0 0 15px 15px;
+            position: relative;
+            
+            > .detail-row {
+              display: block;
+              margin-bottom: 15px;
+              
+              > .icon {
+                font-size: 24px;
+                margin-right: 7px;
+                
+                &::before {
+                  position: relative;
+                  top: 4px;
+                }
+              }
+            }
+            
+            > .hmc {
+              border-left: 1px solid @gray;
+              border-right: 1px solid @gray;
+              display: block;
+              padding: 0 15px;
+              position: absolute;
+              left: 240px;
+              top: -70px;
+              
+              > .h5 {
+                margin-top: 0;
+              }
+              
+              > .docs-covered {
+                display: block;
+                float: left;
+                height: 110px;
+                width: 110px;
+                position: relative;
+              
+                > .donut {
+                  background: @gray-lightest;
+                  border-radius: 50%;
+                  display: block;
+                  margin: 0;
+                  transform: rotate(-90deg);
+                  
+                  > .bar {
+                    fill: none;
+                    stroke-width: 32;
+                    
+                    &.drs10 {
+                      stroke: @brand-info-10;
+                    }
+                    
+                    &.drs20 {
+                      stroke: @brand-info-20;
+                    }
+                    
+                    &.drs30 {
+                      stroke: @brand-info-30;
+                    }
+                    
+                    &.drs40 {
+                      stroke: @brand-info-40;
+                    }
+                    
+                    &.drs50 {
+                      stroke: @brand-info-50;
+                    }
+                    
+                    &.drs60 {
+                      stroke: @brand-info-60;
+                    }
+                    
+                    &.drs70 {
+                      stroke: @brand-info-70;
+                    }
+                    
+                    &.drs80 {
+                      stroke: @brand-info-80;
+                    }
+                    
+                    &.drs90 {
+                      stroke: @brand-info-90;
+                    }
+                    
+                    &.drs100 {
+                      stroke: @brand-info;
+                    }
+                  }
+                  
+                  > .hole {
+                    fill: #fff;
+                  }
+                }
+                
+                > button {
+                  border-style: none;
+                  border-radius: 50%;
+                  color: @gray-darker;
+                  display: block;
+                  height: 110px;
+                  margin: 0 auto;
+                  left: 50%;
+                  outline: none;
+                  position: absolute;
+                  top: 50%;
+                  transition: box-shadow .05s linear;
+                  transform: translate(-50%, -50%);
+                  width: 110px;
+                  
+                  &:focus {
+                    box-shadow: 0 0 3px 3px #83bffc;
+                  }
+                  
+                  > .h3 {
+                    left: 37px;
+                    line-height: 30px;
+                    margin: 0;
+                    position: absolute;
+                    text-align: center;
+                    top: 25px;
+                    .font-weight--bold();
+                    
+                    &::after {
+                      background: @gray-dark;
+                      bottom: -6px;
+                      content: '';
+                      display: block;
+                      height: 30px;
+                      position: absolute;
+                      right: -8px;
+                      transform: rotate(20deg);
+                      width: 3px;
+                    }
+                  }
+                  
+                  > .h5 {
+                    bottom: 48px;
+                    font-weight: normal;
+                    line-height: 20px;
+                    margin: 0;
+                    position: absolute;
+                    right: 35px;
+                  }
+                  
+                  &.double-digit {
+                    > .h3 {
+                      left: 27px;
+                      min-width: 33.38px;
+                      top: 25px;
+                      
+                      &::after {
+                        bottom: -7px;
+                        right: -7px;
+                      }
+                    }
+                    
+                    > .h5 {
+                      bottom: 45px;
+                      min-width: 20.03px;
+                      right: 21px;
+                    }
+                  }
+                  
+                  > small {
+                    bottom: 30px;
+                    display: inline-block;
+                    left: 50%;
+                    position: absolute;
+                    transform: translateX(-50%);
+                    .font-weight--bold();
+                  }
+                }
+              }
+              
+              > .data-viz {
+                float: left;
+                height: 100px;
+                margin-left: 15px;
+              }
+              
+              > [data-details] {
+                border: 0px none;
+                border-radius: 50%;
+                height: 30px;
+                outline: none;
+                position: absolute;
+                text-indent: -9999px;
+                transition: box-shadow linear .05s;
+                transform: translateX(-50%);
+                width: 30px;
+                
+                &:hover {
+                  //background: rgba(255,255,255,.3);
+                  animation: pulse 2s infinite;
+                }
+                
+                &:focus {
+                  box-shadow: 0 0 3px 3px #83bffc;
+                }
+                
+                &[class*='rx-det'] {
+                  top: 102px;
+                  
+                  // Experimantal Styles for testing 2016.12.12
+                  background: @wtwMagenta;
+                  
+                  &::after {
+                    background: url('../../assets/img/quote-results/icons/icon-rx-new.png') center center no-repeat;
+                    background-size: 20px;
+                    border-radius: 50%;
+                    color: #fff;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    left: 0px;
+                    padding-top: 6px;
+                    position: absolute;
+                    text-indent: 0px;
+                    top: 0px;
+                    width: 100%;
+                  }
+                  
+                  &:hover {
+                    //background: desaturate(lighten(@wtwMagenta, 15%), 20%);
+                    animation: pulse-rx 2s infinite;
+                  }
+                  
+                  &[class$="-bar"]::after {
+                    display: none;
+                  }
+                }
+                
+                &[class$="-bar"] {
+                  border-radius: 0;
+                  height: 14px;
+                  top: 75px;
+                  transform: translateX(-50%);
+                }
+                
+                // HMC Premium Details Popovers - IFP
+                &.ifp-prem-det-0 {
+                  left: 168px;
+                  
+                  &-bar {
+                    left: 168px;
+                    width: 44px;
+                  }
+                }
+                
+                &.ifp-prem-det-1 {
+                  left: 176px;
+                  
+                  &-bar {
+                    left: 176px;
+                    width: 58px;
+                  }
+                }
+                
+                &.ifp-prem-det-2 {
+                  left: 181px;
+                  
+                  &-bar {
+                    left: 181px;
+                    width: 68px;
+                  }
+                }
+                
+                &.ifp-prem-det-3 {
+                  left: 186px;
+                  
+                  &-bar {
+                    left: 186px;
+                    width: 78px;
+                  }
+                }
+                
+                &.ifp-prem-det-4 {
+                  left: 198px;
+                  
+                  &-bar {
+                    left: 198px;
+                    width: 100px;
+                  }
+                }
+                
+                &.ifp-prem-det-5 {
+                  left: 202px;
+                  
+                  &-bar {
+                    left: 202px;
+                    width: 108px;
+                  }
+                }
+                
+                &.ifp-prem-det-6 {
+                  left: 210px;
+                  
+                  &-bar {
+                    left: 210px;
+                    width: 125px;
+                  }
+                }
+                
+                &.ifp-prem-det-7 {
+                  left: 234px;
+                  
+                  &-bar {
+                    left: 234px;
+                    width: 173px;
+                  }
+                }
+                
+                &.ifp-prem-det-8 {
+                  left: 247px;
+                  
+                  &-bar {
+                    left: 235px;
+                    width: 174px;
+                  }
+                }
+                
+                &.ifp-prem-det-9 {
+                  left: 247px;
+                  
+                  &-bar {
+                    left: 247px;
+                    width: 200px;
+                  }
+                }
+                
+                &.ifp-prem-det-10 {
+                  left: 277px;
+                  
+                  &-bar {
+                    left: 277px;
+                    width: 259px;
+                  }
+                }
+                
+                &.ifp-prem-det-11 {
+                  left: 283px;
+                  
+                  &-bar {
+                    left: 283px;
+                    width: 272px;
+                  }
+                }
+                
+                // HMC Premium Details Popovers - Medicare
+                &.medicare-prem-det-0 {
+                  left: 154px;
+                  
+                  &-bar {
+                    left: 154px;
+                    width: 13px;
+                  }
+                }
+                
+                &.medicare-prem-det-1 {
+                  left: 154px;
+                  
+                  &-bar {
+                    left: 154px;
+                    width: 13px;
+                  }
+                }
+                
+                &.medicare-prem-det-2 {
+                  left: 154px;
+                  
+                  &-bar {
+                    left: 154px;
+                    width: 13px;
+                  }
+                }
+                
+                &.medicare-prem-det-3 {
+                  left: 154px;
+                  
+                  &-bar {
+                    left: 154px;
+                    width: 13px;
+                  }
+                }
+                
+                &.medicare-prem-det-4 {
+                  left: 198px;
+                  
+                  &-bar {
+                    left: 198px;
+                    width: 100px;
+                  }
+                }
+                
+                &.medicare-prem-det-5 {
+                  left: 202px;
+                  
+                  &-bar {
+                    left: 202px;
+                    width: 108px;
+                  }
+                }
+                
+                &.medicare-prem-det-6 {
+                  left: 234px;
+                  
+                  &-bar {
+                    left: 234px;
+                    width: 171px;
+                  }
+                }
+                
+                &.medicare-prem-det-7 {
+                  left: 234px;
+                  
+                  &-bar {
+                    left: 234px;
+                    width: 173px;
+                  }
+                }
+                
+                &.medicare-prem-det-8 {
+                  left: 247px;
+                  
+                  &-bar {
+                    left: 248px;
+                    width: 198px;
+                  }
+                }
+                
+                &.medicare-prem-det-9 {
+                  left: 258px;
+                  
+                  &-bar {
+                    left: 257px;
+                    width: 218px;
+                  }
+                }
+                
+                &.medicare-prem-det-10 {
+                  left: 275px;
+                  
+                  &-bar {
+                    left: 275px;
+                    width: 254px;
+                  }
+                }
+                
+                &.medicare-prem-det-11 {
+                  left: 283px;
+                  
+                  &-bar {
+                    left: 283px;
+                    width: 272px;
+                  }
+                }
+                
+                // HMC Prescription Details Popovers - IFP
+                &.ifp-rx-det-0 {
+                  left: 236px;
+                  
+                  &-bar {
+                    left: 236px;
+                    width: 88px;
+                  }
+                }
+                
+                &.ifp-rx-det-1 {
+                  left: 247px;
+                  
+                  &-bar {
+                    left: 247px;
+                    width: 81px;
+                  }
+                }
+                
+                &.ifp-rx-det-2 {
+                  left: 253px;
+                  
+                  &-bar {
+                    left: 253px;
+                    width: 75px;
+                  }
+                }
+                
+                &.ifp-rx-det-3 {
+                  left: 266px;
+                  
+                  &-bar {
+                    left: 266px;
+                    width: 84px;
+                  }
+                }
+                
+                &.ifp-rx-det-4 {
+                  left: 277px;
+                  
+                  &-bar {
+                    left: 277px;
+                    width: 57px;
+                  }
+                }
+                
+                &.ifp-rx-det-5 {
+                  left: 274px;
+                  
+                  &-bar {
+                    left: 274px;
+                    width: 31px;
+                  }
+                }
+                
+                &.ifp-rx-det-6 {
+                  left: 305px;
+                  
+                  &-bar {
+                    left: 305px;
+                    width: 64px;
+                  }
+                }
+                
+                &.ifp-rx-det-7 {
+                  left: 337px;
+                  
+                  &-bar {
+                    left: 337px;
+                    width: 33px;
+                  }
+                }
+                
+                &.ifp-rx-det-8 {
+                  left: 351px;
+                  
+                  &-bar {
+                    left: 351px;
+                    width: 55px;
+                  }
+                }
+                
+                &.ifp-rx-det-9 {
+                  left: 363px;
+                  
+                  &-bar {
+                    left: 363px;
+                    width: 33px;
+                  }
+                }
+                
+                &.ifp-rx-det-10 {
+                  left: 423px;
+                  
+                  &-bar {
+                    left: 423px;
+                    width: 30px;
+                  }
+                }
+                
+                &.ifp-rx-det-11 {
+                  left: 435px;
+                  
+                  &-bar {
+                    left: 435px;
+                    width: 30px;
+                  }
+                }
+                
+                // HMC Prescription Details Popovers - Medicare
+                &.medicare-rx-det-0 {
+                  left: 206px;
+                  
+                  &-bar {
+                    left: 206px;
+                    width: 88px;
+                  }
+                }
+                
+                &.medicare-rx-det-1 {
+                  left: 206px;
+                  
+                  &-bar {
+                    left: 206px;
+                    width: 88px;
+                  }
+                }
+                
+                &.medicare-rx-det-2 {
+                  left: 185px;
+                  
+                  &-bar {
+                    left: 185px;
+                    width: 49px;
+                  }
+                }
+                
+                &.medicare-rx-det-3 {
+                  left: 206px;
+                  
+                  &-bar {
+                    left: 206px;
+                    width: 90px;
+                  }
+                }
+                
+                &.medicare-rx-det-4 {
+                  left: 272px;
+                  
+                  &-bar {
+                    left: 272px;
+                    width: 50px;
+                  }
+                }
+                
+                &.medicare-rx-det-5 {
+                  left: 274px;
+                  
+                  &-bar {
+                    left: 274px;
+                    width: 31px;
+                  }
+                }
+                
+                &.medicare-rx-det-6 {
+                  left: 345px;
+                  
+                  &-bar {
+                    left: 345px;
+                    width: 49px;
+                  }
+                }
+                
+                &.medicare-rx-det-7 {
+                  left: 337px;
+                  
+                  &-bar {
+                    left: 337px;
+                    width: 33px;
+                  }
+                }
+                
+                &.medicare-rx-det-8 {
+                  left: 364px;
+                  
+                  &-bar {
+                    left: 364px;
+                    width: 33px;
+                  }
+                }
+                
+                &.medicare-rx-det-9 {
+                  left: 383px;
+                  
+                  &-bar {
+                    left: 383px;
+                    width: 32px;
+                  }
+                }
+                
+                &.medicare-rx-det-10 {
+                  left: 418px;
+                  
+                  &-bar {
+                    left: 418px;
+                    width: 31px;
+                  }
+                }
+                
+                &.medicare-rx-det-11 {
+                  left: 435px;
+                  
+                  &-bar {
+                    left: 435px;
+                    width: 30px;
+                  }
+                }
+                
+                // Medical Estimate Details popovers - IFP
+                &.ifp-med-det-0 {
+                  left: 322px;
+                  
+                  &-bar {
+                    left: 322px;
+                    width: 84px;
+                  }
+                }
+                
+                &.ifp-med-det-1 {
+                  left: 326px;
+                  
+                  &-bar {
+                    left: 327px;
+                    width: 78px;
+                  }
+                }
+                
+                &.ifp-med-det-2 {
+                  left: 326px;
+                  
+                  &-bar {
+                    left: 326px;
+                    width: 72px;
+                  }
+                }
+                
+                &.ifp-med-det-3 {
+                  left: 361px;
+                  
+                  &-bar {
+                    left: 361px;
+                    width: 106px;
+                  }
+                }
+                
+                &.ifp-med-det-4 {
+                  left: 357px;
+                  
+                  &-bar {
+                    left: 357px;
+                    width: 102px;
+                  }
+                }
+                
+                &.ifp-med-det-5 {
+                  left: 340px;
+                  
+                  &-bar {
+                    left: 341px;
+                    width: 103px;
+                  }
+                }
+                
+                &.ifp-med-det-6 {
+                  left: 376px;
+                  
+                  &-bar {
+                    left: 377px;
+                    width: 80px;
+                  }
+                }
+                
+                &.ifp-med-det-7 {
+                  left: 387px;
+                  
+                  &-bar {
+                    left: 388px;
+                    width: 69px;
+                  }
+                }
+                
+                &.ifp-med-det-8 {
+                  left: 413px;
+                  
+                  &-bar {
+                    left: 414px;
+                    width: 71px;
+                  }
+                }
+                
+                &.ifp-med-det-9 {
+                  left: 419px;
+                  
+                  &-bar {
+                    left: 419px;
+                    width: 79px;
+                  }
+                }
+                
+                &.ifp-med-det-10 {
+                  left: 451px;
+                  
+                  &-bar {
+                    left: 451px;
+                    width: 26px;
+                  }
+                }
+                
+                &.ifp-med-det-11 {
+                  left: 465px;
+                  
+                  &-bar {
+                    left: 465px;
+                    width: 30px;
+                  }
+                }
+                
+                // Medical Estimate Details popovers - Medicare
+                &.medicare-med-det-0 {
+                  left: 347px;
+                  
+                  &-bar {
+                    left: 347px;
+                    width: 190px;
+                  }
+                }
+                
+                &.medicare-med-det-1 {
+                  left: 346px;
+                  
+                  &-bar {
+                    left: 346px;
+                    width: 190px;
+                  }
+                }
+                
+                &.medicare-med-det-2 {
+                  left: 269px;
+                  
+                  &-bar {
+                    left: 269px;
+                    width: 121px;
+                  }
+                }
+                
+                &.medicare-med-det-3 {
+                  left: 347px;
+                  
+                  &-bar {
+                    left: 347px;
+                    width: 190px;
+                  }
+                }
+                
+                &.medicare-med-det-4 {
+                  left: 326px;
+                  
+                  &-bar {
+                    left: 326px;
+                    width: 58px;
+                  }
+                }
+                
+                &.medicare-med-det-5 {
+                  left: 319px;
+                  
+                  &-bar {
+                    left: 319px;
+                    width: 59px;
+                  }
+                }
+                
+                &.medicare-med-det-6 {
+                  left: 408px;
+                  
+                  &-bar {
+                    left: 408px;
+                    width: 77px;
+                  }
+                }
+                
+                &.medicare-med-det-7 {
+                  left: 392px;
+                  
+                  &-bar {
+                    left: 392px;
+                    width: 79px;
+                  }
+                }
+                
+                &.medicare-med-det-8 {
+                  left: 428px;
+                  
+                  &-bar {
+                    left: 428px;
+                    width: 95px;
+                  }
+                }
+                
+                &.medicare-med-det-9 {
+                  left: 439px;
+                  
+                  &-bar {
+                    left: 439px;
+                    width: 79px;
+                  }
+                }
+                
+                &.medicare-med-det-10 {
+                  left: 446px;
+                  
+                  &-bar {
+                    left: 446px;
+                    width: 26px;
+                  }
+                }
+                
+                &.medicare-med-det-11 {
+                  left: 462px;
+                  
+                  &-bar {
+                    left: 462px;
+                    width: 28px;
+                  }
+                }
+              }
+              
+              > strong {
+                display: inline-block;
+                float: left;
+                font-size: 22px;
+                margin-left: 10px;
+                position: relative;
+                top: 36px;
+              }
+            }
+          }
+          
+          > .snapshot-card {
+            display: none;
+          }
+        }
+      }
+    }
+    
+    &.short {
+      > ol {
+        > li {
+          > table {
+            display: none;
+          }
+        }
+      }
+    }
+    
+    &.cards {
+      > ol {
+        > li {
+          float: left;
+          margin-right: 15px;
+          width: 32.43%;
+          
+          > h5 {
+            display: none;
+          }
+          
+          > .carrier-logo {
+            margin-top: 15px;
+            
+            > img {
+              max-width: 120px;
+            }
+          }
+          
+          > .premium {
+            clear: left;
+            display: block;
+            margin: 0 auto 15px;
+            position: relative;
+            text-align: center;
+            width: 200px;
+            
+            > a {
+              color: @wtwBlack;
+              position: absolute;
+              right: -60px;
+              text-decoration: underline;
+              top: -55px;
+              
+              // display: none;
+              
+              &:hover {
+                color: @brand-primary-accent;
+                text-decoration: none;
+              }
+            }
+          }
+          
+          > .details-card {
+            display: block;
+            margin: 0 15px 15px;
+            
+            > .detail-row {
+              display: block;
+              margin: 0 0 7px;
+              position: relative;
+              text-align: center;
+              
+              > .data-viz {
+                max-width: 100%;
+              }
+              
+              > .label-style {
+                display: block;
+                float: left;
+                margin: 3px 15px 5px 0;
+                text-align: right;
+                width: 80px;
+              }
+              
+              > ol {
+                display: block;
+                list-style-type: none;
+                margin: 0 auto 0;
+                padding: 0;
+                width: 85%;
+                
+                > li {
+                  display: block;
+                  float: left;
+                  
+                  > .icon {
+                    font-size: 24px;
+                  }
+                  
+                  > .star-rating {
+                    float: left;
+                    height: 21px;
+                    margin-top: 3px;
+                    width: 120px;
+                    
+                    > button {
+                      height: 100%;
+                      width: 100%;
+                    }
+                  }
+                  
+                  & + li {
+                    margin-left: 10px;
+                  }
+                  
+                  &.disabled {
+                    color: @gray;
+                  }
+                }
+              }
+              
+              & + .detail-row {
+                margin-top: 15px;
+              }
+              
+              &.hmc {
+                > [data-details] {
+                  border: 0px none;
+                  display: block;
+                  height: 24px;
+                  outline: none;
+                  position: absolute;
+                  text-indent: -9999px;
+                  transition: box-shadow linear .05s;
+                  top: 1px;
+                  
+                  &:hover {
+                    background: rgba(255,255,255,.3);
+                  }
+                  
+                  &:focus {
+                    box-shadow: 0 0 3px 3px #83bffc;
+                  }
+                  
+                  // PREMIUM Deets - IFP
+                  &.ifp-prem-det-0 {
+                    width: 43px;
+                  }
+                  
+                  &.ifp-prem-det-1 {
+                    width: 58px;
+                  }
+                  
+                  &.ifp-prem-det-2 {
+                    width: 67px;
+                  }
+                  
+                  &.ifp-prem-det-3 {
+                    width: 77px;
+                  }
+                  
+                  &.ifp-prem-det-4 {
+                    width: 99px;
+                  }
+                  
+                  &.ifp-prem-det-5 {
+                    width: 109px;
+                  }
+                  
+                  &.ifp-prem-det-6 {
+                    width: 123px;
+                  }
+                  
+                  &.ifp-prem-det-7 {
+                    width: 171px;
+                  }
+                  
+                  &.ifp-prem-det-8 {
+                    width: 175px;
+                  }
+                  
+                  &.ifp-prem-det-9 {
+                    width: 197px;
+                  }
+                  
+                  &.ifp-prem-det-10 {
+                    width: 255px;
+                  }
+                  
+                  &.ifp-prem-det-11 {
+                    width: 268px;
+                  }
+                  
+                  // PREMIUM Deets - Medicare
+                  &.medicare-prem-det-0 {
+                    width: 13px;
+                  }
+                  
+                  &.medicare-prem-det-1 {
+                    width: 13px;
+                  }
+                  
+                  &.medicare-prem-det-2 {
+                    width: 13px;
+                  }
+                  
+                  &.medicare-prem-det-3 {
+                    width: 13px;
+                  }
+                  
+                  &.medicare-prem-det-4 {
+                    width: 99px;
+                  }
+                  
+                  &.medicare-prem-det-5 {
+                    width: 109px;
+                  }
+                  
+                  &.medicare-prem-det-6 {
+                    width: 170px;
+                  }
+                  
+                  &.medicare-prem-det-7 {
+                    width: 171px;
+                  }
+                  
+                  &.medicare-prem-det-8 {
+                    width: 198px;
+                  }
+                  
+                  &.medicare-prem-det-9 {
+                    width: 217px;
+                  }
+                  
+                  &.medicare-prem-det-10 {
+                    width: 251px;
+                  }
+                  
+                  &.medicare-prem-det-11 {
+                    width: 267px;
+                  }
+                  
+                  // RX Deets - IFP
+                  &.ifp-rx-det-0 {
+                    left: 43px;
+                    width: 90px;
+                  }
+                  
+                  &.ifp-rx-det-1 {
+                    left: 58px;
+                    width: 80px;
+                  }
+                  
+                  &.ifp-rx-det-2 {
+                    left: 67px;
+                    width: 74px;
+                  }
+                  
+                  &.ifp-rx-det-3 {
+                    left: 77px;
+                    width: 82px;
+                  }
+                  
+                  &.ifp-rx-det-4 {
+                    left: 99px;
+                    width: 57px;
+                  }
+                  
+                  &.ifp-rx-det-5 {
+                    left: 109px;
+                    width: 32px;
+                  }
+                  
+                  &.ifp-rx-det-6 {
+                    left: 123px;
+                    width: 63px;
+                  }
+                  
+                  &.ifp-rx-det-7 {
+                    left: 171px;
+                    width: 31px;
+                  }
+                  
+                  &.ifp-rx-det-8 {
+                    left: 175px;
+                    width: 54px;
+                  }
+                  
+                  &.ifp-rx-det-9 {
+                    left: 197px;
+                    width: 32px;
+                  }
+                  
+                  &.ifp-rx-det-10 {
+                    left: 255px;
+                    width: 32px;
+                  }
+                  
+                  &.ifp-rx-det-11 {
+                    left: 268px;
+                    width: 31px;
+                  }
+                  
+                  // RX Deets - Medicare
+                  &.medicare-rx-det-0 {
+                    left: 13px;
+                    width: 90px;
+                  }
+                  
+                  &.medicare-rx-det-1 {
+                    left: 13px;
+                    width: 90px;
+                  }
+                  
+                  &.medicare-rx-det-2 {
+                    left: 13px;
+                    width: 49px;
+                  }
+                  
+                  &.medicare-rx-det-3 {
+                    left: 13px;
+                    width: 89px;
+                  }
+                  
+                  &.medicare-rx-det-4 {
+                    left: 99px;
+                    width: 48px;
+                  }
+                  
+                  &.medicare-rx-det-5 {
+                    left: 109px;
+                    width: 32px;
+                  }
+                  
+                  &.medicare-rx-det-6 {
+                    left: 170px;
+                    width: 48px;
+                  }
+                  
+                  &.medicare-rx-det-7 {
+                    left: 171px;
+                    width: 31px;
+                  }
+                  
+                  &.medicare-rx-det-8 {
+                    left: 198px;
+                    width: 31px;
+                  }
+                  
+                  &.medicare-rx-det-9 {
+                    left: 217px;
+                    width: 32px;
+                  }
+                  
+                  &.medicare-rx-det-10 {
+                    left: 251px;
+                    width: 31px;
+                  }
+                  
+                  &.medicare-rx-det-11 {
+                    left: 267px;
+                    width: 32px;
+                  }
+                  
+                  // MEDICAL Deets - IFP
+                  &.ifp-med-det-0 {
+                    left: 133px;
+                    width: 82px;
+                  }
+                  
+                  &.ifp-med-det-1 {
+                    left: 138px;
+                    width: 80px;
+                  }
+                  
+                  &.ifp-med-det-2 {
+                    left: 141px;
+                    width: 74px;
+                  }
+                  
+                  &.ifp-med-det-3 {
+                    left: 159px;
+                    width: 107px;
+                  }
+                  
+                  &.ifp-med-det-4 {
+                    left: 156px;
+                    width: 102px;
+                  }
+                  
+                  &.ifp-med-det-5 {
+                    left: 141px;
+                    width: 104px;
+                  }
+                  
+                  &.ifp-med-det-6 {
+                    left: 186px;
+                    width: 79px;
+                  }
+                  
+                  &.ifp-med-det-7 {
+                    left: 202px;
+                    width: 70px;
+                  }
+                  
+                  &.ifp-med-det-8 {
+                    left: 229px;
+                    width: 72px;
+                  }
+                  
+                  &.ifp-med-det-9 {
+                    left: 229px;
+                    width: 78px;
+                  }
+                  
+                  &.ifp-med-det-10 {
+                    left: 287px;
+                    width: 25px;
+                  }
+                  
+                  &.ifp-med-det-11 {
+                    left: 299px;
+                    width: 29px;
+                  }
+                  
+                  // MEDICAL Deets - Medicare
+                  &.medicare-med-det-0 {
+                    left: 103px;
+                    width: 187px;
+                  }
+                  
+                  &.medicare-med-det-1 {
+                    left: 103px;
+                    width: 188px;
+                  }
+                  
+                  &.medicare-med-det-2 {
+                    left: 62px;
+                    width: 118px;
+                  }
+                  
+                  &.medicare-med-det-3 {
+                    left: 102px;
+                    width: 188px;
+                  }
+                  
+                  &.medicare-med-det-4 {
+                    left: 147px;
+                    width: 58px;
+                  }
+                  
+                  &.medicare-med-det-5 {
+                    left: 141px;
+                    width: 58px;
+                  }
+                  
+                  &.medicare-med-det-6 {
+                    left: 218px;
+                    width: 79px;
+                  }
+                  
+                  &.medicare-med-det-7 {
+                    left: 202px;
+                    width: 78px;
+                  }
+                  
+                  &.medicare-med-det-8 {
+                    left: 229px;
+                    width: 95px;
+                  }
+                  
+                  &.medicare-med-det-9 {
+                    left: 249px;
+                    width: 78px;
+                  }
+                  
+                  &.medicare-med-det-10 {
+                    left: 282px;
+                    width: 25px;
+                  }
+                  
+                  &.medicare-med-det-11 {
+                    left: 299px;
+                    width: 25px;
+                  }
+                }
+              }
+            }
+          }
+          
+          > .details-large {
+            display: none;
+          }
+          
+          > .snapshot-full {
+            display: none;
+          }
+          
+          > .snapshot-card {
+            margin: 0 auto 15px;
+            // display: none;
+            
+            > tbody {
+              > tr {
+                > th {
+                  > .popover-link {
+                    border-color: @gray-dark;
+                    color: @gray-dark;
+                    text-transform: uppercase;
+                    
+                    &:hover {
+                      border-coolor: @gray-darker;
+                      color: @gray-darker;
+                    }
+                  }
+                }
+                
+                > td {
+                  & + th {
+                    border-left: 1px solid @gray;
+                    padding-left: 10px;
+                  }
+                  
+                  &:last-child {
+                    padding-right: 0;
+                  }
+                }
+              }
+            }
+          }
+          
+          > .plan-footer {
+            
+          }
+          
+          &:nth-child(3n){
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// ---------------------------------
+//  Plan Details Styles
+// ---------------------------------
+
+.plan-details {
+  .plan-ident {
+    background: #fff;
+  }
+  
+  .carrier-logo {
+    margin-top: 12.5px;
+    width: 100%;
+  }
+  
+  table.plan-snapshot td {
+    text-align: right;
+  }
+  
+  .plan-ident {
+    .es-nav.sub-nav.horizontal {
+      margin-bottom: 0;
+    }
+    
+    .scroll-curtain {
+      background: #fff;
+      height: 40px;
+      position: absolute;
+      top: -30px;
+      width: 100%;
+    }
+  }
+  
+  .placeholder {
+    border: 4px dashed #eee;
+    color: #eee;
+    font-size: 24px;
+    font-style: italic;
+    height: 500px;
+    position: relative;
+    .font-weight--bold();
+    
+    p {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      text-align: center;
+      transform: translate(-50%,-50%);
+      width: 60%;
+      z-index: 800;
+    }
+  }
+  
+  .table {
+    table-layout: fixed;
+  }
+  
+  .benefit-display {
+    .popover-link.small {
+      display: block;
+      font-size: 80%;
+    }
+    
+    .benefit-name {
+      width: 40%;
+    }
+    
+    .in-network {
+      background: #eee;
+      width: 30%;
+    }
+    
+    thead th {
+      text-align: center;
+    }
+  }
+}
+
+#plan-details-rhr {
+  > div {
+    > h5 > a {
+      margin: 0 auto;
+    }
+    
+    > .btn-block {
+      margin: 20px 0;
+    }
+    
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    > ul {
+      > li {
+        display: block;
+        margin-bottom: 20px;
+        
+        > .icon {
+          float: left;
+        }
+        
+        > a {
+          display: block;
+          padding-left: 25px;
+          text-decoration: underline;
+          
+          &:hover {
+            text-decoration: none;
+          }
+        }
+        
+        > .label-style {
+          margin: 0 0 5px 25px;
+        }
+      }
+    }
+    
+    > .well > h5:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.bucket-body {
+  img.pull-left {
+    max-width: 215.5px;
+    margin-right: 20px;
+  }
+  
+  .ex-ul {
+    overflow: hidden;
+    
+    li > a {
+      text-decoration: underline;
+    
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+#myTabContent {
+  > .tab-pane {
+    > .table {
+      > tbody {
+        > tr {
+          cursor: pointer;
+          
+          > td {
+            vertical-align: middle;
+          }
+          
+          > .check-box {
+            width: 45px;
+            overflow: hidden;
+            padding-top: 11px;
+          }
+          
+          > .from {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 220px;
+            .font-weight--bold();
+          }
+          
+          > .to {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 220px;
+          }
+          
+          > .subject {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 450px;
+          }
+          
+          > .date {
+            text-align: right;
+            .font-weight--bold();
+          }
+          
+          &.unread {
+            .font-weight--bold();
+          }
+        }
+      }
+    }
+  }
+}
+
+#bg-foot {
+  background: url('../../assets/img/WTW-bckgrndtile-1b.gif') no-repeat bottom center;
+  background-size: 2700px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 350px;
+  width: 100%;
+}
+
+.vid-thumb img { max-width: 100%; }
+
+@media (min-width: 768px) {
+  .hh-nav {
+    min-width: 157.5px;
+    width: 157.5px;
+  }
+  
+  #plan-details-rhr > .affix {
+    max-width: 150px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hh-nav {
+    min-width: 212.5px;
+    width: 212.5px;
+  }
+  
+  #plan-details-rhr > .affix {
+    max-width: 205px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hh-nav {
+    min-width: 262.5px;
+    width: 262.5px;
+  }
+  
+  #snapshot {
+    margin-top: 160px;
+  }
+  
+  .plan-ident {
+    max-width: 825px;
+  }
+  
+  #plan-details-rhr > .affix {
+    max-width: 255px;
+  }
+}
+
+
+#brand-colors-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  > div {
+    width: 32%;
+    margin: 0 0 25px;
+    
+    .swatch {
+      display: block;
+      height: 75px;
+      margin: 0 0 10px;
+      width: 100%;
+      
+      &.vb-blue { background-color: @blue; }
+      &.vb-green { background-color: @green; }
+      &.vb-magenta { background-color: @magenta; }
+      &.vb-soft-blue { background-color: @software-blue; }
+      &.vb-grn-dk { background-color: @green-dark; }
+      &.vb-grn-lt { background-color: @green-light; }
+    }
+    
+    strong {
+      display: block;
+    }
+  }
+}
+
+
+// ---------------------------------
+//  Animations
+// ---------------------------------
+
+@keyframes pulse {
+  0% {
+    background-color: rgba(255,255,255,0);
+  }
+  50% {
+    background-color: rgba(255,255,255,.45);
+  }
+  100% {
+    background-color: rgba(255,255,255,0);
+  }
+}
+
+@keyframes pulse-rx {
+  0% {
+    background-color: @wtwMagenta;
+  }
+  50% {
+    background-color: desaturate(lighten(@wtwMagenta, 25%), 20%);
+  }
+  100% {
+    background-color: @wtwMagenta;
+  }
+}

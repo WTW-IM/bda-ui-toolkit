@@ -1,0 +1,22 @@
+- name: Icons
+  anchor: icons
+  lvl-2-links:
+    - name: Functional icons
+      anchor: icons-functional
+    - name: Examples
+      anchor: icons-examples
+- name: Images
+  anchor: images
+  lvl-2-links:
+    - name: Brand-Aligned
+      anchor: images-brand
+    - name: Retina images
+      anchor: images-retina
+    - name: Responsive images
+      anchor: images-responsive
+    - name: Image shapes
+      anchor: images-shapes
+- name: Data Visualization
+  anchor: data-viz
+- name: Videos
+  anchor: videos

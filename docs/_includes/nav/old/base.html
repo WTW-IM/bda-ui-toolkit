@@ -1,0 +1,68 @@
+{% for lvl-1-link in site.data.base %}
+  <li>
+    <a href="#{{ lvl-1-link.href }}">{{ lvl-1-link.name }}</a>
+    {% if lvl-1-link.lvl-2-links %}
+      <ul class="nav">
+        {% for lvl-2-link in lvl-1-link.lvl-2-links %}
+        <li>
+          <a href="#{{ lvl-2-link.href }}">{{ lvl-2-link.name }}</a>
+          {% if lvl-2-link.lvl-3-links %}
+          <ul class="nav">
+            {% for lvl-3-link in lvl-2-link.lvl-3-links %}
+            <li><a href="#{{ lvl-3-link.href }}">{{ lvl-3-link.name }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
+{% endfor %}
+<!--<li>-->
+<!--  <a href="#type">Typography</a>-->
+<!--  <ul class="nav">-->
+<!--    <li><a href="#type-headings">Headings</a></li>-->
+<!--    <li><a href="#type-body-copy">Body copy</a></li>-->
+    <!--<li><a href="#type-inline-text">Inline text elements</a></li>-->
+    <!--<li><a href="#type-alignment">Alignment classes</a></li>-->
+    <!--<li><a href="#type-transformation">Transformation classes</a></li>-->
+    <!--<li><a href="#type-abbreviations">Abbreviations</a></li>-->
+<!--    <li><a href="#type-addresses">Addresses</a></li>-->
+<!--    <li><a href="#type-blockquotes">Blockquotes</a></li>-->
+<!--    <li><a href="#type-lists">Lists</a></li>-->
+<!--  </ul>-->
+<!--</li>-->
+<!--<li>-->
+<!--  <a href="#colors">Color Palettes</a>-->
+<!--  <ul class="nav">-->
+<!--    <li>-->
+<!--      <a href="#colors-branded">Branded</a>-->
+<!--      <ul class="nav">-->
+<!--        <li><a href="#wtw-colors-primary">Primary</a></li>-->
+<!--        <li><a href="#wtw-colors-secondary">Secondary</a></li>-->
+<!--        <li><a href="#wtw-colors-tertiary">Tertiary</a></li>-->
+<!--      </ul>-->
+<!--    </li>-->
+<!--    <li><a href="#wtw-colors-semantic">Semantic</a></li>-->
+<!--    <li><a href="#wtw-colors-grays">Grays</a></li>-->
+<!--    <li><a href="#wtw-colors-contrast">Color Contrast</a></li>-->
+<!--  </ul>-->
+<!--</li>-->
+<!--<li><a href="#labels">Labels</a></li>-->
+<!--<li><a href="#badges">Badges</a></li>-->
+<!--<li>-->
+<!--  <a href="#progress">Progress bars</a>-->
+<!--  <ul class="nav">-->
+<!--    <li><a href="#progress-basic">Basic example</a></li>-->
+<!--    <li><a href="#progress-label">With label</a></li>-->
+<!--    <li><a href="#progress-alternatives">Contextual alternatives</a></li>-->
+<!--    <li><a href="#progress-striped">Striped</a></li>-->
+<!--    <li><a href="#progress-animated">Animated</a></li>-->
+<!--    <li><a href="#progress-stacked">Stacked</a></li>-->
+<!--  </ul>-->
+<!--</li>-->
+
+    
+    
+ 

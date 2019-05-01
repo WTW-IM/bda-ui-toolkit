@@ -1,0 +1,33 @@
+- number: '0.0.2'
+  changes:
+    - title: "Base:"
+      notes:
+        - desc: Updated the "Contrast" section to have basic contrast check results for branded colors and grays;
+        - desc: Added 'Spinners' to the "Loading" section.
+    - title: "Containers:"
+      notes:
+        - desc: Added guidance for site footers.
+    - title: "Controls:"
+      notes:
+        - desc: Adjusted button text sizes;
+        - desc: Increased button padding;
+          sub-notes:
+            - desc: Also fixed the issue of button text sitting too high within the affordance;
+        - desc: Added datepicker functionality.
+        - desc: "Added slider functionality:"
+          sub-notes:
+            - desc: Single value;
+            - desc: Range;
+            - desc: Vertical variants of each of the above.
+    - title: "Navigation:"
+      notes:
+        - desc: Wrapped all navigational element parent tags with <code>&lt;nav&gt;</code> tags;
+        - desc: Changed pipe character separators to CSS-rendered chevrons in Breadcrumbs;
+        - desc: Changed color of the badges in the global nav from <code class="less-var">@wtwViolet</code> to <code class="less-var">@wtwMagenta</code>.
+- number: '0.0.1'
+  changes:
+    - title: Initial WIP Version
+    - title: "Sections shared with other LOBs:"
+      notes:
+        - desc: Navigation;
+        - desc: Media.

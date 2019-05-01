@@ -1,0 +1,50 @@
+//
+// Glyphicons for Bootstrap
+//
+// Since icons are fonts, they can be placed anywhere text is placed and are
+// thus automatically sized to match the surrounding child. To use, create an
+// inline element with the appropriate classes, like so:
+//
+// <a href="#"><span class="glyphicon oe-icon-star"></span> Star</a>
+
+// Import the fonts
+@font-face {
+  font-family: 'oe-icons-light';
+    src:  url('@{icon-font-path}@{icon-light-font-name}.eot?wc8e4a');
+    src:  url('@{icon-font-path}@{icon-light-font-name}.eot?wc8e4a#iefix') format('embedded-opentype'),
+          url('@{icon-font-path}@{icon-light-font-name}.ttf?wc8e4a') format('truetype'),
+          url('@{icon-font-path}@{icon-light-font-name}.woff?wc8e4a') format('woff'),
+          url('@{icon-font-path}@{icon-light-font-name}.svg?wc8e4a#@{icon-light-font-name}') format('svg');
+}
+
+// [class^="oe-icon-lt"], [class*=" oe-icon-lt"] {
+.icon-lt {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'oe-icons-light' !important;
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.oe-icon-lt-home          { &:before { content: "\e600"; } }
+.oe-icon-lt-bell          { &:before { content: "\e601"; } }
+.oe-icon-lt-envelope      { &:before { content: "\e602"; } }
+.oe-icon-lt-cart          { &:before { content: "\e603"; } }
+.oe-icon-lt-profile       { &:before { content: "\e604"; } }
+.oe-icon-lt-family        { &:before { content: "\e605"; } }
+.oe-icon-lt-search        { &:before { content: "\e606"; } }
+.oe-icon-lt-health        { &:before { content: "\e607"; } }
+.oe-icon-lt-health-shield { &:before { content: "\e608"; } }
+.oe-icon-lt-bicycle       { &:before { content: "\e609"; } }
+.oe-icon-lt-piggy-bank    { &:before { content: "\e60a"; } }
+.oe-icon-lt-umbrella      { &:before { content: "\e60b"; } }
+.oe-icon-lt-learn         { &:before { content: "\e60c"; } }
+.oe-icon-lt-arrow-down    { &:before { content: "\e60d"; } }
+.oe-icon-lt-arrow-left    { &:before { content: "\e60e"; } }
+.oe-icon-lt-arrow-right   { &:before { content: "\e60f"; } }
+.oe-icon-lt-arrow-up      { &:before { content: "\e610"; } }

@@ -1,0 +1,181 @@
+.oe-icon-chevron-down:before {
+  content: "\e61e";
+}
+.oe-icon-chevron-up:before {
+  content: "\e621";
+}
+.oe-icon-double-chevron-right:before {
+  content: "\e623";
+}
+.oe-icon-ok:before {
+  content: "\e642";
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-booking-state .fs-booking-service {
+  display: none !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-booking-state tr th,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-booking-state tr td {
+  padding-bottom: 10px !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings th {
+  background: #666 !important;
+  border-color: #ccc !important;
+  color: #fff !important;
+  padding: 10px 12px !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings td {
+  background: #eee !important;
+  border-color: #ccc !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings td a.fs-service-opening {
+  background: #fff !important;
+  border-radius: 5px !important;
+  margin: 5px 0 10px !important;
+  padding: 7px 0 !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings td a.fs-service-opening:hover {
+  background: #888 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings td a.fs-service-opening:active {
+  background: #c110a0 !important;
+  color: #fff !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings td a.fs-service-opening + a {
+  margin-top: 0px !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav {
+  background: #fff !important;
+  position: relative !important;
+  width: 130px !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav span.fs-openings-prev,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-next,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-prev {
+  background: #702082 !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+  display: block !important;
+  height: 70px !important;
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  width: 120px !important;
+  -webkit-box-shadow: 0px 4px 0px 0px #3b1145 !important;
+  -moz-box-shadow: 0px 4px 0px 0px #3b1145 !important;
+  box-shadow: 0px 4px 0px 0px #3b1145 !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav span.fs-openings-prev::before,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-next::before,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-prev::before {
+  display: block !important;
+  left: 50% !important;
+  position: absolute !important;
+  text-align: center !important;
+  text-indent: 0px !important;
+  top: 35% !important;
+  transform: translate(-50%, -50%) !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav span.fs-openings-prev::after,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-next::after,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-prev::after {
+  display: block !important;
+  left: 50% !important;
+  position: absolute !important;
+  text-align: center !important;
+  text-indent: 0px !important;
+  top: 70% !important;
+  transform: translate(-50%, -50%) !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav span.fs-openings-prev::before,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-prev::before {
+  content: '\25C0' !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav span.fs-openings-prev::after,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-prev::after {
+  content: 'Prev. Week' !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-next:hover,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-prev:hover {
+  background: #3b1145 !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-next:active,
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-prev:active {
+  margin-top: 4px !important;
+  -webkit-box-shadow: 0px 0px 0px 0px transparent !important;
+  -moz-box-shadow: 0px 0px 0px 0px transparent !important;
+  box-shadow: 0px 0px 0px 0px transparent !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav span.fs-openings-prev {
+  cursor: not-allowed !important;
+  opacity: 0.65 !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-next::before {
+  content: '\25b6' !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-openings .fs-openings-nav a.fs-openings-next::after {
+  content: 'Next Week' !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-booking-fields .fs-controls {
+  text-align: left !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-booking-fields input#fs-submit-btn {
+  background: #702082 !important;
+  border: none !important;
+  border-radius: 5px !important;
+  color: #fff !important;
+  display: block !important;
+  margin-left: 116px !important;
+  padding: 5px 15px !important;
+  -webkit-box-shadow: 0px 4px 0px 0px #3b1145 !important;
+  -moz-box-shadow: 0px 4px 0px 0px #3b1145 !important;
+  box-shadow: 0px 4px 0px 0px #3b1145 !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-booking-fields input#fs-submit-btn:hover {
+  background: #3b1145 !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > #fs-main-l > #fs-main-r .fs-booking-fields input#fs-submit-btn:active {
+  margin-top: 4px !important;
+  -webkit-box-shadow: 0px 0px 0px 0px transparent !important;
+  -moz-box-shadow: 0px 0px 0px 0px transparent !important;
+  box-shadow: 0px 0px 0px 0px transparent !important;
+}
+[id^="fs-embed"].fs-embed > .fs-embed-shell > .fs-footer {
+  margin-bottom: 20px !important;
+}
+.alert {
+  color: #fff;
+  border: none;
+}
+.alert > span[class^="eticon"] {
+  display: block;
+  float: left;
+  font-size: 24px;
+}
+.alert > strong {
+  display: block;
+  margin-left: 36px;
+}
+.alert > p {
+  margin-left: 36px;
+}
+.alert.alert-info {
+  background-color: #006699;
+}
+.alert.alert-warning {
+  background-color: #c65313;
+}
+.alert.alert-success {
+  background-color: #298544;
+}
+.alert.alert-error-1 {
+  background-color: #c00;
+}
+.alert.alert-error-2 {
+  background-color: #ec2224;
+}
+.alert.alert-error-3 {
+  background-color: #f03227;
+}
+/*# sourceMappingURL=full-slate-scheduler-wtw.css.map */

@@ -1,0 +1,201 @@
+//
+// ES Loaders (Spinners)
+//
+// ====================================================
+
+@font-face {
+  font-family: 'Visitor';
+    src:  url('@{font-path}@{spinner-font-name}.eot');
+    src:  url('@{font-path}@{spinner-font-name}.eot#iefix') format('embedded-opentype'),
+          url('@{font-path}@{spinner-font-name}.ttf') format('truetype'),
+          url('@{font-path}@{spinner-font-name}.woff') format('woff'),
+          url('@{font-path}@{spinner-font-name}.svg') format('svg');
+}
+
+.spinner {
+  
+  &.large {
+    font-family: 'Visitor' !important;
+    font-size: 48px;
+    height: 61px;
+    margin: 10px auto;
+    overflow: hidden;
+    position: relative;
+    width: 435px;
+
+    > span {
+      display: block;
+      min-width: 28.81px;
+      position: absolute;
+      text-align: center;
+      
+      &:nth-child(1) {
+        left: 0;
+        transition: all 0.7s ease .166667s;
+      }
+      
+      &:nth-child(2) {
+        left: 31px;
+        transition: all 0.7s ease .333333s;
+      }
+      
+      &:nth-child(3) {
+        left: 62px;
+        transition: all 0.7s ease .5s;
+      }
+      
+      &:nth-child(4) {
+        left: 93px;
+        transition: all 0.7s ease .666667s;
+      }
+      
+      &:nth-child(5) {
+        left: 124px;
+        transition: all 0.7s ease .833333s;
+      }
+      
+      &:nth-child(6) {
+        left: 155px;
+        transition: all 0.7s ease 1s;
+      }
+      
+      &:nth-child(7) {
+        left: 186px;
+        transition: all 0.7s ease 1.166667s;
+      }
+      
+      &:nth-child(8) {
+        left: 217px;
+        transition: all 0.7s ease 1.333333s;
+      }
+      
+      &:nth-child(9) {
+        left: 248px;
+        transition: all 0.7s ease 1.5s;
+      }
+      
+      &:nth-child(10) {
+        left: 279px;
+        transition: all 0.7s ease 1.666667s;
+      }
+      
+      &:nth-child(11) {
+        left: 310px;
+        transition: all 0.7s ease 1.833333s;
+      }
+      
+      &:nth-child(12) {
+        left: 341px;
+        transition: all 0.7s ease 2s;
+      }
+      
+      &:nth-child(13) {
+        left: 372px;
+        transition: all 0.7s ease 2.166667s;
+      }
+      
+      &:nth-child(14) {
+        left: 403px;
+        transition: all 0.7s ease 2.333333s;
+      }
+    }
+    
+    &.out {
+      > span {
+        left: -20%;
+      }
+    }
+    
+    &.off {
+      > span {
+        transition: all 0s;
+        left: 120%;
+      }
+    }
+  }
+    
+  &.small {
+    margin: 10px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    
+    > .indicator {
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      position: relative;
+      background: @brand-primary-accent;
+      z-index: 50;
+      background: -webkit-linear-gradient(left, @brand-primary-accent 10%, rgba(255, 255, 255, 0) 42%);
+      background:    -moz-linear-gradient(left, @brand-primary-accent 10%, rgba(255, 255, 255, 0) 42%);
+      background:      -o-linear-gradient(left, @brand-primary-accent 10%, rgba(255, 255, 255, 0) 42%);
+      background:     -ms-linear-gradient(left, @brand-primary-accent 10%, rgba(255, 255, 255, 0) 42%);
+      background:         linear-gradient(to right, @brand-primary-accent 10%, rgba(255, 255, 255, 0) 42%);
+      -webkit-animation: load3 1.4s infinite linear;
+              animation: load3 1.4s infinite linear;
+      -webkit-transform: translateZ(0);
+          -ms-transform: translateZ(0);
+              transform: translateZ(0);
+      
+      &:before {
+        width: 50%;
+        height: 50%;
+        background: @brand-primary-accent;
+        border-radius: 100% 0 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+      }
+      
+      &:after {
+        background: #fff;
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+        content: '';
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    
+    > .track {
+      background: @gray-lighter;
+      border-radius: 50%;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 40;
+    }
+    
+    @-webkit-keyframes load3 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes load3 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  }
+}

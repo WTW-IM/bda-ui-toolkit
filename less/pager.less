@@ -1,0 +1,59 @@
+//
+// Pager pagination
+// --------------------------------------------------
+
+
+.pager {
+  list-style: none;
+  margin: @line-height-computed 0;
+  padding-left: 0;
+  text-align: center;
+  .font-weight--bold();
+  &:extend(.clearfix all);
+  
+  li {
+    display: inline;
+    > a,
+    > span {
+      display: inline-block;
+      padding: 5px 14px;
+      background-color: @pager-bg;
+      border: 2px solid @pager-border;
+      border-radius: @btn-border-radius-base;
+      transition: background-color 250ms linear, color 250ms linear;
+    }
+
+    > a:hover,
+    > a:focus {
+      background-color: @pager-hover-bg;
+      color: @pager-hover-color;
+      text-decoration: none;
+    }
+  }
+
+  .next {
+    > a,
+    > span {
+      float: right;
+    }
+  }
+
+  .previous {
+    > a,
+    > span {
+      float: left;
+    }
+  }
+
+  .disabled {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+      color: @pager-disabled-color;
+      background-color: @pager-disabled-bg;
+      border-color: @pager-disabled-border;
+      cursor: @cursor-disabled;
+    }
+  }
+}

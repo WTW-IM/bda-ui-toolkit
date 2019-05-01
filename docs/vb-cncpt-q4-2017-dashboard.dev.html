@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Exchange Solutions UX">
+    
+    <title>Shop &amp; Compare | Individual &amp; Family Plans | OneExchange.com</title>
+    
+    <!-- Bootstrap core CSS -->
+    
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../dist/css/es-ui-assembly.css" rel="stylesheet">
+    <!--<link href="../assets/css/docs.min.css" rel="stylesheet">-->
+    
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body id="dashboard-prototype">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#quote-results">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+    
+    <div class="es-header navbar-fixed-top">
+      <div class="container clearfix">
+        <span class="logo-mask"><img src="../assets/img/logo-main.png" class="logo placeholder" alt="exchange logo"></span>
+        <span class="logo-mask client"><img src="../assets/img/logo-client@4x.png" class="logo placeholder" alt="client logo"></span>
+        <button id="global-nav" class="btn btn-default"><span class="icon menu-btn"></span> Menu <span class="dot">2</span></button>
+        <div id="nav-menu">
+          <h2 class="h4">Leonard Smithson <span class="icon remove"></span></h2>
+          <ul>
+            <li><a href="/vb-cncpt-q4-2017-dashboard.dev.html"><span class="icon home"></span> Home</a></li>
+            <li>
+              <a href="javascript:;"><span class="icon info-sign"></span> My Plan</a>
+              <ul>
+                <li><a href="javascript:;">Coverage Options</a></li>
+                <li><a href="javascript:;">Household Members</a></li>
+                <li><a href="javascript:;">Applications & Policies</a></li>
+                <li><a href="javascript:;">Funds & Reimbursements</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:;"><span class="icon inbox"></span> Messages <span class="badge">2</span></a></li>
+            <li><a href="/qc-uat-q3-2016-start.v2.html"><span class="icon tag"></span> Shop</a></li>
+            <li>
+              <a href="javascript:;"><span class="icon question-sign"></span> Help</a>
+              <ul>
+                <li><a href="javascript:;">Search</a></li>
+                <li><a href="javascript:;">Popular Questions/Answers</a></li>
+                <li><a href="javascript:;">Ask a Question</a></li>
+                <li><a href="javascript:;">Contact Us</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:;"><span class="icon cog"></span> Account Settings</a>
+              <ul>
+                <li><a href="javascript:;">Security Settings</a></li>
+                <li><a href="javascript:;">Contact Information</a></li>
+              </ul>
+            <li><a href="javascript:;"><span class="icon power"></span> Logout</a></li>
+          </ul>
+        </div>
+        <br clear="both">
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="dashboard" id="dashboard" role="main">
+        
+        <div class="flex-row">
+          
+          <div class="palette clearfix">
+            <h2 class="h3"><span class="icon piggy-bank"></span> Funding Snapshots</h2>
+            
+            <div id="acct-tools" class="clearfix">
+              <ul class="switch-view" role="tabpanel">
+                <li>
+                  <a href="javascript:;" role="tab" aria-controls="plan-tiles" data-display="cards" class="selected" title="View Cards">
+                    <span class="icon thumbnails" aria-label="abbreviated row layout"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" role="tab" aria-controls="plan-tiles" data-display="full" class="" title="View Rows">
+                    <span class="icon menu-btn" aria-label="full row layout"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="view-wrapper cards clearfix">
+              <div class="account clearfix">
+                <h4>BizCo Reimbursement Arrangement</h4>
+                <div class="basic-info">
+                  <strong class="name">Leonard Smithson</strong>
+                  <span><strong>From:</strong> 01/01/2017</span>
+                  <span><strong>To:</strong> 12/31/2017</span>
+                </div>
+                <div class="stats clearfix">
+                  <a href="javascript:;">More details<span class="icon double-chevron-right"></span></a>
+                  <div class="balance">
+                    <svg viewbox="0 0 64 64" class="donut">
+                      <circle class="bar" r="25%" cx="50%" cy="50%" style="stroke-dasharray: 101 100;"></circle>
+                      <circle class="hole" r="30%" cx="50%" cy="50%"></circle>
+                    </svg>
+                    <svg class="spinner small" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                       <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                    </svg>
+                    <p class="sr-only">Loading...</p>
+                    <strong class="bal-fig">$3,728</strong>
+                  </div>
+                  <div class="legend">
+                    <span class="total"><i></i> Total Allocation</span>
+                    <span class="bal"><i></i> Remaining Balance</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="account clearfix">
+                <h4>Health Savings Account</h4>
+                <div class="basic-info">
+                  <strong class="name">Leonard Smithson</strong>
+                  <span><strong>From:</strong> 01/01/1989</span>
+                  <span><strong>To:</strong> &hellip;</span>
+                </div>
+                <div class="stats clearfix">
+                  <a href="javascript:;">More details<span class="icon double-chevron-right"></span></a>
+                  <div class="balance">
+                    <svg viewbox="0 0 64 64" class="donut">
+                      <circle class="bar" r="25%" cx="50%" cy="50%" style="stroke-dasharray: 101 100;"></circle>
+                      <circle class="hole" r="30%" cx="50%" cy="50%"></circle>
+                    </svg>
+                    <svg class="spinner small" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                       <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                    </svg>
+                    <p class="sr-only">Loading...</p>
+                    <strong class="bal-fig">$9,387</strong>
+                  </div>
+                  <div class="legend">
+                    <span class="total"><i></i> Available Now</span>
+                    <span class="bal"><i></i> Invested</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="palette clearfix">
+            <h2 class="h4">Action Center</h2>
+            <ul class="link-list">
+              <li><a href="Javascript:;">Submit a Reimbursement Request<span class="icon arrow-right"></span></a></li>
+              <li><a href="Javascript:;">Update Family Info<span class="icon arrow-right"></span></a></li>
+              <li><a href="Javascript:;">Change Your Password<span class="icon arrow-right"></span></a></li>
+              <li><a href="Javascript:;">Update Your Email Address<span class="icon arrow-right"></span></a></li>
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="flex-row">
+        
+          <div class="palette clearfix">
+            <h2 class="h3"><span class="icon check-document"></span> Applications &amp; Policies</h2>
+            
+            <div id="plan-tools" class="clearfix">
+              <ul class="switch-view" role="tabpanel">
+                <li>
+                  <a href="javascript:;" role="tab" aria-controls="plan-tiles" data-display="cards" class="selected" title="View Cards">
+                    <span class="icon thumbnails" aria-label="cards layout"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" role="tab" aria-controls="plan-tiles" data-display="full" class="" title="View Rows">
+                    <span class="icon menu-btn" aria-label="full row layout"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="view-wrapper cards clearfix">
+              <div class="plan clearfix">
+                <img src="../assets/img/carriers/aarp@2x.png" alt="a.a.r.p. medicare supplement plans insured by united healthcare insurance company"/>
+                <p>
+                  <strong>High Deductible Plan F</strong>
+                  Covers: Leonard Smithson <span class="icon medical covered"></span> <span class="icon rx"></span>
+                </p>
+                <span class="status active"><span class="icon ok"></span> Active</span>
+              </div>
+              
+              <div class="plan clearfix">
+                <img src="../assets/img/carriers/silver-script@2x.png" alt="silver script"/>
+                <p>
+                  <strong>Express Scripts Medicare - Saver (PDP) S5660-247</strong>
+                  Covers: Leonard Smithson <span class="icon medical"></span> <span class="icon rx covered"></span>
+                </p>
+                <span class="status"><span class="icon time"></span> Pending</span>
+              </div>
+              
+              <div class="plan clearfix">
+                <img src="../assets/img/carriers/cigna@2x.png" alt="cigna"/>
+                <p>
+                  <strong>Cigna Connect Flex Gold 1300</strong>
+                  Covers: Betty-Lou Smithson <span class="icon medical covered"></span> <span class="icon rx covered"></span>
+                </p>
+                <span class="status issue"><span class="icon exclamation-sign"></span> Action needed</span>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="palette clearfix">
+            <h2 class="h4">Resources</h2>
+            <ul class="link-list">
+              <li><a href="Javascript:;">Help Center<span class="icon arrow-right"></span></a></li>
+              <li><a href="Javascript:;">Frequently Asked Questions<span class="icon arrow-right"></span></a></li>
+              <li><a href="Javascript:;">Glossary<span class="icon arrow-right"></span></a></li>
+              <li><a href="Javascript:;">Speak to an Expert<span class="icon arrow-right"></span></a></li>
+            </ul>
+          </div>
+          
+        </div>
+        
+        <div class="flex-row">
+          
+          <div id="msg-ctr" class="palette clearfix all full">
+            <h2 class="h3"><span class="icon inbox"></span> Message Center</h2>
+            
+            <div id="msg-tools" class="clearfix">
+              <div id="msg-filter" class="btn-group" role="group" aria-labelledby="sort-label">
+                <button type="button" class="btn btn-default active" value="all" title="Show all messages">All Messages</button>
+                <button type="button" class="btn btn-default" value="unread" title="Show only unread messages">Unread Only</button>
+              </div>
+              
+              <ul class="switch-view" role="tabpanel">
+                <li>
+                  <a href="javascript:;" role="tab" aria-controls="plan-tiles" data-view-snippet="false" title="Abbreviated Rows">
+                    <span class="icon align-justify" aria-label="abbreviated row layout"></span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" role="tab" aria-controls="plan-tiles" data-view-snippet="true" class="selected" title="Full Rows">
+                    <span class="icon menu-btn" aria-label="full row layout"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="message read clearfix">
+              <span class="icon read-message"></span>
+              <p>
+                <strong>Download Your Enrollment Guide</strong>
+                <span>Get your comprehensive guide to collecting the information you need to help find the plan that best suits your needs, choosing... <a href="Javascript:;">Read More<span class="icon double-chevron-right"></span></a></span>
+              </p>
+            </div>
+            
+            <div class="message read clearfix">
+              <span class="icon read-message"></span>
+              <p>
+                <strong>Watch Dr. Kyu Rhee's, "New Options for BizCo Medicare-Eligible Retirees"</strong>
+                <span>Dr. Kyu Rhee introduces Via Benefits, formerly OneExchange. Watch the video to learn how the journey begins. Start with... <a href="Javascript:;">Read More<span class="icon double-chevron-right"></span></a></span>
+              </p>
+            </div>
+            
+            <div class="message unread clearfix">
+              <span class="icon envelope"></span>
+              <p>
+                <strong>We want to hear from you!</strong>
+                <span>We're always looking for ways to improve our service. If you have an idea for new features or improvements to enhance our user... <a href="Javascript:;">Read More<span class="icon double-chevron-right"></span></a></span>
+              </p>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+      </div>
+      
+      <div id="x-popover">
+        Metal tiers were designed to give a general idea of how much of one's health care costs a given plan will pay. Keep this in mind when looking at plans.
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th>Plan pays</th>
+              <th>You pay</th>
+              <th>Monthly cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Bronze</th>
+              <td>60%</td>
+              <td>40%</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <th>Silver</th>
+              <td>70%</td>
+              <td>30%</td>
+              <td>Medium</td>
+            </tr>
+            <tr>
+              <th>Gold</th>
+              <td>80%</td>
+              <td>20%</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <th>Platinum</th>
+              <td>90%</td>
+              <td>10%</td>
+              <td>Highest</td>
+            </tr>
+          </tbody>
+        </table>
+        <small><em>*This is a general guideline. Please refer to a plan's details for specific coverage information.</em></small>
+      </div>
+      
+      <div class="modal es-modal fade" id="" role="dialog" aria-lebelledby="">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="">Health Insurance Network Types*</h4>
+            </div>
+            <div class="modal-body">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!--/.modal-->
+      
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="footer-wrapper">
+          <footer class="footer footer-example">
+            <ul>
+              <li><a href="javascript:;">Privacy Policy</a></li>
+              <li><a href="javascript:;">Licensing &amp; Legal</a></li>
+              <li><a href="javascript:;">Language Assistance</a></li>
+            </ul>
+            <div class="pull-right copyright">
+              <p>&copy; 2013 &ndash; <script>document.write(new Date().getFullYear())</script> Willis Towers Watson. All rights reserved.</p>
+              <span class="wtw-logo"></span>
+            </div>
+          </footer>
+          
+          <p>Attention: This website is operated by XYZ Insurance Services, LLC ("XYZ") and is not the Health Insurance Marketplace website. In offering this website, XYZ is required to comply with all applicable federal laws, including the standards established under 45 CFR 155.220(c) and (d) and standards established under 45 CFR 155.260 to protect the privacy and security of personally identifiable information. This website may not display all data on Qualified Health Plans being offered in your state through the Health Insurance Marketplace website. To see all available data on Qualified Health Plan options in your state, go to the Health Insurance Marketplace website at <a href="javascript:;">HealthCare.gov</a>.</p>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../assets/js/vendor/jquery-ui.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../assets/js/proto/global.js"></script>
+    <script src="../assets/js/proto/dashboard.js"></script>
+    <script src="../assets/js/proto/quote-results.js"></script>
+    
+  </body>
+</html>

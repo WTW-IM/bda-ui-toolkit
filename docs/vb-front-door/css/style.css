@@ -1,0 +1,302 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #c8d7df;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #444;
+  padding: 86px 0 100px;
+  margin: 0; }
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+  padding: 0 0 3px; }
+
+h2 {
+  font-size: 1.2rem;
+  margin: .67rem 0; }
+
+h1,
+h2,
+h3 {
+  clear: both; }
+
+.small {
+  font-size: 14px;
+  line-height: 20px; }
+
+header {
+  background: #fff;
+  border-bottom: 4px solid #00a0d2;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+  header .wrapper {
+    margin: 20px auto; }
+    header .wrapper img {
+      vertical-align: middle; }
+      header .wrapper img.logo-main {
+        height: 42px;
+        margin-right: 1.25rem; }
+    header .wrapper a {
+      float: right; }
+
+.jumbo {
+  background: url("../img/bckgrnd-1.jpg") center center no-repeat;
+  background-size: 100% auto;
+  height: 600px; }
+  .jumbo .wrapper {
+    margin: 0 auto;
+    padding: 50px 0 0; }
+    .jumbo .wrapper .intro {
+      background: rgba(112, 32, 130, 0.6);
+      color: #fff;
+      font-size: 2rem;
+      line-height: 2.4rem;
+      padding: 30px;
+      width: 60%; }
+      .jumbo .wrapper .intro p {
+        margin-bottom: 0; }
+
+article {
+  background: #fff;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+  margin: -64px auto 40px;
+  padding: 0;
+  overflow: hidden; }
+  article h1 {
+    background: #585858;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    margin: 0 0 5px;
+    padding: 20px;
+    z-index: 101; }
+
+.list {
+  display: flex;
+  flex-direction: row;
+  height: 360px;
+  overflow: hidden;
+  z-index: 51; }
+  .list .column {
+    background: #e4e4e4;
+    cursor: pointer;
+    flex: 1 0 25%;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    padding: 1em;
+    position: relative;
+    transition: flex-basis 500ms ease-in-out, background-color 500ms ease-in-out, height 500ms ease-in-out; }
+    .list .column .name {
+      transition: font-size 500ms ease-in-out; }
+    .list .column p,
+    .list .column .details,
+    .list .column button {
+      opacity: 0;
+      transition: opacity 500ms ease-in-out; }
+    .list .column button {
+      bottom: 20px;
+      display: block;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: auto; }
+    .list .column ul {
+      width: 434px; }
+      .list .column ul li {
+        font-size: 1em;
+        line-height: 1.3em; }
+    .list .column.retiree:hover {
+      background: #d2f4ff; }
+    .list .column.active:hover {
+      background: #c3ffed; }
+    .list .column.account:hover {
+      background: #fbd5f4; }
+    .list .column.open {
+      background: #fff;
+      cursor: default;
+      flex-basis: 50%; }
+      .list .column.open .name {
+        font-size: 1.2em;
+        font-weight: 600; }
+      .list .column.open p,
+      .list .column.open .details,
+      .list .column.open button {
+        opacity: 1; }
+      .list .column.open:hover {
+        background: #fff; }
+    .list .column:focus {
+      outline: 0; }
+
+.btn {
+  background-image: none;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.42857143;
+  margin-bottom: 0;
+  outline: 0;
+  padding: 5px 15px 4px;
+  text-align: center;
+  touch-action: manipulation;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .btn.btn-primary {
+    background-color: #007fa7;
+    box-shadow: 0 4px 0 0 #00455b;
+    color: #fff;
+    margin-bottom: 4px;
+    margin-top: 0; }
+    .btn.btn-primary:hover {
+      background-color: #00455b; }
+    .btn.btn-primary:active {
+      box-shadow: 0 0 0 0 transparent;
+      margin-bottom: 0;
+      margin-top: 4px; }
+    .btn.btn-primary.alt {
+      background: #fff;
+      border: 2px solid #007fa7;
+      border-radius: 6px;
+      box-shadow: 0 0 0 0 transparent;
+      color: #007fa7;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 500ms ease-in-out, color 500ms ease-in-out; }
+      .btn.btn-primary.alt:hover {
+        background: #007fa7;
+        color: #fff; }
+
+a, a:link, a:visited {
+  color: #007fa7; }
+a:hover {
+  text-decoration: none; }
+
+footer {
+  margin: 20px auto 0; }
+  footer a, footer a:link, footer a:visited {
+    color: #000; }
+  footer a:hover {
+    text-decoration: none; }
+  footer span {
+    float: right; }
+
+#footer-main {
+  background: #fff;
+  border-top: 4px solid #c110a0;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px 20px; }
+
+#footer-sub {
+  background-color: rgba(237, 237, 237, 0.5);
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  padding: 40px;
+  text-rendering: optimizeLegibility; }
+
+.alert {
+  margin: 0 0 15px;
+  padding: 10px; }
+
+.alert > strong {
+  display: block;
+  margin: 0 0 10px; }
+
+.alert > strong:last-of-type {
+  margin: 0; }
+
+.info {
+  background: #069; }
+
+.success {
+  background: #298544; }
+
+.error {
+  background: #c00; }
+
+.warning {
+  background: #b35f00; }
+
+.info,
+.success,
+.error,
+.warning {
+  color: #fff; }
+
+@media screen and (min-width: 300px) and (max-width: 480px) {
+  body {
+    padding-top: 0; }
+
+  header {
+    margin: 0 0 15px;
+    padding: 10px;
+    position: static; }
+
+  .logo-main {
+    height: 31px; }
+
+  .logo-client {
+    height: 64px; }
+
+  header .wrapper {
+    margin: 0 10px;
+    width: auto; }
+
+  article {
+    margin: 0 0 40px;
+    width: auto; }
+
+  .contact-intro,
+  .contact-info {
+    float: none;
+    width: auto; }
+
+  footer {
+    margin: 20px 0 0;
+    width: auto; } }
+@media (max-width: 979px) and (min-width: 768px) {
+  body {
+    padding-top: 0; }
+
+  header {
+    margin-bottom: 15px;
+    padding: 10px;
+    position: static; }
+
+  header .wrapper {
+    margin: 0 10px;
+    width: auto; }
+
+  article {
+    margin: 0 0 40px;
+    width: auto; }
+
+  footer {
+    margin: 20px 0 0;
+    width: auto; } }
+@media (min-width: 788px) {
+  header .wrapper {
+    width: 940px; }
+
+  .jumbo .wrapper {
+    width: 940px; }
+
+  article {
+    width: 940px; }
+
+  .form-submit {
+    text-align: right; }
+
+  footer {
+    width: 940px; } }
+
+/*# sourceMappingURL=style.css.map */

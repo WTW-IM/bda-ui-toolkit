@@ -1,0 +1,279 @@
+<div class="bs-docs-section">
+  <h2 id="type" class="page-header">Typography</h2>
+
+  <!-- Body copy -->
+  <h3 id="type-body-copy">Body copy</h3>
+  <p>The Benefits Delivery &amp; Administration UI Toolkit uses Source Sans Pro which was chosen because of its weights, character sets, legibility, and pleasantness. Our fallback font stack satisfies similar goals as well (Segoe UI, Segoe, Calibri, Tahoma, sans-serif). We use the "Regular" font for body text, the "Bold" font for bolded itens (e.g.: <code>&lt;strong&gt;</code>), and the "Light" font for headings.</p>
+  <p>Global default <code>font-size</code> is <strong>18px</strong>, with a <code>line-height</code> of <strong>1.428</strong>. This is applied to the <code>&lt;body&gt;</code> and all <code>&lt;p&gt;</code> tags (paragraphs). In addition, paragraphs receive a bottom margin of half their computed line-height (10px by default).</p>
+  <div class="bs-example" data-example-id="body-copy">
+    <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+  </div>
+  
+  <div class="bs-callout bs-callout-accessibility" id="callout-accessibility-italics">
+    <span class="accessibility-tag"><span class="icon accessibility"></span> Accessibility Callout</span>
+    <h4>Italics and legibility</h4>
+    <p>Studies have shown that italicized text presents significant legibility issues for those with dyslexia. For this reason, we have chosen to not use italics.</p>
+  </div>
+  
+  <!-- Links -->
+  <h4 id="type-links">Links</h4>
+  <p>Links that take the user to another spot on the page&mdash;or another page entirely&mdash;are underlined when appearing within a larger body of text, with no underline on <code>:hover</code>. Contextual help (popover) links have a dotted line, which goes to solid on <code>:hover</code>. Also note the cursor when hovering over these links. Contxtual help links maintain this pattern, regardless of context (within a body of text or stand-alone, etc.).</p>
+  <div class="bs-example" data-example-id="body-copy">
+    <p>Cum sociis <a href="javascript:;">text link</a> natoque penatibus et magnis dis parturient montes. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia <button type="button" class="popover-link bs-docs-popover" data-toggle="popover" data-trigger="focus" data-placement="top" data-title="Contextual popover 1" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover">contextual help (popover) link</button> odio sem nec elit.</p>
+  </div>
+
+  <!-- Body copy .lead -->
+  <h4>Lead body copy</h4>
+  <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+  <div class="bs-example" data-example-id="lead-copy">
+    <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+  </div>
+
+  <h4>Small text</h4>
+  <p>For de-emphasizing inline or blocks of text, set text at 85% the size of the parent.</p>
+  <div class="bs-example" data-example-id="simple-small">
+    <p><small>This line of text is meant to be treated as fine print.</small></p>
+  </div>
+
+  <!-- Headings -->
+  <h3 id="type-headings">Headings</h3>
+  <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>, are available. <code>.h1</code> through <code>.h6</code> classes are also available, for when you want to match the font styling of a heading but still want to maintain a proper header heirarchy in your markup.</p>
+  <div class="bs-example bs-example-type" data-example-id="simple-headings">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><h1>h1. Heading</h1></td>
+          <td class="type-info">Light 44.78976px</td>
+        </tr>
+        <tr>
+          <td><h2>h2. Heading</h2></td>
+          <td class="type-info">Light 37.3248px</td>
+        </tr>
+        <tr>
+          <td><h3>h3. Heading</h3></td>
+          <td class="type-info">Light 31.104px</td>
+        </tr>
+        <tr>
+          <td><h4>h4. Heading</h4></td>
+          <td class="type-info">Light 25.92px</td>
+        </tr>
+        <tr>
+          <td><h5>h5. Heading</h5></td>
+          <td class="type-info">Light 21.6px</td>
+        </tr>
+        <tr>
+          <td><h6>h6. Heading</h6></td>
+          <td class="type-info">Light 18px</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h4>Secondary text within headings</h4>
+  <p>Secondary text in any heading should have a lighter and smaller appearance.</p>
+  <div class="bs-example bs-example-type" data-example-id="small-headings">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><h1>h1. Heading <small>Secondary text</small></h1></td>
+        </tr>
+        <tr>
+          <td><h2>h2. Heading <small>Secondary text</small></h2></td>
+        </tr>
+        <tr>
+          <td><h3>h3. Heading <small>Secondary text</small></h3></td>
+        </tr>
+        <tr>
+          <td><h4>h4. Heading <small>Secondary text</small></h4></td>
+        </tr>
+        <tr>
+          <td><h5>h5. Heading <small>Secondary text</small></h5></td>
+        </tr>
+        <tr>
+          <td><h6>h6. Heading <small>Secondary text</small></h6></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <h4>Icons within headings</h4>
+  <p>Place <a href="/media/#icons">icons</a> within the heading tags, and they will inherit the appropriate type size.</p>
+  <div class="bs-example bs-example-type" data-example-id="small-headings">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><h1><span class="icon bullhorn"></span> Heading (h1)</h1></td>
+        </tr>
+        <tr>
+          <td><h2><span class="icon book"></span> Heading (h2)</h2></td>
+        </tr>
+        <tr>
+          <td><h3><span class="icon cog"></span> Heading (h3)</h3></td>
+        </tr>
+        <tr>
+          <td><h4><span class="icon hand-right"></span> Heading (h4)</h4></td>
+        </tr>
+        <tr>
+          <td><h5><span class="icon shopping-cart"></span> Heading (h5)</h5></td>
+        </tr>
+        <tr>
+          <td><h6><span class="icon comment"></span> Heading (h6)</h6></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Addresses -->
+  <h3 id="type-addresses">Addresses</h3>
+  <p>Present contact information for the nearest ancestor or the entire body of work. Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
+  <div class="bs-example" data-example-id="simple-address">
+    <address>
+      <strong>Twitter, Inc.</strong><br>
+      1355 Market Street, Suite 900<br>
+      San Francisco, CA 94103<br>
+      <abbr title="Phone">P:</abbr> (123) 456-7890
+    </address>
+    <address>
+      <strong>Full Name</strong><br>
+      <a href="mailto:#">first.last@example.com</a>
+    </address>
+  </div>
+
+  <!-- Blockquotes -->
+  <h3 id="type-blockquotes">Blockquotes</h3>
+  <p>For quoting blocks of content from another source within your document.</p>
+
+  <h4>Default blockquote</h4>
+  <div class="bs-example" data-example-id="simple-blockquote">
+    <blockquote>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+    </blockquote>
+  </div>
+
+  <h4>Naming a source</h4>
+  <p>Add a <code>&lt;footer&gt;</code> for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+  <div class="bs-example" data-example-id="blockquote-cite">
+    <blockquote>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+
+  <h4>Right-aligned</h4>
+  <div class="bs-example" style="overflow: hidden;" data-example-id="blockquote-reverse">
+    <blockquote class="blockquote-reverse">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+  
+  <div class="bs-callout bs-callout-accessibility" id="callout-inline-form-labels">
+    <span class="accessibility-tag"><span class="icon accessibility"></span> Accessibility Callout</span>
+    <h4>Supplementary content</h4>
+    <p>When using the above supplementary text treatments, make sure you use the appropriate HTML5 tags, ARIA attributes, and location within your markup to avoid interrupting ATs reading main content text.</p>
+  </div>
+
+  <!-- Lists -->
+  <h2 id="type-lists">Lists</h2>
+
+  <h3>Unordered</h3>
+  <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+  <div class="bs-example" data-example-id="simple-ul">
+    <ul>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit
+        <ul>
+          <li>Phasellus iaculis neque</li>
+          <li>Purus sodales ultricies</li>
+          <li>Vestibulum laoreet porttitor sem</li>
+          <li>Ac tristique libero volutpat at</li>
+        </ul>
+      </li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ul>
+  </div>
+
+  <h3>Ordered</h3>
+  <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+  <div class="bs-example" data-example-id="simple-ol">
+    <ol>
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ol>
+  </div>
+
+  <h3>Unstyled</h3>
+  <div class="bs-example" data-example-id="unstyled-list">
+    <ul class="list-unstyled">
+      <li>Lorem ipsum dolor sit amet</li>
+      <li>Consectetur adipiscing elit</li>
+      <li>Integer molestie lorem at massa</li>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit
+        <ul>
+          <li>Phasellus iaculis neque</li>
+          <li>Purus sodales ultricies</li>
+          <li>Vestibulum laoreet porttitor sem</li>
+          <li>Ac tristique libero volutpat at</li>
+        </ul>
+      </li>
+      <li>Faucibus porta lacus fringilla vel</li>
+      <li>Aenean sit amet erat nunc</li>
+      <li>Eget porttitor lorem</li>
+    </ul>
+  </div>
+
+  <h3>Inline</h3>
+  <p>Place all list items on a single line with some light padding.</p>
+  <div class="bs-example" data-example-id="list-inline">
+    <ul class="list-inline">
+      <li>Lorem ipsum</li>
+      <li>Phasellus iaculis</li>
+      <li>Nulla volutpat</li>
+    </ul>
+  </div>
+
+  <h3>Description</h3>
+  <p>A list of terms with their associated descriptions.</p>
+  <div class="bs-example" data-example-id="simple-dl">
+    <dl>
+      <dt>Description lists</dt>
+      <dd>A description list is perfect for defining terms.</dd>
+      <dt>Euismod</dt>
+      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+      <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+      <dt>Malesuada porta</dt>
+      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+    </dl>
+  </div>
+
+  <h4>Horizontal description</h4>
+  <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side. Starts off stacked like default <code>&lt;dl&gt;</code>s, but when the navbar expands, so do these.</p>
+  <div class="bs-example" data-example-id="horizontal-dl">
+    <dl class="dl-horizontal">
+      <dt>Description lists</dt>
+      <dd>A description list is perfect for defining terms.</dd>
+      <dt>Euismod</dt>
+      <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+      <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+      <dt>Malesuada porta</dt>
+      <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+      <dt>Felis euismod semper eget lacinia</dt>
+      <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+    </dl>
+  </div>
+
+</div>

@@ -1,0 +1,169 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant(@color; @background) {
+  color: @color;
+  background-color: @background;
+  border: none;
+  margin-bottom: 4px;
+  margin-top: 0px;
+	box-shadow: 0px 4px 0px 0px darken(@background, 10%);
+	transition: background-color 250ms linear;
+	
+  &:focus,
+  &.focus {
+    color: @color;
+    background-color: darken(@background, 10%);
+  }
+  
+  &:hover {
+    color: @color;
+    background-color: darken(@background, 10%);
+    box-shadow: 0px 4px 0px 0px darken(@background, 10%);
+  }
+  
+  // NOTE: Active state and class once shared styles
+  &:active {
+    margin-bottom: 0px;
+    margin-top: 4px;
+    box-shadow: 0px 0px 0px 0px transparent;
+  }
+  
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    background-color: darken(@background, 10%);
+    box-shadow: 0px 4px 0px 0px darken(@background, 10%);
+	      
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @color;
+      background-color: darken(@background, 17%);
+    }
+    
+    &:active {
+      margin-bottom: 0px;
+      margin-top: 4px;
+      box-shadow: 0px 0px 0px 0px transparent;
+    }
+  }
+  
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: @background;
+    }
+    
+    &:active {
+      margin-bottom: 4px;
+      margin-top: 0px;
+    	box-shadow: 0px 4px 0px 0px darken(@background, 10%);
+    }
+  }
+
+  .badge {
+    color: @badge-active-color;
+    background-color: @white;
+  }
+}
+
+.button-alt(@btn-color) {
+  background-color: #fff;
+  border: 2px solid @btn-color;
+  border-radius: @btn-border-radius-base;
+	box-shadow: none;
+  color: @btn-color;
+  padding: 5px 15px;
+  transition: background-color 250ms linear, color 250ms linear;
+  .font-weight--bold();
+  
+  &.lg {
+    border-radius: @btn-border-radius-large;
+    font-size: 125%;
+    padding: 8px 25px;
+  }
+  
+  &.sm {
+    border-radius: @btn-border-radius-small;
+    font-size: 75%;
+    padding: 4px 10px;
+  }
+  
+  &.xs {
+    border-radius: @btn-border-radius-small;
+    font-size: 60%;
+    padding: 4px 8px;
+    text-transform: uppercase;
+  }
+	
+  &:focus,
+  &.focus {
+    color: @btn-color;
+  }
+  
+  &:hover,
+  &.hover {
+    color: @white;
+    background-color: @btn-color;
+  }
+  
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @white;
+    background-color: darken(@btn-color, 10%);
+    border-color: darken(@btn-color, 10%);
+    
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @btn-color;
+      background-color: darken(@btn-color, 10%);
+         border-color: darken(@btn-color, 10%);
+    }
+  }
+  
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus {
+      cursor: not-allowed;
+      opacity: .65;
+    }
+  }
+
+  .badge {
+    color: @white;
+    background-color: @badge-bg;
+  }
+
+}
+
+// Button sizes
+.button-size(@padding-top, @padding-horizontal, @padding-bottom, @font-size, @line-height, @border-radius) {
+  padding: @padding-top @padding-horizontal @padding-bottom;
+  font-size: @font-size;
+  line-height: @line-height;
+  border-radius: @border-radius;
+}

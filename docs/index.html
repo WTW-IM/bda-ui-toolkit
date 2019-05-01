@@ -1,0 +1,176 @@
+---
+layout: home
+title: BDA UI Toolkit &middot; Welcome
+---
+
+<main class="bs-docs-masthead" id="content" role="main" tabindex="-1">
+  <div class="container">
+    <h1 class="lead">Benefits Delivery &amp; Administration UI Toolkit (Draft)</h1>
+    <p>Version: 0.0.2 &ndash; <button type="button" class="popover-link" data-toggle="modal" data-target="#changelogModal">Changelog</button></p>
+  </div>
+</main>
+
+<div class="container bs-docs-container">
+  <div class="row">
+    <h2 class="page-header">Site Map</h2>
+    <div class="row">
+      <div class="col-md-2">
+        <h3 class="page-header"><a href="base/">Base</a></h3>
+        <ul class="map-nav">
+        {% for lvl-1-link in site.data.nav.base %}
+          <li>
+            <a href="/base/#{{ lvl-1-link.anchor }}">{{ lvl-1-link.name }}</a>
+            {% if lvl-1-link.lvl-2-links %}
+              <ul class="map-nav">
+                {% for lvl-2-link in lvl-1-link.lvl-2-links %}
+                <li><a href="/base/#{{ lvl-2-link.anchor }}">{{ lvl-2-link.name }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h3 class="page-header"><a href="containers/">Containers</a></h3>
+        <ul class="map-nav">
+        {% for lvl-1-link in site.data.nav.containers %}
+          <li>
+            <a href="/containers/#{{ lvl-1-link.anchor }}">{{ lvl-1-link.name }}</a>
+            {% if lvl-1-link.lvl-2-links %}
+              <ul class="map-nav">
+                {% for lvl-2-link in lvl-1-link.lvl-2-links %}
+                <li><a href="/containers/#{{ lvl-2-link.anchor }}">{{ lvl-2-link.name }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h3 class="page-header"><a href="controls/">Controls</a></h3>
+        <ul class="map-nav">
+        {% for lvl-1-link in site.data.nav.controls %}
+          <li>
+            <a href="/controls/#{{ lvl-1-link.anchor }}">{{ lvl-1-link.name }}</a>
+            {% if lvl-1-link.lvl-2-links %}
+              <ul class="map-nav">
+                {% for lvl-2-link in lvl-1-link.lvl-2-links %}
+                <li><a href="/controls/#{{ lvl-2-link.anchor }}">{{ lvl-2-link.name }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+        </ul>  
+      </div>
+      <div class="col-md-2">
+        <h3 class="page-header"><a href="navigation/">Navigation</a></h3>
+        <ul class="map-nav">
+        {% for lvl-1-link in site.data.nav.navigation %}
+          <li>
+            <a href="/navigation/#{{ lvl-1-link.anchor }}">{{ lvl-1-link.name }}</a>
+            {% if lvl-1-link.lvl-2-links %}
+              <ul class="map-nav">
+                {% for lvl-2-link in lvl-1-link.lvl-2-links %}
+                <li>
+                  <a href="/navigation/#{{ lvl-2-link.anchor }}">{{ lvl-2-link.name }}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+      <div class="col-md-2">
+        <h3 class="page-header"><a href="media/">Media</a></h3>
+        <ul class="map-nav">
+        {% for lvl-1-link in site.data.nav.media %}
+          <li>
+            <a href="/media/#{{ lvl-1-link.anchor }}">{{ lvl-1-link.name }}</a>
+            {% if lvl-1-link.lvl-2-links %}
+              <ul class="map-nav">
+                {% for lvl-2-link in lvl-1-link.lvl-2-links %}
+                <li>
+                  <a href="/media/#{{ lvl-2-link.anchor }}">{{ lvl-2-link.name }}</a>
+                  {% if lvl-2-link.lvl-3-links %}
+                  <ul class="map-nav">
+                    {% for lvl-3-link in lvl-2-link.lvl-3-links %}
+                    <li><a href="/media/#{{ lvl-3-link.anchor }}">{{ lvl-3-link.name }}</a></li>
+                    {% endfor %}
+                  </ul>
+                  {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+        </ul> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="row"><hr class="half-rule"></div>
+  
+  <a href="assets/img/ES-UI-Site-Map.png" target="_blank"><img src="assets/img/ES-UI-Site-Map.png" style="width: 900px;"></img></a>
+  <div class="row">
+    <button type="button" class="btn btn-link btn-small" href="assets/img/ES-UI-Site-Map.png" target="_blank">
+    <span class="icon-reg oe-icon-resize-full" aria-hidden="true"></span> View Full size (Opens in a new browser tab)</a></button>
+  </div>
+  
+  <!--<div class="row"><hr class="half-rule"></div>-->
+  
+  <!--<div class="bs-docs-featurette">-->
+  <!--  <div class="container">-->
+  
+  <!--  </div>-->
+  <!--</div>-->
+  
+  <div class="modal es-modal fade" id="changelogModal" tabindex="-1" role="dialog" aria-labelledby="changelogModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="changelogModalLabel">ES UI Guidelines Changelog</h4>
+        </div>
+        <div class="modal-body">
+          {% for version in site.data.changelog %}
+            <h5 class="h4">Ver. {{ version.number }}</h5>
+            {% if version.changes %}
+              <ul>
+                {% for change in version.changes %}
+                <li>
+                  <strong>{{ change.title }}</strong>
+                  {% if change.notes %}
+                    <ul>
+                      {% for note in change.notes %}
+                      <li>
+                        {{ note.desc }}
+                        {% if note.sub-notes %}
+                          <ul>
+                            {% for sub-note in note.sub-notes %}
+                            <li>{{ sub-note.desc }}</li>
+                            {% endfor %}
+                          </ul>
+                        {% endif %}
+                      </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- /.modal -->
+  
+</div>

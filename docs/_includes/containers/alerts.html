@@ -1,0 +1,202 @@
+<div class="bs-docs-section">
+  <h2 id="alerts" class="page-header">Alerts</h2>
+
+  <p class="lead">Alerts are used to present contextual information to convey success, supplemental information, warnings, or errors.</p>
+
+  <h3 id="alerts-variants">Variants</h4>
+  <h4 id="alerts-full">Fully-featured examples (all the bells &amp; whistles)</h3>
+  <p>There are many add-ons to alerts, including icons, dismiss controls, and call(s)-to-action.</p>
+  <p><small>Okay, so we lied... these don't have <em>all</em> the bells and whistles. When you have one or more calls-to-action, you should not use a dismiss (&times;) button.</small></p>
+  
+  <div class="bs-example" data-example-id="full-alerts">
+    <p>With only one call-to-action:</p>
+    <div class="alert alert-success alert-cta indented" role="alert">
+      <span class="icon ok-circle" aria-hidden="true"></span>
+      <strong>Success!</strong>
+      <p>Now you need to do something else.</p>
+      <span class="btn-row">
+        <button type="button" class="btn btn-primary">Let's do this thing!</button>
+      </span>
+    </div>
+    
+    <p>With primary and secondary calls-to-action:</p>
+    <div class="alert alert-warning alert-cta indented" role="alert">
+      <span class="icon exclamation-sign" aria-hidden="true"></span>
+      <strong>You have an important decision to make</strong>
+      <p>You can do one thing, or the other.</p>
+      <span class="btn-row">
+      <button type="button" class="btn btn-primary">But you should do this</button> <button type="button" class="btn btn-default">You can do this</button>
+      </span>
+    </div>
+    <br clear="both"/>
+  </div>
+  
+  <h4 id="alerts-buttons">Alerts with buttons</h4>
+  <p>Thanks to a font-based icon set, adding icons is as easy as including them before any text.</p>
+  <div class="bs-example" data-example-id="simple-alerts">
+    <div class="alert alert-success alert-cta" role="alert">
+      <p><span class="icon ok-circle" aria-hidden="true"></span> <strong>Well done!</strong> You successfully read this important alert message.</p>
+      <span class="btn-row">
+        <button type="button" class="btn btn-primary">Hooray!</button>
+      </span>
+    </div>
+    <br clear="both"/>
+    <div class="alert alert-info alert-cta" role="alert">
+      <p><span class="icon info-circle" aria-hidden="true"></span> <strong>Hey there!</strong> This alert needs your attention, but it's not super important.</p>
+      <span class="btn-row">
+        <button type="button" class="btn btn-primary">Hey, thanks!</button>
+      </span>
+    </div>
+    <br clear="both"/>
+    <div class="alert alert-warning alert-cta" role="alert">
+      <p><span class="icon exclamation-sign" aria-hidden="true"></span> <strong>Warning!</strong> Better check yourself, you're not looking too good.</p>
+      <span class="btn-row">
+        <button type="button" class="btn btn-primary">Thanks for the heads-up!</button>
+      </span>
+    </div>
+    <br clear="both"/>
+    <div class="alert alert-danger alert-cta" role="alert">
+      <p><span class="icon exclamation-circle" aria-hidden="true"></span> <strong>Oh snap!</strong> Change a few things up and try submitting again.</p>
+      <span class="btn-row">
+        <button type="button" class="btn btn-primary">Oh snap, indeed!</button>
+      </span>
+    </div>
+    <br clear="both"/>
+    <div class="alert alert-agent alert-cta" role="alert">
+      <p><span class="icon agent" aria-hidden="true"></span> <strong>Message to agent:</strong> Read the following text to the customer before proceeding.</p>
+      <span class="btn-row">
+        <button type="button" class="btn btn-primary">Sir! Yes, sir!</button>
+      </span>
+    </div>
+    <br clear="both"/>
+  </div>
+  
+  <h4 id="alerts-icons">Alerts with icons</h4>
+  <p>Thanks to a font-based icon set, adding icons is as easy as including them before any text.</p>
+  <div class="bs-example" data-example-id="simple-alerts">
+    <div class="alert alert-success" role="alert">
+      <p><span class="icon ok-circle" aria-hidden="true"></span> <strong>Well done!</strong> You successfully read this important alert message.</p>
+    </div>
+    <div class="alert alert-info" role="alert">
+      <p><span class="icon info-circle" aria-hidden="true"></span> <strong>Hey there!</strong> This alert needs your attention, but it's not super important.</p>
+    </div>
+    <div class="alert alert-warning" role="alert">
+      <p><span class="icon exclamation-sign" aria-hidden="true"></span> <strong>Warning!</strong> Better check yourself, you're not looking too good.</p>
+    </div>
+    <div class="alert alert-danger" role="alert">
+      <p><span class="icon exclamation-circle" aria-hidden="true"></span> <strong>Oh snap!</strong> Change a few things up and try submitting again.</p>
+    </div>
+    <div class="alert alert-agent" role="alert">
+      <p><span class="icon agent" aria-hidden="true"></span> <strong>Message to agent:</strong> Read the following text to the customer before proceeding.</p>
+    </div>
+  </div>
+
+  <h4 id="alerts-simple">Simple alerts</h4>
+  <div class="bs-example" data-example-id="simple-alerts">
+    <div class="alert alert-success" role="alert">
+      <p><strong>Well done!</strong> You successfully read this important alert message.</p>
+    </div>
+    <div class="alert alert-info" role="alert">
+      <p><strong>Hey there!</strong> This alert needs your attention, but it's not super important.</p>
+    </div>
+    <div class="alert alert-warning" role="alert">
+      <p><strong>Warning!</strong> Better check yourself, you're not looking too good.</p>
+    </div>
+    <div class="alert alert-danger" role="alert">
+      <p><strong>Oh snap!</strong> Change a few things up and try submitting again.</p>
+    </div>
+    <div class="alert alert-agent" role="alert">
+      <p><strong>Message to agent:</strong> Read the following text to the customer before proceeding.</p>
+    </div>
+  </div>
+  
+  <h4 id="alerts-dismiss"></span>Dismissible alerts</h4>
+  <p>Alerts can be made to be dismissible. This is not recommended for error alerts and any alerts that contain critical calls-to-action.</p>
+
+  <div class="bs-example" data-example-id="dismissible-alert-css">
+    <div class="alert alert-warning alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span class="icon remove" aria-hidden="true"></span></button>
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </div>
+  </div>
+  
+  <h4 id="alerts-links"></span>Alerts with links</h4>
+  <p>Links wihtin standard alerts should be white, with an underline that disappears on hover. For contextual help links, the text decoration remains the same but, again, all in white.</p>
+
+  <div class="bs-example" data-example-id="dismissible-alert-css">
+    <div class="alert alert-info indented" role="alert">
+      <span class="icon info-circle" aria-hidden="true"></span>
+      <strong>Good News!</strong>
+      <p>You can now edit your account preferences on your <a href="javascript:;">Account Settings page</a>. Don't forget to check your <button type="button" class="popover-link bs-docs-popover" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-container="body" title="Multi-Factor Authentication" data-content="A method of verifying your identity through an additional method&mdash;such as providing a code sent to you via text message, email, or a phone call." data-original-title="Contextual popover 1">MFA</button> settings.</p>
+    </div>
+  </div>
+  
+  <h4 id="alerts-light">Light alerts</h4>
+  <p>Use Light Alerts when you don't need to be quite so bold with your message.</p>
+
+  <div class="bs-example" data-example-id="dismissible-alert-css">
+    <div class="alert alert-success-light indented" role="alert">
+      <span class="icon ok-circle" aria-hidden="true"></span>
+      <strong>Well done!</strong>
+      <p>You successfully read this important alert message.</p>
+    </div>
+    <div class="alert alert-info-light indented" role="alert">
+      <span class="icon info-circle" aria-hidden="true"></span>
+      <strong>Hey there!</strong>
+      <p>This alert needs your attention, but it's not super important.</p>
+    </div>
+    <div class="alert alert-warning-light indented" role="alert">
+      <span class="icon exclamation-sign" aria-hidden="true"></span>
+      <strong>Warning!</strong>
+      <p>Better check yourself, you're not looking too good.</p>
+    </div>
+    <div class="alert alert-danger-light indented" role="alert">
+      <span class="icon exclamation-circle" aria-hidden="true"></span>
+      <strong>Oh snap!</strong>
+      <p>Change a few things up and try submitting again.</p>
+    </div>
+  </div>
+  
+  <h5 id="alerts-light-cta">Light alerts with calls-to-action</h4>
+  <p>Note that the "button row" returns to within the colored background on light alerts.</p>
+
+  <div class="bs-example" data-example-id="dismissible-alert-css">
+    <div class="alert alert-cta alert-success-light indented" role="alert">
+      <span class="icon ok-circle" aria-hidden="true"></span>
+      <strong>Well done!</strong>
+      <p>You successfully read this important alert message.</p>
+      <span class="btn-row">
+        <button type="button" class="btn btn-primary">But you should do this</button> <button type="button" class="btn btn-default-dark">You can do this</button>
+      </span>
+    </div>
+  </div>
+  
+  <h4 id="alerts-messages">Alert Messages</h4>
+  <p>Use Alert Messages when you need to provide some feedback, and the other variants just seem like too much.</p>
+
+  <div class="bs-example" data-example-id="dismissible-alert-css">
+    <div class="alert alert-success-msg" role="alert">
+      <span class="icon ok-circle" aria-hidden="true"></span>
+      <strong>You successfully read this important alert message.</strong>
+    </div>
+    <div class="alert alert-info-msg" role="alert">
+      <span class="icon info-circle" aria-hidden="true"></span>
+      <strong>This alert needs your attention, but it's not super important.</strong>
+    </div>
+    <div class="alert alert-warning-msg" role="alert">
+      <span class="icon exclamation-sign" aria-hidden="true"></span>
+      <strong>Better check yourself, you're not looking too good.</strong>
+    </div>
+    <div class="alert alert-danger-msg" role="alert">
+      <span class="icon exclamation-circle" aria-hidden="true"></span>
+      <strong>Change a few things up and try submitting again.</strong>
+    </div>
+  </div>
+  
+  <div class="bs-callout bs-callout-accessibility" id="callout-glyphicons-accessibility">
+    <span class="accessibility-tag"><span class="icon accessibility"></span> Accessibility Callout</span>
+    <h4>Accessibility Considerations for Alerts</h4>
+    <p>Be sure to use the appropriate <code>role</code> on the alert parent container, as well as providing an alternative labeling mechanism for any "close" buttons. Be sure to make sure all calls-to-action are keyboard focusable and can be triggered in such a manner as well.</p>
+  </div>
+  
+</div>

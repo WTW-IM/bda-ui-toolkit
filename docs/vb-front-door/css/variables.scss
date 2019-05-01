@@ -1,0 +1,71 @@
+// - Brand Colors -------------
+$blue:    #00a0d2;
+$green:   #00c389;
+$magenta: #c110a0;
+$violet:  #702082;
+$gold:    #ffb81c;
+
+// - Tints & Shades -----------
+
+// Tint/Shade Values
+$lightest:   55%;
+$lighter:    50%;
+$light:      30%;
+$dark:       15%;
+$darker:     25%;
+
+// Tint/Shade Definitions
+$blue-lightest:    lighten($blue, $lightest);
+$blue-lighter:     lighten($blue, $lighter);
+$blue-light:       lighten($blue, $light);
+$blue-dark:        darken($blue, $dark);
+$blue-darker:      darken($blue, $darker);
+$green-lightest:   lighten($green, $lightest);
+$green-lighter:    lighten($green, $lighter);
+$green-light:      lighten($green, $light);
+$green-dark:       darken($green, $dark);
+$green-darker:     darken($green, $darker);
+$gold-lightest:    lighten($gold, 35%);
+$gold-lighter:     lighten($gold, 30%);
+$gold-light:       lighten($gold, 20%);
+$gold-dark:        darken($gold, $dark);
+$gold-darker:      darken($gold, $darker);
+$magenta-lightest: lighten($magenta, $lightest);
+$magenta-lighter:  lighten($magenta, $lighter);
+$magenta-light:    lighten($magenta, $light);
+$magenta-dark:     darken($magenta, $dark);
+$magenta-darker:   darken($magenta, $darker);
+$violet-lightest:  lighten($violet, 60%);
+$violet-lighter:   lighten($violet, 55%);
+$violet-light:     lighten($violet, 30%);
+$violet-dark:      darken($violet, 10%);
+$violet-darker:    darken($violet, 20%);
+
+// - Semantic colors ----------
+$software-info:    #069;
+$software-success: #298544;
+$software-error:   #c00;
+$software-warning: #b35f00;
+
+// - Other UI-Related colors --
+$software-blue:    #007fa7;
+$software-focus:   #83bffc;
+$light-gray:       #d8dbd8;
+$light-violet:     #d8d7df;
+$light-pink:       #ddd0cf;
+$light-blue:       #c8d7df;
+$light-green:      #d9e7dc;
+$sand:             #efeede;
+
+// - Grays --------------------
+$white:           #fff;
+$software-gray-1: #f4f4f4;
+$software-gray-2: #ecedee;
+$software-gray-3: #e4e4e4;
+$software-gray-4: #d8d8d8;
+$software-gray-5: #c5c5c5;
+$software-gray-6: #979797;
+$software-gray-7: #707070;
+$software-gray-8: #585858;
+$software-gray-9: #444;
+$black:           #000;

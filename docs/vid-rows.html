@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Exchange Solutions UX">
+    
+    <title>Video Gallery w/ Rows &middot; ES UI Guidelines</title>
+    
+    <!-- Bootstrap core CSS -->
+    
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    <!--<link href="../dist/css/vid-mockups-shim.css" rel="stylesheet">-->
+    <!--<link href="../assets/css/docs.min.css" rel="stylesheet">-->
+    
+    
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+    
+    <style type="text/css">
+      body { padding-top: 106px; }
+      .vid-thumb { position: relative; }
+      .vid-thumb img { max-width: 100%; }
+      .vid-thumb .icon {
+        color: #fff;
+        font-size: 250%;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body data-spy="scroll" data-target="#assem-side-nav" data-offset="80">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+    
+    <div class="es-header navbar-fixed-top">
+      <div class="container clearfix">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#es-nav" aria-controls="es-nav" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="../assets/img/placeholder-logo-exchange.png" class="logo placeholder" alt="exchange logo">
+        <img src="../assets/img/placeholder-logo-client.png" class="logo placeholder" alt="exchange logo">
+        <!--<img data-src="holder.js/150x65?text=Exchange Logo" class="logo placeholder" alt="exchange logo">-->
+        <!--<img data-src="holder.js/150x65?text=Client Logo" class="logo placeholder" alt="client logo">-->
+        <nav>
+          <ul id="es-nav" class="nav es-nav collapse navbar-collapse">
+            <li role="presentation" class="active-example"><a href="javascript:;"><span class="accent"></span><span class="icon-lt oe-icon-lt-home"></span>Home</a></li>
+            <li role="presentation">
+              <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:;"><span class="accent"></span><span class="icon-lt oe-icon-lt-family"></span>Family <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Family Information <span class="icon chevron-right"></span></a></li>
+                <li><a href="javascript:;">Applications &amp; Policies <span class="icon chevron-right"></span></a></li>
+                <li><a href="javascript:;">Funds &amp; Reimbursements <span class="icon chevron-right"></span></a></li>
+              </ul>
+            </li>
+            <li role="presentation"><a href="javascript:;"><span class="accent"></span><span class="icon-lt oe-icon-lt-search"></span>Shop</a></li>
+            <li role="presentation"><a href="javascript:;"><span class="accent"></span><span class="icon-lt oe-icon-lt-learn"></span>Link 4</a></li>
+            <li role="presentation"><a href="javascript:;"><span class="accent"></span><span class="icon-lt oe-icon-lt-bicycle"></span>Link 5</a></li>
+            <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:;"><span class="accent"></span><span class="icon-lt oe-icon-lt-cart"></span>Cart <span class="caret"></span></a><span class="badge">2</span>
+              <ul class="dropdown-menu mini-cart">
+                <li class="family-member"><span class="icon man"></span> Johnathon, Jr. <span class="shopped"><span class="icon ok-circle"></span> Plan Added</span></li>
+                <li class="family-member"><span class="icon woman"></span> Mary-Bethany <span class="shopped"><span class="icon ok-circle"></span> Plan Added</span></li>
+                <li class="family-member"><span class="icon girl"></span> Sally <a href="javascript:;">Shop <span class="icon chevron-right"></span></a></li>
+                <li class="family-member last"><span class="icon boy"></span> Artemis <a href="javascript:;">Shop <span class="icon chevron-right"></span></a></li>
+                <li><a class="secondary" href="javascript:;">View Cart <span class="icon chevron-right"></span></a></li>
+                <li><a class="primary" href="javascript:;">Checkout Now <span class="icon chevron-right"></span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <br clear="both">
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row" id="content">
+        <div class="canvas clearfix">
+          <h1>Video Gallery</h1>
+          <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12" role="main">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 vid-thumb">
+                <a href="javascript:;">
+                  <img src="/assets/img/vid-thumbs/dr-explaining.jpg">
+                  <span class="play-screen"><span class="icon play-circle"></span></span>
+                </a>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 desc">
+                <p>Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue.</p>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block">Play Video</button>
+              </div>
+            </div>
+            <hr class="rule">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 vid-thumb">
+                <a href="javascript:;">
+                  <img src="/assets/img/vid-thumbs/happy-associates.jpg">
+                  <span class="play-screen"><span class="icon play-circle"></span></span>
+                </a>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 desc">
+                <p>Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue.</p>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block">Play Video</button>
+              </div>
+            </div>
+            <hr class="rule">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 vid-thumb">
+                <a href="javascript:;">
+                  <img src="/assets/img/vid-thumbs/office-candids.jpg">
+                  <span class="play-screen"><span class="icon play-circle"></span></span>
+                </a>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 desc">
+                <p>Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue.</p>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block">Play Video</button>
+              </div>
+            </div>
+            <hr class="rule">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 vid-thumb">
+                <a href="javascript:;">
+                  <img src="/assets/img/vid-thumbs/dr-explaining.jpg">
+                  <span class="play-screen"><span class="icon play-circle"></span></span>
+                </a>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 desc">
+                <p>Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue.</p>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block">Play Video</button>
+              </div>
+            </div>
+            <hr class="rule">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 vid-thumb">
+                <a href="javascript:;">
+                  <img src="/assets/img/vid-thumbs/happy-associates.jpg">
+                  <span class="play-screen"><span class="icon play-circle"></span></span>
+                </a>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 desc">
+                <p>Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue.</p>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block">Play Video</button>
+              </div>
+            </div>
+            <hr class="rule">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 vid-thumb">
+                <a href="javascript:;">
+                  <img src="/assets/img/vid-thumbs/office-candids.jpg">
+                  <span class="play-screen"><span class="icon play-circle"></span></span>
+                </a>
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 desc">
+                <p>Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit. Nulla vitae elit libero, a pharetra augue.</p>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <button type="button" class="btn btn-primary btn-block">Play Video</button>
+              </div>
+            </div>
+            <hr class="rule">
+          </div>
+          
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <div class="placeholder">
+              <p>Optional side bar for featured, new, or recently viewed videos &mdash; and/or other content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="footer-wrapper">
+          <footer class="footer footer-example">
+            <ul>
+              <li><a href="javascript:;">Pertinent</a></li>
+              <li><a href="javascript:;">Navigation</a></li>
+              <li><a href="javascript:;">Items go</a></li>
+              <li><a href="javascript:;">Here</a></li>
+            </ul>
+            <div class="pull-right copyright">
+              <p>&copy; 2013 &ndash; <script>document.write(new Date().getFullYear())</script> Willis Towers Watson. All rights reserved.</p>
+              <span class="wtw-logo"></span>
+            </div>
+          </footer>
+          
+          <p>Attention: This website is operated by XYZ Insurance Services, LLC ("XYZ") and is not the Health Insurance Marketplace website. In offering this website, XYZ is required to comply with all applicable federal laws, including the standards established under 45 CFR 155.220(c) and (d) and standards established under 45 CFR 155.260 to protect the privacy and security of personally identifiable information. This website may not display all data on Qualified Health Plans being offered in your state through the Health Insurance Marketplace website. To see all available data on Qualified Health Plan options in your state, go to the Health Insurance Marketplace website at <a href="javascript:;">HealthCare.gov</a>.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="bg-foot"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../assets/js/vendor/jquery-ui.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../assets/js/proto/clamp.min.js"></script>
+    <script>
+      var descriptions = $('.desc p');
+      
+      descriptions.each(function(index, element) {
+        $clamp(element, {clamp: 3});
+      });
+    </script>
+    
+  </body>
+</html>

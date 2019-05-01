@@ -1,0 +1,25 @@
+- name: Global Navigation
+  anchor: global-navigation
+- name: Sub-Navigation
+  anchor: sub-navigation
+  lvl-2-links:
+    - name: Vertical
+      anchor: sub-nav-vertical
+      lvl-3-links:
+        - name: With icons
+          anchor: sub-nav-vert-icons
+        - name: Multi-tiered
+          anchor: sub-nav-multi-tier
+        - name: File Tree
+          anchor: sub-nav-file-tree
+    - name: Horizontal
+      anchor: sub-nav-horizontal
+- name: Breadcrumbs
+  anchor: breadcrumbs
+- name: Pagination
+  anchor: pagination
+  lvl-2-links:
+    - name: Default pagination
+      anchor: pagination-default
+    - name: Pager
+      anchor: pagination-pager

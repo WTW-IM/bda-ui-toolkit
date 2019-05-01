@@ -1,0 +1,21 @@
+{% for lvl-1-link in site.data.nav.navigation %}
+  <li>
+    <a href="#{{ lvl-1-link.anchor }}">{{ lvl-1-link.name }}</a>
+    {% if lvl-1-link.lvl-2-links %}
+      <ul class="nav">
+        {% for lvl-2-link in lvl-1-link.lvl-2-links %}
+        <li>
+          <a href="#{{ lvl-2-link.anchor }}">{{ lvl-2-link.name }}</a>
+          {% if lvl-2-link.lvl-3-links %}
+          <ul class="nav">
+            {% for lvl-3-link in lvl-2-link.lvl-3-links %}
+            <li><a href="#{{ lvl-3-link.anchor }}">{{ lvl-3-link.name }}</a></li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </li>
+{% endfor %}

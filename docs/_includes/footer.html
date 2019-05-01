@@ -1,0 +1,506 @@
+<!-- Footer
+================================================== -->
+<footer class="bs-docs-footer" role="contentinfo">
+  <div class="container">
+
+    <!--<ul class="bs-docs-footer-links">-->
+    <!--  <li><a href="{{ site.repo }}">GitHub</a></li>-->
+    <!--  <li><a href="https://twitter.com/getbootstrap">Twitter</a></li>-->
+    <!--  <li><a href="../getting-started/#examples">Examples</a></li>-->
+    <!--  <li><a href="../about/">About</a></li>-->
+    <!--</ul>-->
+
+
+    <!--<p>Code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>-->
+
+  </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../assets/js/vendor/jquery-ui.min.js"></script>
+<script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+{% if site.github %}
+  <script src="../dist/js/bootstrap.min.js"></script>
+{% else %}
+  <script src="../dist/js/bootstrap.js"></script>
+{% endif %}
+
+{% if site.github %}
+  <script src="../assets/js/docs.min.js"></script>
+{% else %}
+  {% for file in site.data.configBridge.paths.docsJs %}
+  <script src="{{ file }}"></script>
+  {% endfor %}
+{% endif %}
+
+{% if page.slug == "customize" %}
+  <script>var __configBridge = {{ site.data.configBridge.config | jsonify }}</script>
+  {% if site.github %}
+    <script src="../assets/js/customize.min.js"></script>
+  {% else %}
+    {% for file in site.data.configBridge.paths.customizerJs %}
+    <script src="{{ file }}"></script>
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
+<!-- Fix ES UI Scrollspy-offset and scrolling, owing to use of .navbar-fixed-top -->
+<script>
+  var scrollOffset = 50;
+
+  $('body').scrollspy({
+    offset: scrollOffset + 5
+  });
+  
+  $('#es-ui-side-nav a').click(function(event) {
+    event.preventDefault();
+    $($(this).attr('href'))[0].scrollIntoView();
+    window.location.hash = $(this).attr('href');
+    scrollBy(0, -scrollOffset);
+  });
+</script>
+
+{% if page.slug == "base" %}
+<!-- Content Sections // Headers // Color randomizer for icons -->
+<script>
+  var iconColors = ['blue','magenta','gold','green'];
+  $('.bucket .icon-reg').each(function(){
+    var randomColor = iconColors[Math.floor(Math.random() * iconColors.length)];
+    $(this).addClass(randomColor);
+  });
+</script> <!-- /Color-randomizer -->
+
+<!-- Spinners -->
+<script>
+  var containerSlide = $('.spinner.large');
+  //var palette = ['#00a0d2', '#00c389', '#c110a0']
+  //var paletteIndex = 0;
+
+  setInterval(function() {
+    
+    // Reset letter positions without transitions...
+    containerSlide.switchClass('out', 'off');
+    
+    // Change color and bring letters in...
+    setTimeout(function() {
+      //containerSlide.find('path').css('fill', palette[paletteIndex]);
+      containerSlide.switchClass('off', 'in');
+    }, 10);
+    
+    // Take letters out, queue next color...
+    setTimeout(function() {
+      containerSlide.switchClass('in', 'out');
+      //paletteIndex += 1;
+      //paletteIndex %= palette.length;
+    }, 3750);
+    
+  }, 6250);
+</script> <!-- /Spinners -->
+{% endif %}
+
+{% if page.slug == "navigation" %}
+<!-- Multi-tiered Sub-Nav // Level-2 Links // Color Switcher -->
+<script>
+  $('.multi-tier ul a').click(function(){
+    var _this = $(this);
+    _this.siblings().removeClass('active');
+    _this.addClass('active');
+  });
+</script> <!-- /Color-switcher -->
+
+<!-- File-tree UI -->
+<script>
+  $('.multi-tier .folder > a').click(function() {
+    var fldr = $(this).parent();
+    if (fldr.hasClass('open')) {
+      fldr.removeClass('open');
+    } else {
+      fldr.addClass('open');
+    }
+    return false;
+  });
+</script> <!-- /File-tree -->
+{% endif %}
+
+{% if page.slug == "controls" %}
+<script src="../assets/js/vendor/bootstrap-datepicker.min.js"></script>
+<script src="../assets/js/vendor/drum.min.js"></script>
+<script src="../assets/js/vendor/hammer.min.js"></script>
+<script src="../assets/js/vendor/hammer.fakemultitouch.js"></script>
+<script src="../assets/js/vendor/appt-picker-es.js"></script>
+<script src="../assets/js/vendor/dumb-date-picker-es.js"></script>
+<script src="../assets/js/vendor/jquery.scrollTo.min.js"></script>
+<script src="../assets/js/vendor/jquery.multibox.js"></script>
+<script src="../assets/js/vendor/btn-bar-toggler.js"></script>
+
+<!-- Controls // Forms // Inputs // Sliders -->
+<script>
+  var _single = $(".oe-slider");
+  var _range = $(".oe-slider-range"); 
+  var _singleVert = $(".oe-slider-vert");
+  var _rangeVert = $(".oe-slider-range-vert");
+  var _singleVal = $("#demo-single-val");
+  var _rangeMinVal = $("#demo-range-min");
+  var _rangeMaxVal = $("#demo-range-max");
+  _single.slider({
+    range: "min",
+    min: 0,
+    max: 100,
+    value: 80,
+    slide: function(event, ui) {
+      $(this).parent().find(".disp-val").val(ui.value);
+    }
+  });
+  _singleVal.change(function(){
+    _single.slider("option", "value", _singleVal.val());
+  });
+  _range.slider({
+    range: true,
+    min: 0,
+    max: 100,
+    values: [20, 80],
+    slide: function(event, ui) {
+      $(this).parent().find(".disp-val-min").val(ui.values[0]);
+      $(this).parent().find(".disp-val-max").val(ui.values[1]);
+    }
+  });
+  _rangeMinVal.change(function(){
+    _range.slider("option", "values", [_rangeMinVal.val(), _rangeMaxVal.val()]);
+  });
+  _rangeMaxVal.change(function(){
+    _range.slider("option", "values", [_rangeMinVal.val(), _rangeMaxVal.val()]);
+  });
+  _singleVert.slider({
+    orientation: "vertical",
+    range: "min",
+    value: 80,
+    slide: function(event, ui) {
+      $(this).parent().find(".disp-val").val(ui.value);
+    }
+  }); 
+  
+  _rangeVert.slider({
+    orientation: "vertical",
+    range: true,
+    min: 0,
+    max: 100,
+    values: [20, 80], 
+    slide: function(event, ui) {
+      $(this).parent().find(".disp-val-min").val(ui.values[0]);
+      $(this).parent().find(".disp-val-max").val(ui.values[1]);
+    }
+  });
+</script> <!-- /Sliders -->
+
+<!-- "Traditional" Datepickers -->
+<script>
+  $(".datepicker").datepicker({
+    startDate: "-120y",
+    endDate: "Today",
+    startView: 2,
+    autoclose: true
+  });
+</script> 
+
+<!-- Drum/Tumbler Datepicker -->
+<script>
+  $('select#apptDate').drum({
+    panelCount: 18,
+    dial_w: 35,
+    dial_h: 10,
+    dial_stroke_width: 3
+  });
+  $('select#apptTime').drum({
+    panelCount: 18,
+    dial_w: 35,
+    dial_h: 10,
+    dial_stroke_width: 3
+  });
+</script>
+
+<!-- Multibox plugin implementation -->
+<script>
+  $('.multibox').multibox();
+</script> <!-- /All-datepickers -->
+{% endif %}
+
+{% if page.slug == "media" %}
+<script src="../assets/js/vendor/Chart.bundle.js"></script>
+
+<script>
+  // Chart Containers
+  var ctxPie = document.getElementById("chart-ex-pie");
+  var ctxDonut = document.getElementById("chart-ex-donut");
+  var ctxBar = document.getElementById("chart-ex-bar");
+  var ctxBarHoriz = document.getElementById("chart-ex-bar-horiz");
+  var ctxLine = document.getElementById("chart-ex-line");
+  var ctxLineMulti = document.getElementById("chart-ex-line-multi");
+  var ctxRadar = document.getElementById("chart-ex-radar");
+  var ctxPolar = document.getElementById("chart-ex-polar");
+  
+  // WTW Colors, converted to RGB
+  var wtwBlack = '0,0,0';
+  var wtwViolet = '90,12,111';
+  var wtwBlue = '0,160,210';
+  var wtwGold = '255,184,28';
+  var wtwGreen = '0,195,137';
+  var wtwMagenta = '193,16,160';
+  
+  // Pie Chart
+  var exPieChart = new Chart(ctxPie, {
+    type: 'pie',
+    data: {
+      labels: ["Violet", "Gold", "Green", "Blue", "Magenta"],
+      datasets: [{
+        data: [19, 3, 5, 2, 3],
+        backgroundColor: [
+          'rgba('+ wtwViolet +',1)',
+          'rgba('+ wtwGold +',1)',
+          'rgba('+ wtwGreen +',1)',
+          'rgba('+ wtwBlue +',1)',
+          'rgba('+ wtwMagenta +',1)'
+        ]
+      }]
+    },
+    options: {
+      legend: {
+        labels: {
+          boxWidth: 15
+        }
+      }
+    }
+  });
+  
+  // Doughnut chart
+  var exDonutChart = new Chart(ctxDonut, {
+    type: 'doughnut',
+    data: {
+      labels: ["Violet", "Gold", "Green", "Blue", "Magenta"],
+      datasets: [{
+        data: [19, 3, 5, 2, 3],
+        backgroundColor: [
+          'rgba('+ wtwViolet +',1)',
+          'rgba('+ wtwGold +',1)',
+          'rgba('+ wtwGreen +',1)',
+          'rgba('+ wtwBlue +',1)',
+          'rgba('+ wtwMagenta +',1)'
+        ]
+      }]
+    },
+    options: {
+      legend: {
+        labels: {
+          boxWidth: 15
+        }
+      }
+    }
+  });
+  
+  // Bar Chart
+  var exBarChart = new Chart(ctxBar, {
+    type: 'bar',
+    data: {
+      labels: ["Violet", "Gold", "Green", "Blue", "Magenta"],
+      datasets: [{
+        label: '# of Votes',
+        data: [19, 3, 5, 2, 3],
+        backgroundColor: [
+          'rgba('+ wtwViolet +',1)',
+          'rgba('+ wtwGold +',1)',
+          'rgba('+ wtwGreen +',1)',
+          'rgba('+ wtwBlue +',1)',
+          'rgba('+ wtwMagenta +',1)'
+        ]
+      }]
+    },
+    options: {
+      legend: {
+        labels: {
+          boxWidth: 15
+        }
+      },
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+  
+  // Horizontal Bar Chart
+  var exBarChartHoriz = new Chart(ctxBarHoriz, {
+    type: 'horizontalBar',
+    data: {
+      labels: ["Violet", "Gold", "Green", "Blue", "Magenta"],
+      datasets: [{
+        label: '# of Votes',
+        data: [19, 3, 5, 2, 3],
+        backgroundColor: [
+          'rgba('+ wtwViolet +',1)',
+          'rgba('+ wtwGold +',1)',
+          'rgba('+ wtwGreen +',1)',
+          'rgba('+ wtwBlue +',1)',
+          'rgba('+ wtwMagenta +',1)'
+        ]
+      }]
+    },
+    options: {
+      legend: {
+        labels: {
+          boxWidth: 15
+        }
+      },
+      scales: {
+        xAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      }
+    }
+  });
+  
+  // Line Chart
+  var exLineChart = new Chart(ctxLine, {
+    type: 'line',
+    data: {
+      labels: ["Black", "Violet", "Gold", "Green", "Blue", "Magenta"],
+      datasets: [{
+        label: 'Round 1',
+        data: [12, 19, 3, 5, 2, 3],
+        lineTension: 0,
+        backgroundColor: 'rgba('+ wtwViolet +',0.2)',
+        borderColor: 'rgba('+ wtwViolet +',1)',
+        borderJoinStyle: 'miter'
+      }]
+    },
+    options: {
+      legend: {
+        labels: {
+          boxWidth: 15
+        }
+      }
+    }
+  });
+  
+  // Line Chart - Multiple Datasets
+  var exLineChart = new Chart(ctxLineMulti, {
+    type: 'line',
+    data: {
+      labels: ["Black", "Violet", "Gold", "Green", "Blue", "Magenta"],
+      datasets: [{
+        label: 'Round 1',
+        data: [12, 19, 3, 5, 2, 3],
+        lineTension: 0,
+        backgroundColor: 'rgba('+ wtwViolet +',0.2)',
+        borderColor: 'rgba('+ wtwViolet +',1)',
+        borderJoinStyle: 'miter'
+      },
+      {
+        label: 'Round 2',
+        data: [2, 7, 12, 15, 12, 23],
+        lineTension: 0,
+        backgroundColor: 'rgba('+ wtwMagenta +',0.2)',
+        borderColor: 'rgba('+ wtwMagenta +',1)',
+        borderJoinStyle: 'miter'
+      }]
+    },
+    options: {
+      legend: {
+        labels: {
+          boxWidth: 15
+        }
+      }
+    }
+  });
+  
+  // Radar Chart
+  var exRadarChart = new Chart(ctxRadar, {
+    type: 'radar',
+    data: {
+      labels: ["Black", "Violet", "Gold", "Green", "Blue", "Magenta"],
+      datasets: [{
+        label: 'Round 1',
+        data: [12, 19, 23, 5, 2, 3],
+        lineTension: 0,
+        backgroundColor: 'rgba('+ wtwViolet +',0.2)',
+        borderColor: 'rgba('+ wtwViolet +',1)',
+        borderJoinStyle: 'miter'
+      },
+      {
+        label: 'Round 2',
+        data: [32, 11, 16, 2, 14, 19],
+        lineTension: 0,
+        backgroundColor: 'rgba('+ wtwMagenta +',0.2)',
+        borderColor: 'rgba('+ wtwMagenta +',1)',
+        borderJoinStyle: 'miter'
+      }]
+    },
+    options: {
+      legend: {
+        labels: {
+          boxWidth: 15
+        }
+      }
+    }
+  });
+  
+  // Polar Chart
+  var exPolarChart = new Chart(ctxPolar, {
+    type: 'polarArea',
+    data: {
+      labels: ["Violet", "Gold", "Green", "Blue", "Magenta"],
+      datasets: [{
+        data: [23, 11, 16, 14, 19],
+        backgroundColor: [
+          'rgba('+ wtwViolet +',1)',
+          'rgba('+ wtwGold +',1)',
+          'rgba('+ wtwGreen +',1)',
+          'rgba('+ wtwBlue +',1)',
+          'rgba('+ wtwMagenta +',1)'
+        ]
+      }]
+    },
+    options: {
+      legend: {
+        labels: {
+          boxWidth: 15
+        }
+      }
+    }
+  });
+</script>
+{% endif %}
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+
+<!-- Analytics
+================================================== -->
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+<!-- SAAAAFAAAARRRRIIIII!!!!! ----->
+<script>
+  if (navigator.userAgent.indexOf("Safari") > -1) {
+    $('[data-trigger="focus"]').click(function(){
+      $(this).focus();
+    });
+  }
+</script>

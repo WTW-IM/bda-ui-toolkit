@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Exchange Solutions UX">
+    
+    <title>Shop &amp; Compare | Individual &amp; Family Plans | OneExchange.com</title>
+    
+    <!-- Bootstrap core CSS -->
+    
+    <link href="../dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../dist/css/es-ui-assembly.css" rel="stylesheet">
+    <!--<link href="../assets/css/docs.min.css" rel="stylesheet">-->
+    
+    <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../assets/js/ie-emulation-modes-warning.js"></script>
+    
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body id="quote-results-prototype">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+    
+    <div class="es-header navbar-fixed-top">
+      <div class="container clearfix">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#es-nav" aria-controls="es-nav" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <img src="../assets/img/OX-logo-isolated.png" class="logo placeholder" alt="exchange logo">
+        <nav>
+          <ul id="es-nav" class="nav es-nav collapse navbar-collapse">
+            <li role="presentation"><a href="javascript:;"><span class="accent"></span><span class="icon-lt oe-icon-lt-home"></span>Home</a></li>
+            <li role="presentation">
+              <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:;"><span class="accent"></span><span class="icon-lt oe-icon-lt-family"></span>My Info <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="javascript:;">Family Members <span class="icon chevron-right"></span></a></li>
+                <li><a href="javascript:;">Applications &amp; Policies <span class="icon chevron-right"></span></a></li>
+                <li><a href="javascript:;">Funds &amp; Reimbursements <span class="icon chevron-right"></span></a></li>
+              </ul>
+            </li>
+            <li role="presentation" class="active-example"><a href="javascript:;"><span class="accent"></span><span class="icon-lt oe-icon-lt-search"></span>Shop</a></li>
+            <li role="presentation" class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:;">
+                <span class="accent"></span>
+                <span class="icon-lt oe-icon-lt-cart"></span>Cart <span class="caret"></span>
+              </a>
+              <!--<span class="badge">2</span>-->
+              <ul class="dropdown-menu mini-cart">
+                <li><div class="well"><em>You have no plans in your cart.</em></div></li>
+                <!-- <li class="family-member"><span class="icon man"></span> Johnathon, Jr. <span class="shopped"><span class="icon ok-circle"></span> Plan Added</span></li>
+                <li class="family-member"><span class="icon woman"></span> Mary-Bethany <span class="shopped"><span class="icon ok-circle"></span> Plan Added</span></li>
+                <li class="family-member"><span class="icon girl"></span> Sally <a href="javascript:;">Shop <span class="icon chevron-right"></span></a></li>
+                <li class="family-member last"><span class="icon boy"></span> Artemis <a href="javascript:;">Shop <span class="icon chevron-right"></span></a></li>
+                <li><a class="secondary" href="javascript:;">View Cart <span class="icon chevron-right"></span></a></li>
+                <li><a class="primary" href="javascript:;">Checkout Now <span class="icon chevron-right"></span></a></li> -->
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <br clear="both">
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="quote-results row" id="quote-results">
+        
+        <!--<div class="canvas context-bar clearfix">-->
+        <!--  <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">-->
+        <!--    <h2 class="h4">You're shopping for <strong>Mary-Bethany</strong> and <button type="button" class="popover-link" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" data-title="Also shopping for" data-content="<ul><li>Artemis</li></ul>" data-original-title="" title="Also shopping for">1 other</button> for <strong>Individual &amp; Family</strong> coverage starting <strong>December 1, 2016</strong> in ZIP code <strong>84101</strong>.</h2>-->
+        <!--  </div>-->
+          
+        <!--  <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">-->
+        <!--    <a href="/qc-uat-q3-2016-start.html" class="btn btn-primary pull-right">Change</a>-->
+        <!--  </div>-->
+        <!--</div>-->
+        
+        <!--<div id="plan-tabs">-->
+        <!--  <ul id="plan-tabs-controls" class="tabs" role="tablist">-->
+        <!--    <li role="presentation" class="active">-->
+        <!--      <a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">-->
+        <!--        <span class="icon federal"></span>-->
+        <!--        <h3 class="h5">Marketplace Plans</h3>-->
+        <!--        <small>61 plans found</small>-->
+        <!--      </a>-->
+        <!--    </li>-->
+        <!--    <li role="presentation" class="">-->
+        <!--      <a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">-->
+        <!--        <span class="icon wallet"></span>-->
+        <!--        <h3 class="h5">Non-Marketplace Plans</h3>-->
+        <!--        <small>55 plans found</small>-->
+        <!--      </a>-->
+        <!--    </li>-->
+        <!--  </ul>-->
+        <!--</div>-->
+        
+        <div class="canvas clearfix">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" role="main">
+            <div class="context-bar row clearfix">
+              <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <h2 class="h4">You're shopping for <strong>Mary-Bethany</strong> and <button type="button" class="popover-link" data-toggle="popover" data-trigger="focus" data-placement="bottom" data-html="true" data-title="Also shopping for" data-content="<ul><li>Artemis</li></ul>" data-original-title="" title="Also shopping for">1 other</button> for <strong>Individual &amp; Family</strong> coverage starting <strong><span id="effectiveDate"></span> 1, 2017</strong> in ZIP code <strong>84101</strong>.</h2>
+              </div>
+              
+              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <a href="/qc-uat-q3-2016-start.html" class="btn btn-primary pull-right">Shop for Someone Else</a>
+              </div>
+            </div>
+            
+            <div class="filters ifp">
+              <ul class="clearfix" role="tabpanel">
+                <li role="presentation" class="aptc">
+                  <h4 class="h5">Savings</h4>
+                  <img src="../assets/img/quote-results/slider_ifp_redux.png" style="display: block; height: 70px; margin-top: 15px; cursor: not-allowed;" draggable="false" title="This functionality is not included in this test."/>
+                  <button class="btn-link inline">Recalculate</button>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:;" role="tab" data-toggle="tab" aria-controls="financial" aria-expanded="false">
+                    <span class="icon"></span>
+                    <h4 class="h5">Monthly Cost:</h4>
+                    <strong class="selection">$50 &ndash; $550</strong>
+                    <h4 class="h5">Deductible:</h4>
+                    <strong class="selection">$1,000 &ndash; $8,000</strong>
+                    <h4 class="h5">Out of Pocket Limit:</h4>
+                    <strong class="selection">$2,000 &ndash; $7,500</strong>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:;" class="carrier" role="tab" data-toggle="tab" aria-controls="carrier" aria-expanded="false">
+                    <span class="icon"></span>
+                    <h4 class="h5">Insurance Company:</h4>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:;" class="metal-tier" role="tab" data-toggle="tab" aria-controls="metal-tier" aria-expanded="false">
+                    <span class="icon"></span>
+                    <h4 class="h5">Metal Tier:</h4>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:;" class="plan-type" role="tab" data-toggle="tab" aria-controls="plan-type" aria-expanded="false">
+                    <span class="icon"></span>
+                    <h4 class="h5">Plan Type:</h4>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="javascript:;" class="hsa" role="tab" data-toggle="tab" aria-controls="hsa" aria-expanded="false">
+                    <span class="icon"></span>
+                    <h4 class="h5">HSA:</h4>
+                  </a>
+                </li>
+              </ul>
+              <div id="financial" class="filter-drawer" style="display: none;">
+                <em>This functionality is not included in this test.</em>
+              </div>
+              <div id="carrier" class="filter-drawer" style="display: none;">
+                <h5>Insurance Company <button type="button" class="popover-link" data-toggle="popover" data-trigger="focus" data-placement="right" data-html="true" data-container="body" data-title="Insurance Company" data-content="<p>A financial institution that sells insurance. You may also see such an entity referred to as a <em>carrier</em>.</p>" data-original-title="" title="Insurance Company"><span class="icon question-sign"></span></button></h5>
+                <ol>
+                  <li>
+                    <div class="checkbox oe-checkbox pull-left">
+                      <label>
+                        <input type="checkbox" value="aetna">
+                        Aetna
+                        <span class="check"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox oe-checkbox pull-left">
+                      <label>
+                        <input type="checkbox" value="altius">
+                        Altius
+                        <span class="check"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox oe-checkbox pull-left">
+                      <label>
+                        <input type="checkbox" value="anthem">
+                        Anthem Blue Cross &amp; Blue Shield
+                        <span class="check"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox oe-checkbox pull-left">
+                      <label>
+                        <input type="checkbox" value="cigna">
+                        Cigna
+                        <span class="check"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox oe-checkbox pull-left">
+                      <label>
+                        <input type="checkbox" value="humana">
+                        Humana
+                        <span class="check"></span>
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="checkbox oe-checkbox pull-left">
+                      <label>
+                        <input type="checkbox" value="scott-white">
+                        Scott &amp; White
+                        <span class="check"></span>
+                      </label>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <div id="metal-tier" class="filter-drawer" style="display: none;">
+                <h5>Metal Tier <button type="button" class="popover-link" data-details="metal-tier"><span class="icon question-sign"></span></button></h5>
+                <ol>
+                  <li><em>This functionality is not included in this test.</em></li>
+                </ol>
+              </div>
+              <div id="plan-type" class="filter-drawer" style="display: none;">
+                <h5 class="network-type">Plan Type <button type="button" class="popover-link" title="Plan Type"><span class="icon question-sign"></span></button></h5>
+                <ol>
+                  <li><em>This functionality is not included in this test.</em></li>
+                </ol>
+              </div>
+              <div id="hsa" class="filter-drawer" style="display: none;">
+                <h5>HSA <button type="button" class="popover-link" data-toggle="popover" data-trigger="focus" data-placement="right" data-html="true" data-container="body" data-title="Health Savings Account" data-content="<p>A type of savings account that allows you to set aside money on a pre-tax basis to pay for qualified medical expenses if you have a &rdquo;high deductible&ldquo; health insurance plan.</p><p>Combining a High Deductible Health Plan with a Health Savings Account (HSA) allows you to pay for certain medical expenses, like your deductible and copayments, with untaxed dollars. High-deductible plans usually have lower monthly premiums than plans with lower deductibles.</p>" data-original-title="" title="Health Savings Account"><span class="icon question-sign"></span></button></h5>
+                <ol>
+                  <li><em>This functionality is not included in this test.</em></li>
+                </ol>
+              </div>
+            </div> <!-- /filters -->
+            
+            <div class="results-tools clearfix">
+              <h4 class="plan-count h5"><strong>12</strong> of <strong>12</strong> plans found</h4>
+              <div class="sort-view">
+                <span id="sort-label">Sort by:</span>
+                <!--<select id="results-sorter" aria-labelledby="sort-label">-->
+                <!--  <option value="premium" data-mode="ascend" default>Monthly Cost (Low to High)</option>-->
+                <!--  <option value="annual" data-mode="ascend">Out-of-Pocket Costs (Low to High)</option>-->
+                <!--  <option value="doctors" data-mode="descend">Doctor Coverage (High to Low)</option>-->
+                <!--  <option value="rating" data-mode="descend">Plan Rating (High to Low)</option>-->
+                <!--</select>-->
+                <div id="results-sorter2" class="btn-group" role="group" aria-labelledby="sort-label">
+                  <button type="button" class="btn btn-default active" value="premium" data-mode="ascend" title="Sort by monthly cost">Monthly Cost</button>
+                  <button type="button" class="btn btn-default" value="annual" data-mode="ascend" title="Sort by estimated annual cost">Your Annual Cost&#8480;</button>
+                  <button type="button" class="btn btn-default" value="doctors" data-mode="descend" title="Sort by number of doctors covered">Doctors Covered</button>
+                </div>
+                <span id="view-label">View:</span>
+                <ul aria-labelledby="view-label" role="tabpanel">
+                  <li>
+                    <a href="javascript:;" role="tab" aria-controls="plan-tiles" class="cards" title="Cards">
+                      <span class="icon thumbnails" aria-label="card layout"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" role="tab" aria-controls="plan-tiles" class="short" title="Abbreviated Rows">
+                      <span class="icon align-justify" aria-label="abbreviated row layout"></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="javascript:;" role="tab" aria-controls="plan-tiles" class="full selected" title="Full Rows">
+                      <span class="icon menu-btn" aria-label="full row layout layout"></span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div> <!-- /results tools -->
+            
+            <div id="plan-tiles" class="full">
+              <ol></ol>
+            </div> <!-- /plan tiles -->
+            
+          </div>
+        </div>
+      </div>
+      
+      <div id="metal-tiers-explained">
+        Metal tiers were designed to give a general idea of how much of one's health care costs a given plan will pay. Keep this in mind when looking at plans.
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th>Plan pays</th>
+              <th>You pay</th>
+              <th>Monthly cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Bronze</th>
+              <td>60%</td>
+              <td>40%</td>
+              <td>Low</td>
+            </tr>
+            <tr>
+              <th>Silver</th>
+              <td>70%</td>
+              <td>30%</td>
+              <td>Medium</td>
+            </tr>
+            <tr>
+              <th>Gold</th>
+              <td>80%</td>
+              <td>20%</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <th>Platinum</th>
+              <td>90%</td>
+              <td>10%</td>
+              <td>Highest</td>
+            </tr>
+          </tbody>
+        </table>
+        <small><em>*This is a general guideline. Please refer to a plan's details for specific coverage information.</em></small>
+      </div>
+      
+      <div class="modal fade" id="success-modal" role="dialog" aria-lebelledby="success-modal-title">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="success-modal-title">Awesome!</h4>
+            </div>
+            <!--<div class="modal-body">-->
+            <!--  <p>You completed task #5. Great job! Please use the "Done" button proceed to the next task.</p>-->
+            <!--  <p><strong><em>If you are</em> NOT <em>currently on task #5, do</em> NOT <em>click "Done", and please complete your current task.</em></strong></p>-->
+            <!--  <p><em>If you don't see the "Done" button, you can find it under "Show Task".</em></p>-->
+            <!--</div>-->
+            <div class="modal-body">
+              <p>The link you clicked would normally take you to a page that shows you all the details for the corresponding health plan.</p>
+              <p>Unfortunately, it is not part of this test &mdash; we're just focusing on this page, for now. Please close this message and continue with your current task.</p>
+              <hr/>
+              <h4>Feeling lost?</h4>
+              <p>If you need a reminder of your current task, don't forget to use the "Show Task" widget! It looks like this:</p>
+              <img src="../assets/img/quote-results/show-task.png" style="display: block; margin: 10px auto 10px;"/>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!--/.modal-->
+      
+      <div class="modal fade" id="add-to-cart" role="dialog" aria-lebelledby="atc-modal-title">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="atc-modal-title">Add to Cart</h4>
+            </div>
+            <div class="modal-body">
+              <p>We're glad that you like this plan enough to add it to your cart, but the <strong>Shopping Cart is not part of this test.</strong></p>
+              <p>If this were the real thing, we would take you to your cart to show you what's in there. For today, though, we're just going to stay on this page.</p>
+              <hr/>
+              <h4>Feeling lost?</h4>
+              <p>If you need a reminder of your current task, don't forget to use the "Show Task" widget! It looks like this:</p>
+              <img src="../assets/img/quote-results/show-task.png" style="display: block; margin: 10px auto 10px;"/>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!--/.modal-->
+      
+      <div class="modal es-modal fade" id="network-types-modal" role="dialog" aria-lebelledby="network-modal-title">
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+              <h4 class="modal-title" id="network-modal-title">Health Insurance Network Types*</h4>
+            </div>
+            <div class="modal-body">
+              <p>Health insurance plans have different network types, sometimes referred to as “plan type”. There are many plan types; the most common are “health maintenance organization” (HMO), “preferred provider organization” (PPO), “exclusive provider organization” (EPO), and “point of service” (POS) plans. The different types are used as follows.</p>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>&nbsp;</th>
+                    <th>HMO</th>
+                    <th>PPO</th>
+                    <th>EPO</th>
+                    <th>POS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Has a network of doctors and/or hospitals</th>
+                    <td><span class="icon ok"></span></td>
+                    <td><span class="icon ok"></span></td>
+                    <td><span class="icon ok"></span></td>
+                    <td><span class="icon ok"></span></td>
+                  </tr>
+                  <tr>
+                    <th>Must use a network doctor and/or hospital</th>
+                    <td><span class="icon ok"></span></td>
+                    <td>&nbsp;</td>
+                    <td><span class="icon ok"></span></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <th>Need a referral to see a specialist</th>
+                    <td><span class="icon ok"></span></td>
+                    <td>&nbsp;</td>
+                    <td>Varies*</td>
+                    <td>Varies*</td>
+                  </tr>
+                  <tr>
+                    <th>Covers care at an out-of-network doctor or hospital</th>
+                    <td>&nbsp;</td>
+                    <td><span class="icon ok"></span></td>
+                    <td>&nbsp;</td>
+                    <td>Varies*</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p><small><em>*This is a general guideline. Please refer to a plan's details for specific coverage information.</em></small></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Okay</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!--/.modal-->
+      
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="footer-wrapper">
+          <footer class="footer footer-example">
+            <ul>
+              <li><a href="javascript:;">Privacy Policy</a></li>
+              <li><a href="javascript:;">Licensing &amp; Legal</a></li>
+              <li><a href="javascript:;">Language Assistance</a></li>
+            </ul>
+            <div class="pull-right copyright">
+              <p>&copy; 2013 &ndash; <script>document.write(new Date().getFullYear())</script> Willis Towers Watson. All rights reserved.</p>
+              <span class="wtw-logo"></span>
+            </div>
+          </footer>
+          
+          <p class="sub-footer">Attention: This website is operated by XYZ Insurance Services, LLC ("XYZ") and is not the Health Insurance Marketplace website. In offering this website, XYZ is required to comply with all applicable federal laws, including the standards established under 45 CFR 155.220(c) and (d) and standards established under 45 CFR 155.260 to protect the privacy and security of personally identifiable information. This website may not display all data on Qualified Health Plans being offered in your state through the Health Insurance Marketplace website. To see all available data on Qualified Health Plan options in your state, go to the Health Insurance Marketplace website at <a href="javascript:;">HealthCare.gov</a>.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div id="bg-foot"></div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../assets/js/vendor/jquery-ui.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../dist/js/bootstrap.js"></script>
+    <script src="../assets/js/proto/quote-results.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,77 @@
+- name: Typography
+  anchor: type
+  lvl-2-links:
+    - name: Body copy
+      anchor: type-body-copy
+      lvl-3-links:
+      - name: Links
+        anchor: type-links
+      - name: Lead Body Copy
+        anchor: lead-body-copy
+      - name: Small Text
+        anchor: small-text
+    - name: Headings
+      anchor: type-headings
+      lvl-3-links:
+      - name: Secondary text
+        anchor: secondary-text-within-headings
+      - name: With icons
+        anchor: icons-within-headings
+    - name: Addresses
+      anchor: type-addresses
+    - name: Blockquotes
+      anchor: type-blockquotes
+    - name: Lists
+      anchor: type-lists
+- name: Voice &amp; Tone
+  anchor: voice-tone
+  lvl-2-links:
+    - name: Voice
+      anchor: voice-tone-voice
+    - name: Tone
+      anchor: voice-tone-tone
+- name: Color Palettes
+  anchor: colors
+  lvl-2-links:
+    - name: BDA UI Toolkit Colors
+      anchor: colors-branded
+      lvl-3-links:
+        - name: Primary
+          anchor: colors-primary
+        - name: Secondary
+          anchor: colors-secondary
+        - name: Tertiary
+          anchor: wtw-colors-tertiary
+    - name: Functional
+      anchor: colors-functional
+    - name: Semantic
+      anchor: colors-semantic
+    - name: Tints/Shades
+      anchor: colors-tints-shades
+    - name: Grays
+      anchor: colors-grays
+    - name: Color Contrast
+      anchor: colors-contrast
+#- name: Labels
+#  anchor: labels
+- name: Badges
+  anchor: badges
+- name: Loaders
+  anchor: loaders
+  lvl-2-links:
+    - name: Progress Bars
+      anchor: loaders-progress
+      lvl-3-links:
+        - name: Basic
+          anchor: loaders-progress-basic
+        - name: With label
+          anchor: loaders-progress-label
+        - name: Alternative implementations
+          anchor: loaders-progress-alt
+    - name: Spinners
+      anchor: loaders-spinners
+      lvl-3-links:
+#        - name: Large
+#          anchor: loaders-spinner-large
+#        - name: Small
+#          anchor: loaders-spinner-small

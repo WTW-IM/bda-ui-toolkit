@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {% include header.html %}
+  </head>
+  <body data-spy="scroll" data-target="#es-ui-side-nav" data-offset="80">
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content"><div class="container"><span class="skiplink-text">Skip to main content</span></div></a>
+
+    <!-- Docs master nav -->
+    {% include nav/main.html %}
+
+    <!-- Docs page layout -->
+    <div class="bs-docs-header" id="top" tabindex="-1">
+      <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.lead }}</p>
+      </div>
+    </div>
+
+    <div class="container bs-docs-container">
+
+      <div class="row">
+        <div class="col-md-{% if page.fullwidth == true %}12{% else %}9{% endif %}" role="main">
+          {{ content }}
+        </div>
+        {% unless page.fullwidth == true %}
+        <div class="col-md-3" role="complementary">
+          <nav id="es-ui-side-nav" class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" data-spy="affix">
+            {% if page.slug == "base" %}
+              <h5>Base</h5>
+            {% elsif page.slug == "containers" %}
+              <h5>Containers</h5>
+            {% elsif page.slug == "controls" %}
+              <h5>Controls</h5>
+            {% elsif page.slug == "navigation" %}
+              <h5>Navigation</h5>
+            {% elsif page.slug == "media" %}
+              <h5>Media</h5>
+            {% endif %}
+            <ul class="nav bs-docs-sidenav">
+              {% if page.slug == "getting-started" %}
+                {% include nav/getting-started.html %}
+              {% elsif page.slug == "base" %}
+                {% include nav/base.html %}
+              {% elsif page.slug == "navigation" %}
+                {% include nav/navigation.html %}
+              {% elsif page.slug == "containers" %}
+                {% include nav/containers.html %}
+              {% elsif page.slug == "controls" %}
+                {% include nav/controls.html %}
+              {% elsif page.slug == "media" %}
+                {% include nav/media.html %}
+              {% endif %}
+            </ul>
+            <a class="back-to-top" href="#top">
+              Back to top
+            </a>
+          </nav>
+        </div>
+        {% endunless %}
+      </div>
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>

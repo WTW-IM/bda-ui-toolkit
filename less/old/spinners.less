@@ -1,0 +1,397 @@
+//
+// ES Loaders (Spinners)
+//
+// ====================================================
+
+.spinner {
+  
+  &.large {
+    position: relative;
+    margin: 10px auto;
+    width: 294px;
+    height: 55px;
+    font-size: 48px;
+
+    > span {
+      transform-origin: 50% 50% 50px;
+      transform: rotateX(0deg);
+      position: absolute;
+      
+      &:nth-child(1) {
+        // O
+        left: 0;
+        font-weight: bold;
+        transition: all 0.7s ease .083333s;
+      }
+      
+      &:nth-child(2) {
+        // n
+        left: 36px;
+        font-weight: bold;
+        transition: all 0.7s ease .166667s;
+      }
+      
+      &:nth-child(3) {
+        // e
+        left: 64px;
+        font-weight: bold;
+        transition: all 0.7s ease .25s;
+      }
+      
+      &:nth-child(4) {
+        // E
+        left: 90px;
+        font-weight: normal;
+        transition: all 0.7s ease .333333s;
+      }
+      
+      &:nth-child(5) {
+        // x
+        left: 121px;
+        font-weight: normal;
+        transition: all 0.7s ease .416667s;
+      }
+      
+      &:nth-child(6) {
+        // c
+        left: 143px;
+        font-weight: normal;
+        transition: all 0.7s ease .5s;
+      }
+      
+      &:nth-child(7) {
+        // h
+        left: 167px;
+        font-weight: normal;
+        transition: all 0.7s ease .583333s;
+      }
+      
+      &:nth-child(8) {
+        // a
+        left: 192px;
+        font-weight: normal;
+        transition: all 0.7s ease .666667s;
+      }
+      
+      &:nth-child(9) {
+        // n
+        left: 217px;
+        font-weight: normal;
+        transition: all 0.7s ease .75s;
+      }
+      
+      &:nth-child(10) {
+        // g
+        left: 242px;
+        font-weight: normal;
+        transition: all 0.7s ease .833333s;
+      }
+      
+      &:nth-child(11) {
+        // e
+        left: 268px;
+        font-weight: normal;
+        transition: all 0.7s ease .916667s;
+      }
+    }
+    
+    &.off {
+      > span {
+        transition: all 0s;
+        transform: rotateX(0deg);
+      }
+    }
+    
+    &.on {
+      > span{
+        transform: rotateX(360deg);
+      } 
+    }
+  }
+  
+  &.medium {
+    position: relative;
+    margin: 10px auto;
+    width: 294px;
+    height: 55px;
+    font-size: 48px;
+
+    > span {
+      transform-origin: 50% 50% 0px;
+      transform: rotateX(0deg);
+      position: absolute;
+      
+      &:nth-child(1) {
+        // O
+        left: 0;
+        font-weight: bold;
+        transition: all 0.7s ease .083333s;
+      }
+      
+      &:nth-child(2) {
+        // n
+        left: 36px;
+        font-weight: bold;
+        transition: all 0.7s ease .166667s;
+      }
+      
+      &:nth-child(3) {
+        // e
+        left: 64px;
+        font-weight: bold;
+        transition: all 0.7s ease .25s;
+      }
+      
+      &:nth-child(4) {
+        // E
+        left: 90px;
+        font-weight: normal;
+        transition: all 0.7s ease .333333s;
+      }
+      
+      &:nth-child(5) {
+        // x
+        left: 121px;
+        font-weight: normal;
+        transition: all 0.7s ease .416667s;
+      }
+      
+      &:nth-child(6) {
+        // c
+        left: 143px;
+        font-weight: normal;
+        transition: all 0.7s ease .5s;
+      }
+      
+      &:nth-child(7) {
+        // h
+        left: 167px;
+        font-weight: normal;
+        transition: all 0.7s ease .583333s;
+      }
+      
+      &:nth-child(8) {
+        // a
+        left: 192px;
+        font-weight: normal;
+        transition: all 0.7s ease .666667s;
+      }
+      
+      &:nth-child(9) {
+        // n
+        left: 217px;
+        font-weight: normal;
+        transition: all 0.7s ease .75s;
+      }
+      
+      &:nth-child(10) {
+        // g
+        left: 242px;
+        font-weight: normal;
+        transition: all 0.7s ease .833333s;
+      }
+      
+      &:nth-child(11) {
+        // e
+        left: 268px;
+        font-weight: normal;
+        transition: all 0.7s ease .916667s;
+      }
+    }
+    
+    &.off {
+      > span {
+        transition: all 0s;
+        transform: rotateX(0deg);
+      }
+    }
+    
+    &.on {
+      > span{
+        transform: rotateX(360deg);
+      } 
+    }
+  }
+    
+  &.small {
+    margin: 10px auto;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    
+    > .indicator {
+      display: block;
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      position: relative;
+      background: @brand-primary-accent;
+      z-index: 50;
+      background: -webkit-linear-gradient(left, @brand-primary-accent 10%, rgba(255, 255, 255, 0) 42%);
+      background:    -moz-linear-gradient(left, @brand-primary-accent 10%, rgba(255, 255, 255, 0) 42%);
+      background:      -o-linear-gradient(left, @brand-primary-accent 10%, rgba(255, 255, 255, 0) 42%);
+      background:     -ms-linear-gradient(left, @brand-primary-accent 10%, rgba(255, 255, 255, 0) 42%);
+      background:         linear-gradient(to right, @brand-primary-accent 10%, rgba(255, 255, 255, 0) 42%);
+      -webkit-animation: load3 1.4s infinite linear;
+              animation: load3 1.4s infinite linear;
+      -webkit-transform: translateZ(0);
+          -ms-transform: translateZ(0);
+              transform: translateZ(0);
+      
+      &:before {
+        width: 50%;
+        height: 50%;
+        background: @brand-primary-accent;
+        border-radius: 100% 0 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+      }
+      
+      &:after {
+        background: #fff;
+        width: 75%;
+        height: 75%;
+        border-radius: 50%;
+        content: '';
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    
+    > .track {
+      background: @gray-lighter;
+      border-radius: 50%;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 40;
+    }
+    
+    @-webkit-keyframes load3 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes load3 {
+      0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+  }
+  
+  &.slide {
+    position: relative;
+    margin: 10px auto;
+    width: 294px;
+    height: 61px;
+    font-size: 48px;
+    overflow: hidden;
+
+    > span {
+      position: absolute;
+      
+      &:nth-child(1) {
+        // O
+        left: 0;
+        font-weight: bold;
+        transition: all 0.7s ease .166667s;
+      }
+      
+      &:nth-child(2) {
+        // n
+        left: 36px;
+        font-weight: bold;
+        transition: all 0.7s ease .333333s;
+      }
+      
+      &:nth-child(3) {
+        // e
+        left: 64px;
+        font-weight: bold;
+        transition: all 0.7s ease .5s;
+      }
+      
+      &:nth-child(4) {
+        // E
+        left: 90px;
+        font-weight: normal;
+        transition: all 0.7s ease .666667s;
+      }
+      
+      &:nth-child(5) {
+        // x
+        left: 121px;
+        font-weight: normal;
+        transition: all 0.7s ease .833333s;
+      }
+      
+      &:nth-child(6) {
+        // c
+        left: 143px;
+        font-weight: normal;
+        transition: all 0.7s ease 1s;
+      }
+      
+      &:nth-child(7) {
+        // h
+        left: 167px;
+        font-weight: normal;
+        transition: all 0.7s ease 1.166667s;
+      }
+      
+      &:nth-child(8) {
+        // a
+        left: 192px;
+        font-weight: normal;
+        transition: all 0.7s ease 1.333333s;
+      }
+      
+      &:nth-child(9) {
+        // n
+        left: 217px;
+        font-weight: normal;
+        transition: all 0.7s ease 1.5s;
+      }
+      
+      &:nth-child(10) {
+        // g
+        left: 242px;
+        font-weight: normal;
+        transition: all 0.7s ease 1.666667s;
+      }
+      
+      &:nth-child(11) {
+        // e
+        left: 268px;
+        font-weight: normal;
+        transition: all 0.7s ease 1.833333s;
+      }
+    }
+    
+    &.off {
+      > span {
+        transition: all 0s;
+        left: 120%;
+      }
+    }
+  }
+}

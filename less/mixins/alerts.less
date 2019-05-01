@@ -1,0 +1,35 @@
+// Alerts
+
+.alert-variant(@color) {
+  background-color: @color;
+  color: @white;
+
+  hr {
+    border-top-color: darken(@color, 5%);
+  }
+  
+  // .alert-link {
+  //   color: darken(@text-color, 10%);
+  // }
+}
+
+.alert-variant-light(@color) {
+  background-color: lighten(desaturate(@color, 15%), 55%);
+  color: @software-gray-8;
+  
+  .icon {
+    color: @color;
+  }
+}
+
+.alert-variant-msg(@color) {
+  background-color: transparent;
+  color: @color;
+  padding: @alert-padding 0;
+  
+  .icon {
+    color: @color;
+    font-size: 28px;
+    vertical-align: sub;
+  }
+}

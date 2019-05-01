@@ -1,0 +1,96 @@
+//
+// WTW Footer
+// --------------------------------------------------
+
+// Base style
+// -------------------------
+
+footer.footer,
+footer.footer-example {
+  background-color: @white;
+  border-top: 3px solid @magenta;
+  color: @software-gray-7;
+  padding: 8px 20px 10px;
+  min-height: 75px;
+  font-size: @font-size-small;
+  margin: 25px 0 10px;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+  .font-weight--bold();
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    
+    > li {
+      display: block;
+      padding: 0 0 5px;
+      
+      > a {
+        color: @software-gray-7;
+      }
+    }
+  }
+  
+  .copyright {
+    > p {
+      margin-bottom: 3px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    ul {
+      .clearfix;
+      float: left;
+      
+      > li {
+        float: left;
+        
+        & + li {
+          border-left: 1px solid @software-gray-5;
+          margin-left: 10px;
+          padding: 0 0 0 10px;
+        }
+        
+        > a {
+          &,
+          &:focus,
+          &:active {
+            color: @software-gray-7;
+          }
+          
+          &:hover {
+            color: @brand-primary-accent;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    
+    .copyright {
+      float: right;
+      text-align: right;
+    }
+  }
+}
+
+p.sub-footer {
+  background: rgba(220, 220, 220, 0.6);
+  font-size: @font-size-small;
+  margin-top: 25px;
+  padding: 30px 30px 45px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+     -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3);
+  
+  > a {
+    &,
+    &:visited{
+      color: @wtwBlack;
+    }
+    
+    &:hover {
+      color: @brand-primary-accent;
+      text-decoration: underline;
+    }
+  }
+}

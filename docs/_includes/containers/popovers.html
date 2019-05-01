@@ -1,0 +1,137 @@
+<div class="bs-docs-section">
+  <h2 id="popovers" class="page-header">Popovers</h2>
+
+  <p class="lead">Add small overlays of content, like those on the iPad, to any element for housing secondary information.</p>
+
+  <h3 id="popovers-static">Static examples</h3>
+  <p>Four options are available: top, right, bottom, and left aligned.</p>
+  <div class="bs-example bs-example-popover" data-example-id="static-popovers">
+    <div class="popover top">
+      <div class="arrow"></div>
+      <h3 class="popover-title">Popover top</h3>
+      <div class="popover-content">
+        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+
+    <div class="popover right">
+      <div class="arrow"></div>
+      <h3 class="popover-title">Popover right</h3>
+      <div class="popover-content">
+        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+
+    <div class="popover bottom">
+      <div class="arrow"></div>
+      <h3 class="popover-title">Popover bottom</h3>
+
+      <div class="popover-content">
+        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+
+    <div class="popover left">
+      <div class="arrow"></div>
+      <h3 class="popover-title">Popover left</h3>
+      <div class="popover-content">
+        <p>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+  
+  <p>You can also implement them without the Title Bar:</p>
+  <div class="bs-example bs-example-popover" data-example-id="static-popovers">
+    <div class="popover no-title top">
+      <div class="arrow"></div>
+      <div class="popover-content">
+        <p>Popover top, aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+
+    <div class="popover no-title right">
+      <div class="arrow"></div>
+      <div class="popover-content">
+        <p>Popover right, aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+
+    <div class="popover no-title bottom">
+      <div class="arrow"></div>
+      <div class="popover-content">
+        <p>Popover bottom, aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+
+    <div class="popover no-title left">
+      <div class="arrow"></div>
+      <div class="popover-content">
+        <p>Popover left, aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+  </div>
+
+  <h3 id="popovers-live">Live examples</h3>
+  <div class="bs-example bs-example-padded-bottom">
+    <button type="button" class="btn btn-lg btn-danger bs-docs-popover" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+  </div>
+
+  <h4 id="popovers-live-directions">Four directions</h4>
+  <div class="bs-example popover-demo">
+    <div class="bs-example-popovers">
+      <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-title="Popover right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        Popover on right
+      </button>
+      <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-title="Popover top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        Popover on top
+      </button>
+      <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-title="Popover bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        Popover on bottom
+      </button>
+      <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-title="Popover left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        Popover on left
+      </button>
+    </div>
+  </div><!-- /example -->
+
+  <h4 id="popovers-live-contextual">Contextual example &ndash; with "Dismiss on next click" enabled</h4>
+  <p>Popovers can be made to dismiss themselves when you click elsewhere on the page. This is the recommended implementation for contextual-help implementations of popovers.</p>
+  <div class="bs-example bs-example-padded-bottom">
+    <p>Raw denim <button type="button" class="popover-link bs-docs-popover" data-toggle="popover" data-trigger="focus" data-placement="top" title="Contextual popover 1" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">you probably haven't heard of them</button> jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. <button type="button" class="popover-link bs-docs-popover" data-toggle="popover" data-trigger="focus" data-placement="top" title="Contextual popover 2" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Reprehenderit butcher</button> retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan <button type="button" class="popover-link bs-docs-popover" data-toggle="popover-light" data-trigger="focus" data-placement="top" title="Contextual popover 3" data-original-title="" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">american apparel</button>, butcher voluptate nisi qui.</p>
+  </div>
+
+  <h4 id="popovers-live-context-icon">Contextual example &ndash; when a separate control is needed</h4>
+  <p>If something that already recieves an action from the customer, such as a form element with a label, requires contextual help, use an icon to invoke popovers.</p>
+  <div class="bs-example bs-example-padded-bottom">
+    <form class="form">
+      <div class="form-group">
+        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+      </div>
+      <div class="form-group">
+        <label class="sr-only" for="exampleInputPassword3">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+      </div>
+      <div class="checkbox chckbx">
+        <label>
+          <input type="checkbox"> Remember me <button type="button" class="popover-link-icon bs-docs-popover" data-toggle="popover" data-trigger="focus" data-placement="top" data-container="body" data-title="Contextual popover 1" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."><span class="icon question-circle"></span></button>
+          <span class="check"></span>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </form>
+  </div><!-- /example -->
+  
+  <h4 id="contextual-help-cursor">Contextual Help Cursor</h4>
+  <p>Through testing this cursor was developed for use on contextual help links, such as those invoking popovers and &mdash; in some cases &mdash; modals:</p>
+  <div class="bs-example bs-example-padded-bottom">
+    <img src="../../assets/img/cursors/pointer-help.png" alt="help cursor containing a pointing hand overlaid by a question mark">
+    <div class="well" style="margin-top: 20px;">
+      <span style="font-family: monospace;">cursor: url(~/pointer-help.png) 10 0, pointer;</span>
+    </div>
+  </div>
+</div>
